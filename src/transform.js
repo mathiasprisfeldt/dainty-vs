@@ -5,6 +5,7 @@ const { transformCoveragePage } = require("./transformers/pages/coverage");
 const { transformDaintyCssPage } = require("./transformers/pages/dainty-css");
 const { transformIndexPage } = require("./transformers/pages/index");
 const { transformSyntaxPage } = require("./transformers/pages/syntax");
+const { transformDaintyCss } = require("./transformers/dainty-css");
 
 module.exports = {
   transformTheme,
@@ -13,5 +14,6 @@ module.exports = {
   transformColorsPage,
   transformCoveragePage,
   transformDaintyCssPage,
-  transformSyntaxPage
+  transformSyntaxPage,
+  transformDaintyCss
 };

@@ -5,7 +5,8 @@ const {
   buildColorsPage,
   buildCoveragePage,
   buildDaintyCssPage,
-  buildSyntaxPage
+  buildSyntaxPage,
+  buildDaintyCss
 } = require("./build");
 const { generateColorPalette } = require("./colors");
 
@@ -35,7 +36,8 @@ const { generateColorPalette } = require("./colors");
     buildIndexPage(colors),
     buildSyntaxPage(colors),
     buildColorsPage(colors),
-    buildDaintyCssPage(colors)
+    buildDaintyCssPage(colors),
+    buildDaintyCss(colors)
   ]);
 
   await buildCoveragePage(colors);

@@ -9,7 +9,8 @@ const {
   transformCoveragePage,
   transformDaintyCssPage,
   transformIndexPage,
-  transformSyntaxPage
+  transformSyntaxPage,
+  transformDaintyCss
 } = require("./transform");
 const { zip, writeFileLog } = require("./utils");
 
@@ -93,6 +94,12 @@ async function buildSyntaxPage(colors) {
   writeFileLog(target, data);
 }
 
+async function buildDaintyCss(colors) {
+  const target = path.join(__dirname, "../public/dainty.css");
+  const data = await transformDaintyCss(colors);
+  writeFileLog(target, data);
+}
+
 module.exports = {
   buildThemeZip,
   buildThemeFiles,
@@ -100,5 +107,6 @@ module.exports = {
   buildColorsPage,
   buildCoveragePage,
   buildDaintyCssPage,
-  buildSyntaxPage
+  buildSyntaxPage,
+  buildDaintyCss
 };
