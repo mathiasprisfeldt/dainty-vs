@@ -17,17 +17,17 @@ function getCategoryReplacements(configuration, colors) {
 
   const replacements = {
     Environment: {
-      MainWindowActiveIconDefault: [blue[24], null],
-      MainWindowActiveIconBuilding: [blue[24], null],
-      MainWindowActiveIconDebugging: [blue[24], null],
-      MainWindowActiveIconNoSolution: [blue[24], null],
-      RaftedWindowActiveIconDefault: [blue[24], null],
-      RaftedWindowActiveIconBuilding: [blue[24], null],
-      RaftedWindowActiveIconDebugging: [blue[24], null],
-      RaftedWindowActiveIconNoSolution: [blue[24], null],
-      RaftedWindowInactiveIconDefault: [blue[24], null],
-      RaftedWindowInactiveIconBuilding: [blue[24], null],
-      RaftedWindowInactiveIconDebugging: [blue[24], null],
+      MainWindowActiveIconDefault: [blueLessChroma[24], null],
+      MainWindowActiveIconBuilding: [blueLessChroma[24], null],
+      MainWindowActiveIconDebugging: [blueLessChroma[24], null],
+      MainWindowActiveIconNoSolution: [blueLessChroma[24], null],
+      RaftedWindowActiveIconDefault: [blueLessChroma[24], null],
+      RaftedWindowActiveIconBuilding: [blueLessChroma[24], null],
+      RaftedWindowActiveIconDebugging: [blueLessChroma[24], null],
+      RaftedWindowActiveIconNoSolution: [blueLessChroma[24], null],
+      RaftedWindowInactiveIconDefault: [blueLessChroma[24], null],
+      RaftedWindowInactiveIconBuilding: [blueLessChroma[24], null],
+      RaftedWindowInactiveIconDebugging: [blueLessChroma[24], null],
       StartPageTextControlLinkSelected: [blue[34], null],
       StartPageTextControlLinkSelectedHover: [blueLessChroma[36], null]
     },
@@ -209,10 +209,10 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#fefcc8", orange[39]],
 
     // Start page arrow
-    ["#4f4f53", blueMoreChroma[16]],
+    ["#4f4f53", blue[16]],
 
     // Start page arrow hover
-    ["#606060", blueMoreChroma[20]],
+    ["#606060", blue[20]],
 
     // Notification badge
     ["#8631c7", blueMoreChroma[8]],
