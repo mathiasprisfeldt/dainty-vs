@@ -319,12 +319,12 @@ button {
 }
 
 button.primary {
-  border: 0.5px solid "BLUE_GRAY_12";
-  color: "BLUE_MORE_CHROMA_28";
+  color: "BLUE_LESS_CHROMA_39";
+  background-color: "BLUE_6";
 }
 
 button:not(.primary) {
-  border: 0.5px solid "BLUE_GRAY_12";
+  background-color: "BLUE_GRAY_3";
   color: "BLUE_GRAY_34";
   font-size: 0.875em;
 }
@@ -334,15 +334,12 @@ button:focus {
 }
 
 button.primary:hover {
-  border-color: "BLUE_GRAY_20";
-  color: "BLUE_MORE_CHROMA_32";
-  background-color: "BLUE_GRAY_1";
+  background-color: "BLUE_8";
 }
 
 button:not(.primary):hover {
-  border-color: "BLUE_GRAY_20";
-  color: "BLUE_GRAY_39";
-  background-color: "BLUE_GRAY_1";
+  color: "BLUE_GRAY_36";
+  background-color: "BLUE_GRAY_5";
 }
 
 button:active {
