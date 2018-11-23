@@ -28,7 +28,7 @@ function getCategoryReplacements(configuration, colors) {
       RaftedWindowInactiveIconDefault: [blue[24], null],
       RaftedWindowInactiveIconBuilding: [blue[24], null],
       RaftedWindowInactiveIconDebugging: [blue[24], null],
-      StartPageTextControlLinkSelected: [blueLessChroma[34], null],
+      StartPageTextControlLinkSelected: [blue[34], null],
       StartPageTextControlLinkSelectedHover: [blueLessChroma[36], null]
     },
     "ColorizedSignatureHelp colors": {
@@ -282,7 +282,7 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#dcdcdc", blueGray[edfc(34)]],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
-    ["#ffffff", dark ? blue[30] : blue[8]],
+    ["#ffffff", dark ? blueLessChroma[30] : blue[8]],
 
     // Close and pin icons on active tab
     ["#d0e6f5", blueGray[envfc(32)]],
