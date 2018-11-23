@@ -57,7 +57,7 @@ function generateScale(color, override, adjustments) {
   }
 
   if (color === "BLUE_GRAY") {
-    chromaAdjustment += adjustments.chroma ? adjustments.chroma : 0;
+    chromaAdjustment += adjustments.chroma ? adjustments.chroma / 3 : 0;
     lightnessAdjustment += adjustments.lightness ? adjustments.lightness : 0;
     chromaStartAdjustment += adjustments.chromaStart
       ? adjustments.chromaStart
