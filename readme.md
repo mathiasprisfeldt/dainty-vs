@@ -4,6 +4,10 @@ Dainty is a configurable, refined, and balanced color theme for Visual Studio dr
 
 For more information and web-based configuration, see https://dainty-vs.now.sh.
 
+## Screenshot
+
+![image](public/screenshot-dainty.png)
+
 ## Features
 
 - Precise and pleasant colors are generated within the CIELAB color space
