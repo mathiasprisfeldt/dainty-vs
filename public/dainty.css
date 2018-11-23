@@ -319,13 +319,12 @@ button {
 }
 
 button.primary {
-  color: #e4ffff;
-  background-color: #003c71;
+  color: #ffffff;
+  background-color: #00477d;
 }
 
 button:not(.primary) {
-  background-color: #222a36;
-  color: #dddee1;
+  color: #79b8ff;
   font-size: 0.875em;
 }
 
@@ -334,12 +333,11 @@ button:focus {
 }
 
 button.primary:hover {
-  background-color: #00477d;
+  background-color: #095189;
 }
 
 button:not(.primary):hover {
-  color: #eaebed;
-  background-color: #2c3440;
+  background-color: #1d2532;
 }
 
 button:active {
