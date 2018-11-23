@@ -108,17 +108,17 @@ Each replacement is a tuple, where the first value represents the dark variation
 
 Run `npm run start` to start Express server. These are the available routes:
 
-| Method | Route                           | Description                                                       |
-| ------ | ------------------------------- | ----------------------------------------------------------------- |
-| `GET`  | `/`                             | Landing page                                                      |
-| `GET`  | `/colors.html`                  | Colors page                                                       |
-| `GET`  | `/coverage.html`                | Coverage page                                                     |
-| `GET`  | `/dainty-css.html`              | Dainty.css page                                                   |
-| `GET`  | `/syntax.html`                  | Syntax page                                                       |
-| `GET`  | `/dainty-latest.zip`            | Generates the latest version of Dainty with default configuration |
-| `POST` | `/dainty-latest-configured.zip` | Generates the latest version of Dainty with custom configuration  |
+| Method | Route                           | Description                                                         |
+| ------ | ------------------------------- | --------------------------------------------------------------------|
+| `GET`  | `/`                             | Landing page                                                        |
+| `GET`  | `/colors.html`                  | Colors page                                                         |
+| `GET`  | `/coverage.html`                | Coverage page                                                       |
+| `GET`  | `/dainty-css.html`              | Dainty.css page                                                     |
+| `GET`  | `/syntax.html`                  | Syntax page                                                         |
+| `GET`  | `/dainty-latest.zip`            | Generates the latest version of Dainty with default configuration   |
+| `POST` | `/dainty-latest-configured.zip` | Generates the latest version of Dainty with custom configuration[1] |
 
-Custom configuration is sent as JSON using the request body, and the format is defined by [`configuration-schema.json`](https://github.com/alexanderte/dainty-vs/blob/master/configuration-schema.json).
+1. Custom configuration is sent as JSON using the request body, and the format is defined by [`configuration-schema.json`](https://github.com/alexanderte/dainty-vs/blob/master/configuration-schema.json).
 
 ## License
 
