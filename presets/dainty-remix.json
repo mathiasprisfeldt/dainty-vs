@@ -1,10 +1,20 @@
 {
   "colors": {
     "overrides": {
-      "blue": "#ab47bc",
-      "blueLessChroma": "#84ffff",
-      "green": "#b9f6ca",
-      "orange": "#42a5f5"
+      // Material Purple 500
+      "blue": "#9c27b0",
+
+      // Material Deep Purple 500
+      "blueLessChroma": "#673ab7",
+
+      // Material Indigo 500
+      "purple": "#3f51b5",
+
+      // Material Teal A200
+      "green": "#64ffda",
+
+      // Material Blue A700
+      "orange": "#2962ff"
     }
   }
 }
