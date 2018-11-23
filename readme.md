@@ -11,7 +11,6 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 ## Features
 
 - Precise and pleasant colors are generated and selected within the CIELAB color space
-- Supports presets of configurations – i.e. other themes
 - Punctuation marks are slightly dimmed
 - The left side of the editor is less busy than in the default themes
 - Contrast for environment background can be added
@@ -25,6 +24,7 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 - Colors can be lightened, darkened, or desaturated
 - Colors can be overridden
 - Usages of colors can be overridden
+- Supports configuration presets
 
 ## Setup
 
