@@ -1,6 +1,6 @@
 # Dainty for Visual Studio
 
-Dainty is a configurable, refined, and balanced color theme for Visual Studio drawing inspiration from the default theme of Visual Studio. It is designed to maximize readability and reduce eye strain, making it more pleasant to work with code all day long.
+Dainty for Visual Studio is a configurable, refined, and balanced color theme using carefully selected colors within the CIELAB color space. It is designed to maximize readability and reduce eye strain.
 
 For more information and web-based configuration, see https://dainty-vs.now.sh.
 
@@ -10,7 +10,7 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 
 ## Features
 
-- Precise and pleasant colors are generated within the CIELAB color space
+- Precise and pleasant colors are generated and selected within the CIELAB color space
 - Supports presets of configurations – i.e. other themes
 - Punctuation marks are slightly dimmed
 - The left side of the editor is less busy than in the default themes
@@ -109,7 +109,7 @@ Each replacement is a tuple, where the first value represents the dark variation
 Run `npm run start` to start Express server. These are the available routes:
 
 | Method | Route                           | Description                                                         |
-| ------ | ------------------------------- | --------------------------------------------------------------------|
+| ------ | ------------------------------- | ------------------------------------------------------------------- |
 | `GET`  | `/`                             | Landing page                                                        |
 | `GET`  | `/colors.html`                  | Colors page                                                         |
 | `GET`  | `/coverage.html`                | Coverage page                                                       |
