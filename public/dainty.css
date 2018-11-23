@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #131c28;
-  color: #dddee1;
+  background-color: #17202d;
+  color: #dddfe1;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   line-height: 1.875;
@@ -154,7 +154,7 @@ code {
   font-family: "Roboto Mono", SFMono-Regular, Consolas, Liberation Mono, Menlo,
     Courier, monospace;
   font-size: 0.875em;
-  color: #eaebed;
+  color: #f8f9f9;
 }
 
 a > code,
@@ -185,7 +185,7 @@ table {
 }
 
 tr {
-  border-bottom: 0.5px solid #484e59;
+  border-bottom: 0.5px solid #4b525d;
 }
 
 th {
@@ -231,7 +231,7 @@ ul:not(.nav) > li:before {
   content: "–";
   width: 18px;
   margin-left: -18px;
-  color: #6a7079;
+  color: #6d727c;
 }
 
 ul ul {
@@ -263,7 +263,7 @@ ul.nav li.active a {
 }
 
 ul.nav li:not(.active) a {
-  color: #dddee1;
+  color: #dddfe1;
 }
 
 ul.nav li:not(.active) a:hover {
@@ -337,7 +337,7 @@ button.primary:hover {
 }
 
 button:not(.primary):hover {
-  background-color: #1d2532;
+  background-color: #212936;
 }
 
 button:active {
@@ -366,7 +366,7 @@ button:active {
 
 .form-group {
   display: flex;
-  border-bottom: 0.5px solid #484e59;
+  border-bottom: 0.5px solid #4b525d;
   padding-bottom: 16px;
   margin-bottom: 16px;
   padding-left: 16px;
@@ -374,7 +374,7 @@ button:active {
 }
 
 .form-group:first-child {
-  border-top: 0.5px solid #484e59;
+  border-top: 0.5px solid #4b525d;
   padding-top: 16px;
 }
 
@@ -392,22 +392,22 @@ button:active {
   border: 0;
   padding: 8px 12px;
   position: absolute;
-  background-color: #1d2532;
-  color: #dddee1;
+  background-color: #212936;
+  color: #dddfe1;
   transition: background-color 0.25s ease;
 }
 
 .form-group > .input-container > input[type="text"]:hover,
 .form-group > .input-container > select:hover {
-  background-color: #272f3b;
-  color: #e3e5e7;
+  background-color: #2b333f;
+  color: #e4e5e7;
 }
 
 .form-group > .input-container > input[type="text"]:focus,
 .form-group > .input-container > select:focus {
   outline: none;
-  background-color: #323945;
-  color: #eaebed;
+  background-color: #353d49;
+  color: #ebeced;
 }
 
 .form-group > .input-container > input[type="text"] {
@@ -442,7 +442,7 @@ button:active {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 1024px;
-  background-color: #131c28;
+  background-color: #17202d;
   overflow: auto;
   padding: 24px 32px 32px 32px;
   box-shadow: 1px 3px 25px rgba(0, 0, 0, 0.25);
@@ -496,7 +496,7 @@ div[class^="ckbx-style-"] input[type="checkbox"] {
   height: 1em;
   left: 0.1em;
   transition: background-color 0.25s ease;
-  background-color: #1d2532;
+  background-color: #212936;
   border-radius: 50px;
 }
 
@@ -508,7 +508,7 @@ div[class^="ckbx-style-"] input[type="checkbox"] {
   border-radius: 50px;
   left: 0;
   transition: all 0.25s;
-  background-color: #dddee1;
+  background-color: #dddfe1;
   z-index: 3;
 }
 
@@ -521,7 +521,7 @@ div[class^="ckbx-style-"] input[type="checkbox"] {
 }
 
 .ckbx-style-8 input[type="checkbox"]:hover + label:before {
-  background-color: #323945;
+  background-color: #353d49;
 }
 
 .ckbx-style-8 input[type="checkbox"]:checked:hover + label:before {

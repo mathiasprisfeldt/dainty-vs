@@ -26,6 +26,7 @@ function generateScale(color, override, adjustments) {
       chromaDivisor = 13.125;
 
       if (!lchOverride) {
+        lightnessAdjustment = 2;
         chromaEndAdjustment = -10;
       }
       break;
