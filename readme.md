@@ -4,6 +4,10 @@ Dainty is a configurable, refined, and balanced color theme for Visual Studio dr
 
 For more information and web-based configuration, see https://dainty-vs.now.sh.
 
+## Screenshot
+
+![image](public/screenshot-dainty.png)
+
 ## Features
 
 - Precise and pleasant colors are generated within the CIELAB color space
@@ -44,7 +48,7 @@ These are adjustments that can be specified under `"colors"."adjustments"` in `c
 
 | Property        | Description                                                  |
 | --------------- | ------------------------------------------------------------ |
-| `"lightness"`   | Adjust lightness to make blue-grays either darker og lighter |
+| `"lightness"`   | Adjust lightness to make blue-grays either darker or lighter |
 | `"chroma"`      | Adjust chroma to make colors either more or less saturated   |
 | `"chromaStart"` | Adjust start of blue grays scale chroma                      |
 | `"chromaEnd"`   | Adjust start of blue grays scale chroma                      |
@@ -104,17 +108,17 @@ Each replacement is a tuple, where the first value represents the dark variation
 
 Run `npm run start` to start Express server. These are the available routes:
 
-| Method | Route                           | Description                                                       |
-| ------ | ------------------------------- | ----------------------------------------------------------------- |
-| `GET`  | `/`                             | Landing page                                                      |
-| `GET`  | `/colors.html`                  | Colors page                                                       |
-| `GET`  | `/coverage.html`                | Coverage page                                                     |
-| `GET`  | `/dainty-css.html`              | Dainty.css page                                                   |
-| `GET`  | `/syntax.html`                  | Syntax page                                                       |
-| `GET`  | `/dainty-latest.zip`            | Generates the latest version of Dainty with default configuration |
-| `POST` | `/dainty-latest-configured.zip` | Generates the latest version of Dainty with custom configuration  |
+| Method | Route                           | Description                                                         |
+| ------ | ------------------------------- | --------------------------------------------------------------------|
+| `GET`  | `/`                             | Landing page                                                        |
+| `GET`  | `/colors.html`                  | Colors page                                                         |
+| `GET`  | `/coverage.html`                | Coverage page                                                       |
+| `GET`  | `/dainty-css.html`              | Dainty.css page                                                     |
+| `GET`  | `/syntax.html`                  | Syntax page                                                         |
+| `GET`  | `/dainty-latest.zip`            | Generates the latest version of Dainty with default configuration   |
+| `POST` | `/dainty-latest-configured.zip` | Generates the latest version of Dainty with custom configuration[1] |
 
-Custom configuration is sent as JSON using the request body, and the format is defined by [`configuration-schema.json`](https://github.com/alexanderte/dainty-vs/blob/master/configuration-schema.json).
+1. Custom configuration is sent as JSON using the request body, and the format is defined by [`configuration-schema.json`](https://github.com/alexanderte/dainty-vs/blob/master/configuration-schema.json).
 
 ## License
 
