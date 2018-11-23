@@ -243,19 +243,19 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#3399ff", accent[28]],
 
     // `using`, `public class`
-    ["#569cd6", dark ? blue[26] : blue[24]],
+    ["#569cd6", blue[26]],
 
     // `form`, `option` (bold)
-    ["#008080", dark ? blue[26] : blue[24]],
+    ["#008080", blue[26]],
 
     // `&nbsp;`
-    ["#00a0a0", dark ? blue[32] : blue[20]],
+    ["#00a0a0", dark ? blueLessChroma[30] : blue[20]],
 
     // `Program`, `WebHost`, `Startup`
-    ["#4ec9b0", dark ? blue[32] : blue[20]],
+    ["#4ec9b0", dark ? blueLessChroma[30] : blue[20]],
 
     // HTML attribute
-    ["#9cdcfe", dark ? blue[32] : blue[20]],
+    ["#9cdcfe", dark ? blueLessChroma[30] : blue[20]],
 
     // Active tool window tab, `Import theme`
     ["#0097fb", blueGray[envfc(32)]],
@@ -313,10 +313,10 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#b5cea8", dark ? green[36] : green[16]],
 
     // `IWebHostBuilder`
-    ["#b8d7a3", dark ? purple[30] : purple[20]],
+    ["#b8d7a3", dark ? blueLessChroma[34] : purple[20]],
 
     // Less variable
-    ["#c563bd", dark ? purple[30] : purple[20]],
+    ["#c563bd", dark ? blueLessChroma[34] : purple[20]],
 
     // Strings
     ["#d69d85", dark ? orange[33] : orange[18]],

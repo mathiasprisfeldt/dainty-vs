@@ -17,6 +17,10 @@ function generateScale(color, override, adjustments, lessChrome) {
   const lchOverride = override ? culori.lch(override) : null;
 
   switch (color) {
+    case "RED":
+      hue = 90 / 4;
+      chromaDivisor = 2.5;
+      break;
     case "BLUE_GRAY":
       hue = 270 - 90 / 16;
       chromaDivisor = 10 + 50 / 16;
@@ -29,7 +33,9 @@ function generateScale(color, override, adjustments, lessChrome) {
       hue = 270 - 90 / 16;
 
       if (lessChrome) {
-        chromaDivisor = 6;
+        chromaDivisor = 5;
+      } else {
+        chromaDivisor = 3.5;
       }
       break;
     case "PURPLE":
@@ -37,10 +43,11 @@ function generateScale(color, override, adjustments, lessChrome) {
       break;
     case "GREEN":
       hue = 180;
+      chromaDivisor = 4.5;
       break;
     case "ORANGE":
       hue = 45;
-      chromaAdjustment = -(maximumChroma / 6);
+      chromaDivisor = 6;
       break;
   }
 
@@ -125,6 +132,9 @@ function generateColorPalette(configuration) {
     ),
     green: handleVariant(
       generateScale("GREEN", overrides.green, configuration.colors.adjustments)
+    ),
+    red: handleVariant(
+      generateScale("RED", overrides.red, configuration.colors.adjustments)
     )
   };
 
