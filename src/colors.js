@@ -1,18 +1,18 @@
 const culori = require("culori");
 const changeCase = require("change-case");
 
-function generateScale(color, override, adjustments, lessChrome) {
+function generateScale(color, override, adjustments) {
   const maximumLightness = 100;
   const lightnessMultiplier = 2 + 5 / 16;
   let lightnessAdjustment = 0;
 
   const maximumChroma = 131.207;
-  let chromaDivisor = 3;
+  let chromaDivisor;
   let chromaAdjustment = 0;
   let chromaStartAdjustment = 0;
   let chromaEndAdjustment = 0;
 
-  let hue = 0;
+  let hue;
 
   const lchOverride = override ? culori.lch(override) : null;
 
@@ -23,7 +23,7 @@ function generateScale(color, override, adjustments, lessChrome) {
       break;
     case "BLUE_GRAY":
       hue = 270 - 90 / 16;
-      chromaDivisor = 10 + 50 / 16;
+      chromaDivisor = 13.125;
 
       if (!lchOverride) {
         chromaEndAdjustment = -10;
@@ -31,15 +31,19 @@ function generateScale(color, override, adjustments, lessChrome) {
       break;
     case "BLUE":
       hue = 270 - 90 / 16;
-
-      if (lessChrome) {
-        chromaDivisor = 5;
-      } else {
-        chromaDivisor = 3.5;
-      }
+      chromaDivisor = 3.5;
+      break;
+    case "BLUE_LESS_CHROMA":
+      hue = 270 - 90 / 16;
+      chromaDivisor = 5;
+      break;
+    case "BLUE_MORE_CHROMA":
+      hue = 270 + 90 / 16;
+      chromaDivisor = 2;
       break;
     case "PURPLE":
       hue = 315;
+      chromaDivisor = 3;
       break;
     case "GREEN":
       hue = 180;
@@ -97,7 +101,7 @@ function generateColorPalette(configuration) {
     }
   }
 
-  const colorPalette = {
+  return {
     blueGray: handleVariant(
       generateScale(
         "BLUE_GRAY",
@@ -110,10 +114,16 @@ function generateColorPalette(configuration) {
     ),
     blueLessChroma: handleVariant(
       generateScale(
-        "BLUE",
-        overrides.blue,
-        configuration.colors.adjustments,
-        true
+        "BLUE_LESS_CHROMA",
+        overrides.blueLessChroma,
+        configuration.colors.adjustments
+      )
+    ),
+    blueMoreChroma: handleVariant(
+      generateScale(
+        "BLUE_MORE_CHROMA",
+        overrides.blueMoreChroma,
+        configuration.colors.adjustments
       )
     ),
     purple: handleVariant(
@@ -136,11 +146,6 @@ function generateColorPalette(configuration) {
     red: handleVariant(
       generateScale("RED", overrides.red, configuration.colors.adjustments)
     )
-  };
-
-  return {
-    ...colorPalette,
-    accent: colorPalette[configuration.colors.accent]
   };
 }
 

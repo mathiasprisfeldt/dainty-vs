@@ -1,9 +1,8 @@
 {
   "colors": {
-    "accent": "purple",
     "overrides": {
       "blue": "#ab47bc",
-      "purple": "#84ffff",
+      "blueLessChroma": "#84ffff",
       "green": "#b9f6ca",
       "orange": "#42a5f5"
     }

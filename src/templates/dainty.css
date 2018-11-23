@@ -114,13 +114,13 @@ h3 {
 }
 
 a {
-  color: "ACCENT_36";
+  color: "BLUE_MORE_CHROMA_28";
   text-decoration: none;
   cursor: pointer;
 }
 
 a:hover {
-  color: "ACCENT_39";
+  color: "BLUE_MORE_CHROMA_32";
 }
 
 main {
@@ -259,7 +259,7 @@ ul.nav li a {
 }
 
 ul.nav li.active a {
-  color: "ACCENT_36";
+  color: "BLUE_MORE_CHROMA_28";
 }
 
 ul.nav li:not(.active) a {
@@ -267,7 +267,7 @@ ul.nav li:not(.active) a {
 }
 
 ul.nav li:not(.active) a:hover {
-  color: "ACCENT_39";
+  color: "BLUE_MORE_CHROMA_32";
 }
 
 .button-group {
@@ -320,7 +320,7 @@ button {
 
 button.primary {
   border: 0.5px solid "BLUE_GRAY_12";
-  color: "ACCENT_34";
+  color: "BLUE_MORE_CHROMA_28";
 }
 
 button:not(.primary) {
@@ -335,7 +335,7 @@ button:focus {
 
 button.primary:hover {
   border-color: "BLUE_GRAY_20";
-  color: "ACCENT_39";
+  color: "BLUE_MORE_CHROMA_32";
   background-color: "BLUE_GRAY_1";
 }
 
@@ -518,7 +518,7 @@ div[class^="ckbx-style-"] input[type="checkbox"] {
 }
 
 .ckbx-style-8 input[type="checkbox"]:checked + label:before {
-  background: "ACCENT_20";
+  background: "BLUE_MORE_CHROMA_20";
 }
 
 .ckbx-style-8 input[type="checkbox"]:checked + label:after {
@@ -530,5 +530,5 @@ div[class^="ckbx-style-"] input[type="checkbox"] {
 }
 
 .ckbx-style-8 input[type="checkbox"]:checked:hover + label:before {
-  background-color: "ACCENT_24";
+  background-color: "BLUE_MORE_CHROMA_24";
 }

@@ -6,7 +6,6 @@
       "chromaStart": -3,
       "chromaEnd": -10
     },
-    "accent": "blue",
     "overrides": {
       "blueGray": "#515C6B",
       "blue": "#0078d7",

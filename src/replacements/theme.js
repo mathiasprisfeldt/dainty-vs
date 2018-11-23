@@ -9,17 +9,32 @@ const {
 function getCategoryReplacements(configuration, colors) {
   const { editor } = configuration;
   const dark = configuration.variant === "dark";
-  const { blueGray, orange, accent } = colors;
+  const { blue, blueLessChroma, blueMoreChroma, blueGray, orange } = colors;
 
   function edfc(index) {
     return checkScaleRange(index + editor.foregroundContrast);
   }
 
   const replacements = {
+    Environment: {
+      MainWindowActiveIconDefault: [blue[24], null],
+      MainWindowActiveIconBuilding: [blue[24], null],
+      MainWindowActiveIconDebugging: [blue[24], null],
+      MainWindowActiveIconNoSolution: [blue[24], null],
+      RaftedWindowActiveIconDefault: [blue[24], null],
+      RaftedWindowActiveIconBuilding: [blue[24], null],
+      RaftedWindowActiveIconDebugging: [blue[24], null],
+      RaftedWindowActiveIconNoSolution: [blue[24], null],
+      RaftedWindowInactiveIconDefault: [blue[24], null],
+      RaftedWindowInactiveIconBuilding: [blue[24], null],
+      RaftedWindowInactiveIconDebugging: [blue[24], null],
+      StartPageTextControlLinkSelected: [blueLessChroma[34], null],
+      StartPageTextControlLinkSelectedHover: [blueLessChroma[36], null]
+    },
     "ColorizedSignatureHelp colors": {
       "HTML Attribute Value": [null, dark ? orange[33] : orange[18]],
       punctuation: [null, blueGray[edfc(26)]],
-      urlformat: [null, dark ? accent[34] : accent[16]]
+      urlformat: [null, dark ? blueMoreChroma[28] : blueMoreChroma[16]]
     },
     "Text Editor Text Marker Items": {
       "Current Statement": ["#eff284", null] // Revert
@@ -36,13 +51,13 @@ function getCategoryReplacements(configuration, colors) {
 function getSearchReplaceReplacements(configuration, colors) {
   const { environment, editor } = configuration;
   const {
-    blueGray,
     blue,
-    orange,
-    purple,
+    blueGray,
+    blueLessChroma,
+    blueMoreChroma,
     green,
-    accent,
-    blueLessChroma
+    orange,
+    purple
   } = colors;
   const dark = configuration.variant === "dark";
 
@@ -194,13 +209,13 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#fefcc8", orange[39]],
 
     // Start page arrow
-    ["#4f4f53", accent[24]],
+    ["#4f4f53", blueMoreChroma[16]],
 
     // Start page arrow hover
-    ["#606060", accent[28]],
+    ["#606060", blueMoreChroma[20]],
 
     // Notification badge
-    ["#8631c7", blue[8]],
+    ["#8631c7", blueMoreChroma[8]],
 
     // `100%` box arrow hover
     ["#1f1f20", blueGray[envbc(16)]],
@@ -224,7 +239,7 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#0079ce", blue[20]],
 
     // Team Explorer `Changes` red indicator
-    ["#f05033", dark ? accent[34] : accent[16]],
+    ["#f05033", dark ? blue[34] : blue[16]],
 
     // Diagnostic Tools tab hover
     ["#555555", blueGray[envbc(4)]],
@@ -237,10 +252,10 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#dadada", blueGray[edfc(32)]],
 
     // Start page `NEW`
-    ["#ff8c00", dark ? accent[34] : accent[16]],
+    ["#ff8c00", dark ? green[32] : green[16]],
 
     // Preview Selected Items border
-    ["#3399ff", accent[28]],
+    ["#3399ff", blue[28]],
 
     // `using`, `public class`
     ["#569cd6", blue[26]],
@@ -267,7 +282,7 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#dcdcdc", blueGray[edfc(34)]],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
-    ["#ffffff", dark ? accent[34] : accent[8]],
+    ["#ffffff", dark ? blue[30] : blue[8]],
 
     // Close and pin icons on active tab
     ["#d0e6f5", blueGray[envfc(32)]],
@@ -313,10 +328,10 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#b5cea8", dark ? green[36] : green[16]],
 
     // `IWebHostBuilder`
-    ["#b8d7a3", dark ? blueLessChroma[34] : purple[20]],
+    ["#b8d7a3", dark ? purple[30] : purple[20]],
 
     // Less variable
-    ["#c563bd", dark ? blueLessChroma[34] : purple[20]],
+    ["#c563bd", dark ? purple[30] : purple[20]],
 
     // Strings
     ["#d69d85", dark ? orange[33] : orange[18]],

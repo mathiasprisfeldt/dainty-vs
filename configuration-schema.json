@@ -154,13 +154,6 @@
             }
           }
         },
-        "accent": {
-          "$id": "#/properties/colors/properties/accent",
-          "type": "string",
-          "enum": ["blue", "purple", "orange", "green"],
-          "title": "Active file tab, file tab border, and status bar background",
-          "default": "green"
-        },
         "overrides": {
           "$id": "#/properties/colors/properties/overrides",
           "type": "object",
@@ -178,6 +171,18 @@
               "$id": "#/properties/colors/properties/overrides/properties/blue",
               "type": "string",
               "title": "Base color for scale of blues",
+              "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+            },
+            "blueLessChroma": {
+              "$id": "#/properties/colors/properties/overrides/properties/blueLessChroma",
+              "type": "string",
+              "title": "Base color for scale of blues with less chroma",
+              "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+            },
+            "blueMoreChroma": {
+              "$id": "#/properties/colors/properties/overrides/properties/blueMoreChroma",
+              "type": "string",
+              "title": "Base color for scale of blues with more chroma",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
             },
             "purple": {

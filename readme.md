@@ -18,9 +18,8 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 - Transparent scrollbar containers can be set
 - Transparent tool window grip handles can be set
 - Settings for Indent Guides extension can be included
-- Colors can be brightened or desaturated
 - Colors can be lightened, darkened, or desaturated
-- Colors can be overridden, and accent color can be set
+- Colors can be overridden
 - Usages of colors can be overridden
 
 ## Setup

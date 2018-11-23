@@ -3,13 +3,12 @@
     "adjustments": {
       "chromaEnd": -10
     },
-    "accent": "purple",
     "overrides": {
       "blueGray": "#011627",
       "blue": "#82aaff",
       "green": "#f78c6c", // Deep orange
       "orange": "#ecc48d",
-      "purple": "#addb67" // Green
+      "blueLessChroma": "#addb67" // Green
     }
   },
   "replacements": {

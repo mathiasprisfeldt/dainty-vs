@@ -16,10 +16,6 @@ async function transformColorsPage(colors) {
   let html = [];
 
   for (color of Object.keys(colors)) {
-    if (color === "accent") {
-      continue;
-    }
-
     html.push(`
       <section>
         <h2>${color}</h2>
