@@ -12,9 +12,9 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 
 - Precise and pleasant colors are generated and selected within the CIELAB color space
 - Punctuation marks are slightly dimmed
-- The left side of the editor is less busy than in the default themes
-- Contrast for environment background can be added
-- Contrast for environment and editor text can be added
+- Left side of the editor is less busy than in the default themes
+- Lightness of environment background and foreground can be adjusted
+- Lightness of editor background and foreground can be adjusted
 - Contrast for comments can be added
 - Contrast for scrollbars can be added
 - Transparent environment borders can be set
