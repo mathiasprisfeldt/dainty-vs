@@ -6,11 +6,11 @@ function getFontsAndColorsReplacements(configuration, colors) {
   const dark = configuration.variant === "dark";
 
   function edbc(index) {
-    return checkScaleRange(index - editor.backgroundContrast);
+    return checkScaleRange(index - editor.backgroundLightness);
   }
 
   function edfc(index) {
-    return checkScaleRange(index + editor.foregroundContrast);
+    return checkScaleRange(index + editor.foregroundLightness);
   }
 
   function r(str) {

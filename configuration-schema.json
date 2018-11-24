@@ -25,17 +25,17 @@
           "title": "Editor, console, and output windows font",
           "default": "Consolas"
         },
-        "backgroundContrast": {
-          "$id": "#/properties/editor/properties/foregroundContrast",
+        "backgroundLightness": {
+          "$id": "#/properties/editor/properties/backgroundLightness",
           "type": "integer",
-          "title": "Contrast for editor background",
+          "title": "Editor background lightness",
           "default": 0,
           "maximum": 0
         },
-        "foregroundContrast": {
-          "$id": "#/properties/editor/properties/foregroundContrast",
+        "foregroundLightness": {
+          "$id": "#/properties/editor/properties/foregroundLightness",
           "type": "integer",
-          "title": "Contrast for editor foreground",
+          "title": "Editor foreground lightness",
           "default": 0
         }
       }
@@ -47,17 +47,17 @@
       "default": {},
       "additionalProperties": false,
       "properties": {
-        "backgroundContrast": {
-          "$id": "#/properties/environment/properties/backgroundContrast",
+        "backgroundLightness": {
+          "$id": "#/properties/environment/properties/backgroundLightness",
           "type": "integer",
-          "title": "Contrast for environment background",
+          "title": "Environment background lightness",
           "default": 0,
           "maximum": 1
         },
-        "foregroundContrast": {
-          "$id": "#/properties/environment/properties/foregroundContrast",
+        "foregroundLightness": {
+          "$id": "#/properties/environment/properties/foregroundLightness",
           "type": "integer",
-          "title": "Contrast for environment foreground",
+          "title": "Environment foreground lightness",
           "default": 0
         },
         "additionalCommentsContrast": {

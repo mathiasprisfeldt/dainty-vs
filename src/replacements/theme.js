@@ -12,7 +12,7 @@ function getCategoryReplacements(configuration, colors) {
   const { blue, blueLessChroma, blueMoreChroma, blueGray, orange } = colors;
 
   function edfc(index) {
-    return checkScaleRange(index + editor.foregroundContrast);
+    return checkScaleRange(index + editor.foregroundLightness);
   }
 
   const replacements = {
@@ -62,19 +62,19 @@ function getSearchReplaceReplacements(configuration, colors) {
   const dark = configuration.variant === "dark";
 
   function envbc(index) {
-    return checkScaleRange(index - environment.backgroundContrast);
+    return checkScaleRange(index - environment.backgroundLightness);
   }
 
   function envfc(index) {
-    return checkScaleRange(index + environment.foregroundContrast);
+    return checkScaleRange(index + environment.foregroundLightness);
   }
 
   function edbc(index) {
-    return checkScaleRange(index - editor.backgroundContrast);
+    return checkScaleRange(index - editor.backgroundLightness);
   }
 
   function edfc(index) {
-    return checkScaleRange(index + editor.foregroundContrast);
+    return checkScaleRange(index + editor.foregroundLightness);
   }
 
   const replacements = [

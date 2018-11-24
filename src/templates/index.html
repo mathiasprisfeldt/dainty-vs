@@ -394,8 +394,8 @@
               <div class="form-group">
                 <label>Additional contrast for environment background </label>
                 <div class="ckbx-style-8">
-                  <input type="checkbox" id="environment_additionalBackgroundContrast">
-                  <label for="environment_additionalBackgroundContrast"></label>
+                  <input type="checkbox" id="environment_additionalbackgroundLightness">
+                  <label for="environment_additionalbackgroundLightness"></label>
                 </div>
               </div>
               <div class="form-group">
@@ -652,8 +652,8 @@
           fontFamily: $("#editor_fontFamily").value
         },
         environment: {
-          backgroundContrast: $("#environment_additionalBackgroundContrast").checked ? -2 : 0,
-          foregroundContrast: $("#environment_additionalTextContrast").checked ? 2 : 0,
+          backgroundLightness: $("#environment_additionalbackgroundLightness").checked ? -2 : 0,
+          foregroundLightness: $("#environment_additionalTextContrast").checked ? 2 : 0,
           additionalScrollbarsContrast: $("#environment_additionalScrollbarsContrast").checked,
           additionalCommentsContrast: $("#environment_additionalCommentsContrast").checked,
           transparentBorders: false,

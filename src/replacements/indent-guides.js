@@ -6,7 +6,7 @@ function getIndentGuidesReplacements(configuration, colors) {
   const dark = configuration.variant === "dark";
 
   function edbc(index) {
-    return checkScaleRange(index - editor.backgroundContrast);
+    return checkScaleRange(index - editor.backgroundLightness);
   }
 
   return [
