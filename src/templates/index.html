@@ -392,17 +392,17 @@
                 </div>
               </div>
               <div class="form-group">
-                <label>Additional contrast for environment background </label>
+                <label>Additional environment background lightness </label>
                 <div class="ckbx-style-8">
-                  <input type="checkbox" id="environment_additionalbackgroundLightness">
-                  <label for="environment_additionalbackgroundLightness"></label>
+                  <input type="checkbox" id="environment_additionalBackgroundLightness">
+                  <label for="environment_additionalBackgroundLightness"></label>
                 </div>
               </div>
               <div class="form-group">
-                <label>Additional contrast for environment text</label>
+                <label>Additional environment foreground lightness</label>
                 <div class="ckbx-style-8">
-                  <input type="checkbox" id="environment_additionalTextContrast">
-                  <label for="environment_additionalTextContrast"></label>
+                  <input type="checkbox" id="environment_additionalForegroundLightness">
+                  <label for="environment_additionalForegroundLightness"></label>
                 </div>
               </div>
               <div class="form-group">
@@ -652,8 +652,8 @@
           fontFamily: $("#editor_fontFamily").value
         },
         environment: {
-          backgroundLightness: $("#environment_additionalbackgroundLightness").checked ? -2 : 0,
-          foregroundLightness: $("#environment_additionalTextContrast").checked ? 2 : 0,
+          backgroundLightness: $("#environment_additionalBackgroundLightness").checked ? 2 : 0,
+          foregroundLightness: $("#environment_additionalForegroundLightness").checked ? 2 : 0,
           additionalScrollbarsContrast: $("#environment_additionalScrollbarsContrast").checked,
           additionalCommentsContrast: $("#environment_additionalCommentsContrast").checked,
           transparentBorders: false,
