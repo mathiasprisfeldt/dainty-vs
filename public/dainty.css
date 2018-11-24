@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #17202d;
-  color: #dddfe1;
+  background-color: #18202c;
+  color: #dedfe0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   line-height: 1.875;
@@ -56,7 +56,7 @@ h1,
 h2,
 h3,
 th {
-  color: #c3e1ff;
+  color: #cae0ff;
 }
 
 h1,
@@ -114,13 +114,13 @@ h3 {
 }
 
 a {
-  color: #79b8ff;
+  color: #83b8ff;
   text-decoration: none;
   cursor: pointer;
 }
 
 a:hover {
-  color: #96d1ff;
+  color: #9fd1ff;
 }
 
 main {
@@ -154,7 +154,7 @@ code {
   font-family: "Roboto Mono", SFMono-Regular, Consolas, Liberation Mono, Menlo,
     Courier, monospace;
   font-size: 0.875em;
-  color: #f8f9f9;
+  color: #f9f8f8;
 }
 
 a > code,
@@ -185,7 +185,7 @@ table {
 }
 
 tr {
-  border-bottom: 0.5px solid #4b525d;
+  border-bottom: 0.5px solid #4b515c;
 }
 
 th {
@@ -231,7 +231,7 @@ ul:not(.nav) > li:before {
   content: "–";
   width: 18px;
   margin-left: -18px;
-  color: #6d727c;
+  color: #6e727b;
 }
 
 ul ul {
@@ -259,15 +259,15 @@ ul.nav li a {
 }
 
 ul.nav li.active a {
-  color: #79b8ff;
+  color: #83b8ff;
 }
 
 ul.nav li:not(.active) a {
-  color: #dddfe1;
+  color: #dedfe0;
 }
 
 ul.nav li:not(.active) a:hover {
-  color: #96d1ff;
+  color: #9fd1ff;
 }
 
 .button-group {
@@ -319,12 +319,12 @@ button {
 }
 
 button.primary {
-  color: #ffffff;
-  background-color: #00477d;
+  color: #fffffe;
+  background-color: #144673;
 }
 
 button:not(.primary) {
-  color: #79b8ff;
+  color: #83b8ff;
   font-size: 0.875em;
 }
 
@@ -333,11 +333,11 @@ button:focus {
 }
 
 button.primary:hover {
-  background-color: #095189;
+  background-color: #24517f;
 }
 
 button:not(.primary):hover {
-  background-color: #212936;
+  background-color: #212935;
 }
 
 button:active {
@@ -366,7 +366,7 @@ button:active {
 
 .form-group {
   display: flex;
-  border-bottom: 0.5px solid #4b525d;
+  border-bottom: 0.5px solid #4b515c;
   padding-bottom: 16px;
   margin-bottom: 16px;
   padding-left: 16px;
@@ -374,7 +374,7 @@ button:active {
 }
 
 .form-group:first-child {
-  border-top: 0.5px solid #4b525d;
+  border-top: 0.5px solid #4b515c;
   padding-top: 16px;
 }
 
@@ -392,22 +392,22 @@ button:active {
   border: 0;
   padding: 8px 12px;
   position: absolute;
-  background-color: #212936;
-  color: #dddfe1;
+  background-color: #212935;
+  color: #dedfe0;
   transition: background-color 0.25s ease;
 }
 
 .form-group > .input-container > input[type="text"]:hover,
 .form-group > .input-container > select:hover {
-  background-color: #2b333f;
-  color: #e4e5e7;
+  background-color: #2c333e;
+  color: #e5e5e6;
 }
 
 .form-group > .input-container > input[type="text"]:focus,
 .form-group > .input-container > select:focus {
   outline: none;
-  background-color: #353d49;
-  color: #ebeced;
+  background-color: #363d48;
+  color: #ebecec;
 }
 
 .form-group > .input-container > input[type="text"] {
@@ -442,7 +442,7 @@ button:active {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 1024px;
-  background-color: #17202d;
+  background-color: #18202c;
   overflow: auto;
   padding: 24px 32px 32px 32px;
   box-shadow: 1px 3px 25px rgba(0, 0, 0, 0.25);
@@ -496,7 +496,7 @@ div[class^="ckbx-style-"] input[type="checkbox"] {
   height: 1em;
   left: 0.1em;
   transition: background-color 0.25s ease;
-  background-color: #212936;
+  background-color: #212935;
   border-radius: 50px;
 }
 
@@ -508,12 +508,12 @@ div[class^="ckbx-style-"] input[type="checkbox"] {
   border-radius: 50px;
   left: 0;
   transition: all 0.25s;
-  background-color: #dddfe1;
+  background-color: #dedfe0;
   z-index: 3;
 }
 
 .ckbx-style-8 input[type="checkbox"]:checked + label:before {
-  background: #3787f9;
+  background: #4887ef;
 }
 
 .ckbx-style-8 input[type="checkbox"]:checked + label:after {
@@ -521,9 +521,9 @@ div[class^="ckbx-style-"] input[type="checkbox"] {
 }
 
 .ckbx-style-8 input[type="checkbox"]:hover + label:before {
-  background-color: #353d49;
+  background-color: #363d48;
 }
 
 .ckbx-style-8 input[type="checkbox"]:checked:hover + label:before {
-  background-color: #5a9fff;
+  background-color: #679fff;
 }

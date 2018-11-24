@@ -16,6 +16,10 @@ function generateScale(color, override, adjustments) {
 
   const lchOverride = override ? culori.lch(override) : null;
 
+  if (!lchOverride) {
+    chromaAdjustment = -2;
+  }
+
   switch (color) {
     case "RED":
       hue = 90 / 4;
@@ -80,7 +84,7 @@ function generateScale(color, override, adjustments) {
         (lightnessAdjustment / 40) * (39 - i),
       c:
         (lchOverride ? lchOverride.c : maximumChroma / chromaDivisor) +
-        chromaAdjustment +
+        (color === "BLUE_GRAY" ? chromaAdjustment / 3 : chromaAdjustment * 3) +
         (chromaStartAdjustment / 40) * (39 - i) +
         (chromaEndAdjustment / 40) * i
     });
