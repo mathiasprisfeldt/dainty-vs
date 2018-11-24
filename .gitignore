@@ -1,9 +1,10 @@
 .vs
+configuration.json
 dist
 node_modules
-public/index.html
 public/colors.html
 public/coverage.html
 public/dainty-css.html
+public/dainty.css
+public/index.html
 public/syntax.html
-configuration.json
