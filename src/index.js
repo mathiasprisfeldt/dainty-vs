@@ -36,7 +36,7 @@ const {
   trackColorsCount(false);
 
   await Promise.all([
-    buildIndexPage(colors, getColorsCountByScale()),
+    buildIndexPage(colors, getColorsCountByScale(c => c.count > 4)),
     buildSyntaxPage(colors),
     buildColorsPage(colors)
   ]);
