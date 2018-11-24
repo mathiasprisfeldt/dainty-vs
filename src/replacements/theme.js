@@ -17,17 +17,17 @@ function getCategoryReplacements(configuration, colors) {
 
   const replacements = {
     Environment: {
-      MainWindowActiveIconDefault: [blueLessChroma[24], null],
-      MainWindowActiveIconBuilding: [blueLessChroma[24], null],
-      MainWindowActiveIconDebugging: [blueLessChroma[24], null],
-      MainWindowActiveIconNoSolution: [blueLessChroma[24], null],
-      RaftedWindowActiveIconDefault: [blueLessChroma[24], null],
-      RaftedWindowActiveIconBuilding: [blueLessChroma[24], null],
-      RaftedWindowActiveIconDebugging: [blueLessChroma[24], null],
-      RaftedWindowActiveIconNoSolution: [blueLessChroma[24], null],
-      RaftedWindowInactiveIconDefault: [blueLessChroma[24], null],
-      RaftedWindowInactiveIconBuilding: [blueLessChroma[24], null],
-      RaftedWindowInactiveIconDebugging: [blueLessChroma[24], null],
+      MainWindowActiveIconDefault: [blue[24], null],
+      MainWindowActiveIconBuilding: [blue[24], null],
+      MainWindowActiveIconDebugging: [blue[24], null],
+      MainWindowActiveIconNoSolution: [blue[24], null],
+      RaftedWindowActiveIconDefault: [blue[24], null],
+      RaftedWindowActiveIconBuilding: [blue[24], null],
+      RaftedWindowActiveIconDebugging: [blue[24], null],
+      RaftedWindowActiveIconNoSolution: [blue[24], null],
+      RaftedWindowInactiveIconDefault: [blue[24], null],
+      RaftedWindowInactiveIconBuilding: [blue[24], null],
+      RaftedWindowInactiveIconDebugging: [blue[24], null],
       StartPageTextControlLinkSelected: [blue[34], null],
       StartPageTextControlLinkSelectedHover: [blueLessChroma[36], null]
     },
@@ -282,7 +282,7 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#dcdcdc", blueGray[edfc(34)]],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
-    ["#ffffff", dark ? blueLessChroma[30] : blue[8]],
+    ["#ffffff", dark ? blue[30] : blue[8]],
 
     // Close and pin icons on active tab
     ["#d0e6f5", blueGray[envfc(32)]],
