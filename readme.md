@@ -6,7 +6,7 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 
 ## Screenshot
 
-![image](public/screenshot-dainty.png)
+![image](public/screenshot-dainty-github.png)
 
 ## Features
 
