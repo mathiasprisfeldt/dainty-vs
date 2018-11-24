@@ -56,9 +56,9 @@ async function createDistDirectory() {
   }
 }
 
-async function buildIndexPage(colors) {
+async function buildIndexPage(colors, colorsCountByScale) {
   const target = path.join(__dirname, "../public/index.html");
-  const data = await transformIndexPage(colors);
+  const data = await transformIndexPage(colors, colorsCountByScale);
 
   writeFileLog(
     target,

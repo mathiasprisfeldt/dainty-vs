@@ -8,7 +8,11 @@ const {
   buildSyntaxPage,
   buildDaintyCss
 } = require("./build");
-const { generateColorPalette } = require("./colors");
+const {
+  generateColorPalette,
+  getColorsCountByScale,
+  trackColorsCount
+} = require("./colors");
 
 (async () => {
   let filename;
@@ -31,9 +35,12 @@ const { generateColorPalette } = require("./colors");
 
   const colors = generateColorPalette(configuration);
 
+  trackColorsCount(true);
+  await buildThemeFiles(configuration, colors);
+  trackColorsCount(false);
+
   await Promise.all([
-    buildThemeFiles(configuration, colors),
-    buildIndexPage(colors),
+    buildIndexPage(colors, getColorsCountByScale()),
     buildSyntaxPage(colors),
     buildColorsPage(colors),
     buildDaintyCssPage(colors),

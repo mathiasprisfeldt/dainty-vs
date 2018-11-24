@@ -1,5 +1,9 @@
 const culori = require("culori");
 const changeCase = require("change-case");
+const { groupBy } = require("./utils");
+
+let colorsCount = [];
+let isTrackingColorsCount = false;
 
 function generateScale(color, override, adjustments) {
   const maximumLightness = 100;
@@ -90,7 +94,41 @@ function generateScale(color, override, adjustments) {
     });
   }
 
-  return scale.map(culori.formatter("hex"));
+  const handler = {
+    get: (target, propertyKey, reciever) => {
+      if (isTrackingColorsCount) {
+        if (propertyKey !== "length" && propertyKey !== "entries") {
+          const key = `${color}_${propertyKey}`;
+          const el = colorsCount.find(c => c.color === key);
+          if (!el) {
+            colorsCount.push({ scale: color, color: key, count: 1 });
+          } else {
+            el.count = el.count + 1;
+          }
+        }
+      }
+
+      return Reflect.get(target, propertyKey, reciever);
+    }
+  };
+
+  return new Proxy(scale.map(culori.formatter("hex")), handler);
+}
+
+function trackColorsCount(isTracking) {
+  isTrackingColorsCount = isTracking;
+}
+
+function getColorsCountByScale() {
+  return groupBy(
+    colorsCount
+      .sort((a, b) => a.color.localeCompare(b.color, "en", { numeric: true }))
+      .map(c => {
+        return { ...c, count: c.count - 4 };
+      })
+      .filter(c => c.count > 0),
+    "scale"
+  );
 }
 
 function generateColorPalette(configuration) {
@@ -106,7 +144,7 @@ function generateColorPalette(configuration) {
     }
   }
 
-  return {
+  const colors = {
     blueGray: handleVariant(
       generateScale(
         "BLUE_GRAY",
@@ -152,6 +190,8 @@ function generateColorPalette(configuration) {
       generateScale("RED", overrides.red, configuration.colors.adjustments)
     )
   };
+
+  return colors;
 }
 
 function isHexColor(colorHex) {
@@ -222,6 +262,19 @@ function generateColorConstantReplacements(colors, quotedKeys = true) {
   return replacements;
 }
 
+function getScaleName(constantName) {
+  switch (constantName) {
+    case "BLUE_GRAY":
+      return "Blue-gray";
+    case "BLUE_LESS_CHROMA":
+      return "Blue (less chroma)";
+    case "BLUE_MORE_CHROMA":
+      return "Blue (more chroma)";
+    default:
+      return changeCase.titleCase(constantName);
+  }
+}
+
 function applyColorConstantReplacement(
   color,
   colorReplacements,
@@ -254,6 +307,9 @@ function checkScaleRange(index) {
 
 module.exports = {
   generateColorPalette,
+  getColorsCountByScale,
+  trackColorsCount,
+  getScaleName,
   generateColorConstantReplacements,
   applyColorConstantReplacement,
   isHexColor,

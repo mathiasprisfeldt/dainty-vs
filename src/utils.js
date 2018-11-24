@@ -40,9 +40,20 @@ function applyReplacements(
   return replaceOnce(content, find, replace, "g");
 }
 
+function groupBy(items, key) {
+  return items.reduce(
+    (result, item) => ({
+      ...result,
+      [item[key]]: [...(result[item[key]] || []), item]
+    }),
+    {}
+  );
+}
+
 module.exports = {
   cloneDeep,
   writeFileLog,
   applyReplacements,
-  zip
+  zip,
+  groupBy
 };

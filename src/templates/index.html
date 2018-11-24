@@ -152,8 +152,40 @@
       font-size: 14px;
     }
 
+    .color-palette {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -32px;
+      margin-right: -32px;
+      margin-top: 24px;
+      margin-bottom: -32px;
+    }
+
+    .scale {
+      padding-left: 32px;
+      padding-right: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 1023.98px) {
+      .scale {
+        flex: 0 0 50%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .scale {
+        flex: 0 0 25%;
+      }
+    }
+
     .swatch-group {
-      margin-bottom: 16px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .swatch-group:not(:last-child) {
+      margin-bottom: 32px;
     }
 
     .swatch {
@@ -164,215 +196,17 @@
     }
 
     @media (max-width: 1023.98px) {
-      .swatch {
-        margin-right: 8px;
+      .swatch:not(:last-child) {
+        margin-right: 16px;
+        margin-bottom: 16px;
       }
     }
 
     @media (min-width: 1024px) {
-      .swatch {
+      .swatch:not(:last-child) {
         margin-right: 16px;
+        margin-bottom: 16px;
       }
-    }
-
-    .swatch.blue-grays-0 {
-      background-color: "BLUE_GRAY_0"
-    }
-
-    .swatch.blue-grays-4 {
-      background-color: "BLUE_GRAY_4"
-    }
-
-    .swatch.blue-grays-8 {
-      background-color: "BLUE_GRAY_8"
-    }
-
-    .swatch.blue-grays-12 {
-      background-color: "BLUE_GRAY_12"
-    }
-
-    .swatch.blue-grays-16 {
-      background-color: "BLUE_GRAY_16"
-    }
-
-    .swatch.blue-grays-20 {
-      background-color: "BLUE_GRAY_20"
-    }
-
-    .swatch.blue-grays-24 {
-      background-color: "BLUE_GRAY_24"
-    }
-
-    .swatch.blue-grays-28 {
-      background-color: "BLUE_GRAY_28"
-    }
-
-    .swatch.blue-grays-32 {
-      background-color: "BLUE_GRAY_32"
-    }
-
-    .swatch.blue-grays-39 {
-      background-color: "BLUE_GRAY_39"
-    }
-
-    .swatch.blue-0 {
-      background-color: "BLUE_0"
-    }
-
-    .swatch.blue-4 {
-      background-color: "BLUE_4"
-    }
-
-    .swatch.blue-8 {
-      background-color: "BLUE_8"
-    }
-
-    .swatch.blue-12 {
-      background-color: "BLUE_12"
-    }
-
-    .swatch.blue-16 {
-      background-color: "BLUE_16"
-    }
-
-    .swatch.blue-20 {
-      background-color: "BLUE_20"
-    }
-
-    .swatch.blue-24 {
-      background-color: "BLUE_24"
-    }
-
-    .swatch.blue-28 {
-      background-color: "BLUE_28"
-    }
-
-    .swatch.blue-32 {
-      background-color: "BLUE_32"
-    }
-
-    .swatch.blue-39 {
-      background-color: "BLUE_39"
-    }
-
-    .swatch.green-0 {
-      background-color: "GREEN_0"
-    }
-
-    .swatch.green-4 {
-      background-color: "GREEN_4"
-    }
-
-    .swatch.green-8 {
-      background-color: "GREEN_8"
-    }
-
-    .swatch.green-12 {
-      background-color: "GREEN_12"
-    }
-
-    .swatch.green-16 {
-      background-color: "GREEN_16"
-    }
-
-    .swatch.green-20 {
-      background-color: "GREEN_20"
-    }
-
-    .swatch.green-24 {
-      background-color: "GREEN_24"
-    }
-
-    .swatch.green-28 {
-      background-color: "GREEN_28"
-    }
-
-    .swatch.green-32 {
-      background-color: "GREEN_32"
-    }
-
-    .swatch.green-39 {
-      background-color: "GREEN_39"
-    }
-
-    .swatch.purple-0 {
-      background-color: "PURPLE_0"
-    }
-
-    .swatch.purple-4 {
-      background-color: "PURPLE_4"
-    }
-
-    .swatch.purple-8 {
-      background-color: "PURPLE_8"
-    }
-
-    .swatch.purple-12 {
-      background-color: "PURPLE_12"
-    }
-
-    .swatch.purple-16 {
-      background-color: "PURPLE_16"
-    }
-
-    .swatch.purple-20 {
-      background-color: "PURPLE_20"
-    }
-
-    .swatch.purple-24 {
-      background-color: "PURPLE_24"
-    }
-
-    .swatch.purple-28 {
-      background-color: "PURPLE_28"
-    }
-
-    .swatch.purple-32 {
-      background-color: "PURPLE_32"
-    }
-
-    .swatch.purple-39 {
-      background-color: "PURPLE_39"
-    }
-
-    .swatch.orange-0 {
-      background-color: "ORANGE_0"
-    }
-
-    .swatch.orange-4 {
-      background-color: "ORANGE_4"
-    }
-
-    .swatch.orange-8 {
-      background-color: "ORANGE_8"
-    }
-
-    .swatch.orange-12 {
-      background-color: "ORANGE_12"
-    }
-
-    .swatch.orange-16 {
-      background-color: "ORANGE_16"
-    }
-
-    .swatch.orange-20 {
-      background-color: "ORANGE_20"
-    }
-
-    .swatch.orange-24 {
-      background-color: "ORANGE_24"
-    }
-
-    .swatch.orange-28 {
-      background-color: "ORANGE_28"
-    }
-
-    .swatch.orange-32 {
-      background-color: "ORANGE_32"
-    }
-
-    .swatch.orange-39 {
-      background-color: "ORANGE_39"
     }
 
     /* https://github.com/tholman/github-corners */
@@ -727,91 +561,22 @@
     </section>
     <section>
       <h2>Color palette</h2>
-      <p>
-        The Dainty color palette consists of 40-indices scales based on hues of blue-gray, blue, purple, green, and orange. Blue is the primary color, and there are four scales based on blue with different amounts of saturation. For a complete listing, see the <a href="colors.html">colors</a> page.
-      </p>
-      <h3>Blue-grays</h3>
-      <div class="swatch-group">
-        <div class="swatch blue-grays-0"></div>
-        <div class="swatch blue-grays-4"></div>
-        <div class="swatch blue-grays-8"></div>
-        <div class="swatch blue-grays-12"></div>
-        <div class="swatch blue-grays-16"></div>
-        <div class="swatch blue-grays-20"></div>
-        <div class="swatch blue-grays-24"></div>
-        <div class="swatch blue-grays-28"></div>
-        <div class="swatch blue-grays-32"></div>
-        <div class="swatch blue-grays-39"></div>
-      </div>
-      <h3>Blues</h3>
-      <div class="swatch-group">
-        <div class="swatch blue-0"></div>
-        <div class="swatch blue-4"></div>
-        <div class="swatch blue-8"></div>
-        <div class="swatch blue-12"></div>
-        <div class="swatch blue-16"></div>
-        <div class="swatch blue-20"></div>
-        <div class="swatch blue-24"></div>
-        <div class="swatch blue-28"></div>
-        <div class="swatch blue-32"></div>
-        <div class="swatch blue-39"></div>
-      </div>
-      <h3>Purples</h3>
-      <div class="swatch-group">
-        <div class="swatch purple-0"></div>
-        <div class="swatch purple-4"></div>
-        <div class="swatch purple-8"></div>
-        <div class="swatch purple-12"></div>
-        <div class="swatch purple-16"></div>
-        <div class="swatch purple-20"></div>
-        <div class="swatch purple-24"></div>
-        <div class="swatch purple-28"></div>
-        <div class="swatch purple-32"></div>
-        <div class="swatch purple-39"></div>
-      </div>
-      <h3>Greens</h3>
-      <div class="swatch-group">
-        <div class="swatch green-0"></div>
-        <div class="swatch green-4"></div>
-        <div class="swatch green-8"></div>
-        <div class="swatch green-12"></div>
-        <div class="swatch green-16"></div>
-        <div class="swatch green-20"></div>
-        <div class="swatch green-24"></div>
-        <div class="swatch green-28"></div>
-        <div class="swatch green-32"></div>
-        <div class="swatch green-39"></div>
-      </div>
-      <h3>Oranges</h3>
-      <div class="swatch-group">
-        <div class="swatch orange-0"></div>
-        <div class="swatch orange-4"></div>
-        <div class="swatch orange-8"></div>
-        <div class="swatch orange-12"></div>
-        <div class="swatch orange-16"></div>
-        <div class="swatch orange-20"></div>
-        <div class="swatch orange-24"></div>
-        <div class="swatch orange-28"></div>
-        <div class="swatch orange-32"></div>
-        <div class="swatch orange-39"></div>
-      </div>
+      <!-- INSERT_COLORS -->
     </section>
     <section>
       <h2>Implementation</h2>
       <p>
-        The color theme is generated by doing transformations in a pipeline on the default color theme, Environment –
+        The theme is generated by doing transformations in a pipeline on the default color theme, Environment –
         Fonts and Colors settings, and settings for included extensions. Because the dynamics of Dainty is similar to
         that of the default themes, most colors can be changed using search–replace. In addition, specific colors can
         be set afterwards to get full control over the styling. See <a href="coverage.html">coverage</a> page for table of colors that are set.
       </p>
       <p>
-        The entire palette is generated and processed using <a href="https://github.com/Evercoder/culori">Culori</a>. The default colors are defined as LCh using math. Overrides expressed as RGB hex values are supported.
+        The palette palette is generated and processed using <a href="https://github.com/Evercoder/culori">Culori</a>. It is built by first generating 40-indices scales for each hue. Blue is the primary color, and there are four scales based on blue with different amounts of chroma. Then colors are selected within the scales, preferring indicies divisible by 4<sup>[1]</sup>. The default colors are defined as LCh using math. Overrides expressed as RGB hex colors are supported. See <a href="colors.html">color scales</a> page for listing of generated scales.</i>
       </p>
-      <p>
-        One of the surprises during development was learning how Visual Studio stores colors. Colors
-        exported/imported using <code>.vssettings</code> files are expressed in BGR. For a while it was <em>somewhat</em>
-        confusing why only the green color seemed to work properly!
-      </p>
+      <p class="small">
+          <i>1. The indices may be shifted by various lightness configuration options, except for <code>"lightness"</code> of <code>"colors"."adjustments"</code> which pre-processes colors before scales are built.
+        </p>  
     </section>
     <section>
       <h2>Credits</h2>
