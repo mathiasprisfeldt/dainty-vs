@@ -4,7 +4,5 @@ dist
 node_modules
 public/colors.html
 public/coverage.html
-public/dainty-css.html
-public/dainty.css
 public/index.html
 public/syntax.html

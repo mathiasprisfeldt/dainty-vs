@@ -2,11 +2,10 @@ const path = require("path");
 const util = require("util");
 const fs = require("fs");
 const convert = require("xml-js");
-const { applyReplacements } = require("../../utils");
-const {
-  toColorHex,
-  generateColorConstantReplacements
-} = require("../../colors");
+const { applyReplacements } = require("dainty-shared").utils;
+const { generateColorConstantReplacements } = require("dainty-shared").colors;
+const { toColorHex } = require("../../colors-vs");
+const { getDaintyCss } = require("dainty-shared").daintyCss;
 
 const readFile = util.promisify(fs.readFile);
 
@@ -17,13 +16,12 @@ async function transformCoveragePage(colors) {
     __dirname,
     "../../../dist/dainty.vstheme"
   );
-  const daintyCss = path.join(__dirname, "../../templates/dainty.css");
 
   console.log(`Transforming \`${source}\`…`);
 
   const sourceContent = (await readFile(source, "utf8")).replace(
     "/* INSERT_DAINTY_CSS */",
-    await readFile(daintyCss, "utf8")
+    await getDaintyCss()
   );
 
   function sortCategories(a, b) {

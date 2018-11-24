@@ -143,12 +143,12 @@
             "chromaStart": {
               "$id": "#/properties/colors/properties/adjustments/properties/chromaStart",
               "type": "integer",
-              "title": "Start of blue grays scale chroma adjustment"
+              "title": "Start of blue gray scale chroma adjustment"
             },
             "chromaEnd": {
               "$id": "#/properties/colors/properties/adjustments/properties/chromaEnd",
               "type": "integer",
-              "title": "End of blue grays scale chroma adjustment"
+              "title": "End of blue gray scale chroma adjustment"
             }
           }
         },
@@ -162,43 +162,43 @@
             "blueGray": {
               "$id": "#/properties/colors/properties/overrides/properties/blueGray",
               "type": "string",
-              "title": "Base color for scale of blue-grays",
+              "title": "Base color for blue-gray scale",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
             },
             "blue": {
               "$id": "#/properties/colors/properties/overrides/properties/blue",
               "type": "string",
-              "title": "Base color for scale of blues",
+              "title": "Base color for blue scale",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
             },
             "blueLessChroma": {
               "$id": "#/properties/colors/properties/overrides/properties/blueLessChroma",
               "type": "string",
-              "title": "Base color for scale of blues with less chroma",
+              "title": "Base color for blue with less chroma scale",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
             },
             "blueMoreChroma": {
               "$id": "#/properties/colors/properties/overrides/properties/blueMoreChroma",
               "type": "string",
-              "title": "Base color for scale of blues with more chroma",
+              "title": "Base color for blue with more chroma scale",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
             },
             "purple": {
               "$id": "#/properties/colors/properties/overrides/properties/purple",
               "type": "string",
-              "title": "Base color for scale of purples",
+              "title": "Base color for purple scale",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
             },
             "green": {
               "$id": "#/properties/colors/properties/overrides/properties/green",
               "type": "string",
-              "title": "Base color for scale of greens",
+              "title": "Base color for green scale",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
             },
             "orange": {
               "$id": "#/properties/colors/properties/overrides/properties/orange",
               "type": "string",
-              "title": "Base color for scale of oranges",
+              "title": "Base color for orange scale",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
             }
           }

@@ -1,24 +1,23 @@
 const path = require("path");
 const util = require("util");
 const fs = require("fs");
-const { applyReplacements } = require("../../utils");
+const { applyReplacements } = require("dainty-shared").utils;
 const {
   generateColorConstantReplacements,
-  getScaleName
-} = require("../../colors");
-const changeCase = require("change-case");
+  getColorScaleName
+} = require("dainty-shared").colors;
+const { getDaintyCss } = require("dainty-shared").daintyCss;
 
 const readFile = util.promisify(fs.readFile);
 
 async function transformIndexPage(colors, colorsCountByScale) {
   const source = path.join(__dirname, "../../templates/index.html");
-  const daintyCss = path.join(__dirname, "../../templates/dainty.css");
 
   console.log(`Transforming \`${source}\`…`);
 
   let content = (await readFile(source, "utf8")).replace(
     "/* INSERT_DAINTY_CSS */",
-    await readFile(daintyCss, "utf8")
+    await getDaintyCss()
   );
 
   let html = [`<div class="color-palette">`];
@@ -26,7 +25,7 @@ async function transformIndexPage(colors, colorsCountByScale) {
   for (scale of Object.keys(colorsCountByScale)) {
     html.push(
       `<div class="scale">
-        <h4>${getScaleName(scale)}</h4>
+        <h4>${getColorScaleName(scale)}</h4>
         <div class="swatch-group">`
     );
 

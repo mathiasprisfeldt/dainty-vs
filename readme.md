@@ -38,50 +38,9 @@ Run `npm run build` to generate the color theme files. This produces `dist/daint
 
 `configuration.json` is used for configuration, and the file is created with default values if it doesn’t exist. The format of `configuration.json` is defined by [`configuration-schema.json`](https://github.com/alexanderte/dainty-vs/blob/master/configuration-schema.json).
 
-## Light theme
+## Configuration
 
-Set `"variant"` to `"light"` to enable the light theme. The light theme is currently not as complete as the dark theme.
-
-## Adjustments
-
-These are adjustments that can be specified under `"colors"."adjustments"` in `configuration.json`:
-
-| Property        | Description                                                  |
-| --------------- | ------------------------------------------------------------ |
-| `"lightness"`   | Adjust lightness to make blue-grays either darker or lighter |
-| `"chroma"`      | Adjust chroma to make colors either more or less saturated   |
-| `"chromaStart"` | Adjust start of blue grays scale chroma                      |
-| `"chromaEnd"`   | Adjust start of blue grays scale chroma                      |
-
-There are currently no minimum or maximum values set. For the dark variant of Dainty somewhere between -5 to 5 should work.
-
-## Presets
-
-Presets are configuration files that you can use in addition to `configuration.json`. They are mostly used for turning Dainty into another color theme. Presets are located in the `presets` directory. You can build Dainty with the remix configuration displayed on the website by running:
-
-    npm run build -- -p dainty-remix
-
-If a property is set in both `configuration.json` and the preset configuration, then the one in `configuration.json` is used.
-
-## Advanced
-
-### Overriding colors
-
-Color scales can be overridden by adding the following object to `"colors"` in `configuration.json`:
-
-```json
-"overrides": {
-  "blueGray": "#11181b",
-  "blue": "#ab47bc",
-  "purple": "#42a5f5",
-  "green": "#84ffff",
-  "orange": "#82b1ff"
-}
-```
-
-With a provided base color a scale of 40 shades is built. The color will be converted to LCh and its hue and chroma (saturation) are used while the lightness is calculated. For the blue-grays scale the exact lightness is used for the darkest shade.
-
-Use `public/syntax.html` to quickly test new settings after running `npm run build`.
+Dainty can be configured by editing `configuration.json`. See [Configuration among applications](https://github.com/alexanderte/dainty-shared/blob/master/configuration-shared.md) for more details.
 
 ### Overriding usages of colors
 
@@ -111,9 +70,8 @@ Run `npm run start` to start Express server. These are the available routes:
 | Method | Route                           | Description                                                         |
 | ------ | ------------------------------- | ------------------------------------------------------------------- |
 | `GET`  | `/`                             | Landing page                                                        |
-| `GET`  | `/colors.html`                  | Colors page                                                         |
+| `GET`  | `/colors.html`                  | Color scales page                                                   |
 | `GET`  | `/coverage.html`                | Coverage page                                                       |
-| `GET`  | `/dainty-css.html`              | Dainty.css page                                                     |
 | `GET`  | `/syntax.html`                  | Syntax page                                                         |
 | `GET`  | `/dainty-latest.zip`            | Generates the latest version of Dainty with default configuration   |
 | `POST` | `/dainty-latest-configured.zip` | Generates the latest version of Dainty with custom configuration[1] |

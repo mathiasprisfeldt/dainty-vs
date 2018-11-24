@@ -1,6 +1,6 @@
 # Roadmap
 
-## 2018-11-20
+## 2018-11-20 (updated 2018-11-24)
 
 I use Visual Studio at work for C# development, some JavaScript, and Sass. Although Dainty for Visual Studio feels “good enough” for my use cases, there are some things that need to be improved before I would say that it’s complete. One example is hovering the small icons on the active tab. The background color is not the one I would choose if I had unlimited time to tweak things. Also, the different status bar colors should be supported in a better way.
 
@@ -14,14 +14,10 @@ These are things I would like to see in the future:
 - Better support tokens such as C# regions or XML CDATA _(high priority)_
 - Add support for ReShaper _(high priority)_
 - Add support for Visual Studio 2019 _(high priority)_
-- Add integration tests especially for downloading the ZIP files _(high priority)_
-- Add unit tests especially for the colors module _(high priority)_
-- Add support for converting VS Code themes _(high priority)_
-  - One of my ideas is to make the conversion of VS Code themes into VS themes complete enough so that Dainty for VS Code can be used for generating Dainty for VS.
+- Add integration tests, especially for downloading the ZIP files _(high priority)_
+- Add unit tests, especially for the colors module _(high priority)_
 - Make it possible to run an `npm` script to build the theme for making it available through the VS Marketplace _(high priority)_
 - Consider using something like ImageMagick to improve the screenshot workflow _(low priority)_
 - Consider rewriting pages in React to enable more interactive features (wait until hooks are out of alpha) _(low priority)_
-- Consider extracting color scale code into an `npm` package _(low priority)_
-- Consider turning Dainty.css into its own project _(low priority)_
 
 If you have anything you’d like to see, then feel free to open an issue at GitHub.

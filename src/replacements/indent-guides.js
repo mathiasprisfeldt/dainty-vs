@@ -1,12 +1,12 @@
-const { toRGBString, checkScaleRange } = require("../colors");
+const { checkColorScaleRange } = require("dainty-shared").colors;
+const { toRGBString } = require("../colors-vs");
 
 function getIndentGuidesReplacements(configuration, colors) {
   const { editor } = configuration;
   const { blueGray, purple } = colors;
-  const dark = configuration.variant === "dark";
 
   function edbl(index) {
-    return checkScaleRange(index + editor.backgroundLightness);
+    return checkColorScaleRange(index + editor.backgroundLightness);
   }
 
   return [

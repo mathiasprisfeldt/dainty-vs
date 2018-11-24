@@ -1,8 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const { getConfiguration } = require("./configuration");
-const { generateColorPalette } = require("./colors");
+const { getConfiguration } = require("dainty-shared").configuration;
+const { generateColorPalette } = require("dainty-shared").colors;
 const { buildThemeZip } = require("./build");
 const app = express();
 
@@ -10,16 +10,16 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/dainty-vs-latest.zip", async (_req, res) => {
-  const [_, configuration] = await getConfiguration({});
+  const configuration = await getConfiguration(__dirname);
   const colors = generateColorPalette(configuration);
   res.type("zip").end(await buildThemeZip(configuration, colors), "binary");
 });
 
 app.post("/dainty-vs-latest-configured.zip", async (req, res) => {
-  const [error, configuration] = await getConfiguration(req.body);
+  const configuration = await getConfiguration(__dirname, null, req.body);
 
-  if (error) {
-    res.status(422).send(error);
+  if (configuration === null) {
+    res.status(422).send(`Configuration is not valid.`);
     return;
   }
 

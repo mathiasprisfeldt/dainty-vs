@@ -1,4 +1,5 @@
-const { RGBToBGR, checkScaleRange } = require("../colors");
+const { checkColorScaleRange } = require("dainty-shared").colors;
+const { RGBToBGR } = require("../colors-vs");
 
 function getFontsAndColorsReplacements(configuration, colors) {
   const { editor } = configuration;
@@ -6,11 +7,11 @@ function getFontsAndColorsReplacements(configuration, colors) {
   const dark = configuration.variant === "dark";
 
   function edbl(index) {
-    return checkScaleRange(index + editor.backgroundLightness);
+    return checkColorScaleRange(index + editor.backgroundLightness);
   }
 
   function edfl(index) {
-    return checkScaleRange(index + editor.foregroundLightness);
+    return checkColorScaleRange(index + editor.foregroundLightness);
   }
 
   function r(str) {

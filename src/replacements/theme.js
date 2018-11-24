@@ -1,10 +1,10 @@
-const { cloneDeep } = require("../utils");
+const { cloneDeep } = require("dainty-shared").utils;
 const {
   generateColorConstantReplacements,
   applyColorConstantReplacement,
   isHexColor,
-  checkScaleRange
-} = require("../colors");
+  checkColorScaleRange
+} = require("dainty-shared").colors;
 
 function getCategoryReplacements(configuration, colors) {
   const { editor } = configuration;
@@ -12,7 +12,7 @@ function getCategoryReplacements(configuration, colors) {
   const { blue, blueLessChroma, blueMoreChroma, blueGray, orange } = colors;
 
   function edfl(index) {
-    return checkScaleRange(index + editor.foregroundLightness);
+    return checkColorScaleRange(index + editor.foregroundLightness);
   }
 
   const replacements = {
@@ -62,19 +62,19 @@ function getSearchReplaceReplacements(configuration, colors) {
   const dark = configuration.variant === "dark";
 
   function envbl(index) {
-    return checkScaleRange(index + environment.backgroundLightness);
+    return checkColorScaleRange(index + environment.backgroundLightness);
   }
 
   function envfl(index) {
-    return checkScaleRange(index + environment.foregroundLightness);
+    return checkColorScaleRange(index + environment.foregroundLightness);
   }
 
   function edbl(index) {
-    return checkScaleRange(index + editor.backgroundLightness);
+    return checkColorScaleRange(index + editor.backgroundLightness);
   }
 
   function edfl(index) {
-    return checkScaleRange(index + editor.foregroundLightness);
+    return checkColorScaleRange(index + editor.foregroundLightness);
   }
 
   const replacements = [

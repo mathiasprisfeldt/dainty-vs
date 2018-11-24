@@ -2,17 +2,13 @@ const fs = require("fs");
 const util = require("util");
 const path = require("path");
 const minify = require("html-minifier").minify;
-const {
-  transformTheme,
-  transformSettings,
-  transformColorsPage,
-  transformCoveragePage,
-  transformDaintyCssPage,
-  transformIndexPage,
-  transformSyntaxPage,
-  transformDaintyCss
-} = require("./transform");
-const { zip, writeFileLog } = require("./utils");
+const { transformTheme } = require("./transformers/theme");
+const { transformSettings } = require("./transformers/settings");
+const { transformColorsPage } = require("./transformers/pages/colors");
+const { transformCoveragePage } = require("./transformers/pages/coverage");
+const { transformIndexPage } = require("./transformers/pages/index");
+const { transformSyntaxPage } = require("./transformers/pages/syntax");
+const { zip, writeFileLog } = require("dainty-shared").utils;
 
 const exists = util.promisify(fs.exists);
 const mkdir = util.promisify(fs.mkdir);
@@ -82,21 +78,9 @@ async function buildCoveragePage(colors) {
   writeFileLog(target, data);
 }
 
-async function buildDaintyCssPage(colors) {
-  const target = path.join(__dirname, "../public/dainty-css.html");
-  const data = await transformDaintyCssPage(colors);
-  writeFileLog(target, data);
-}
-
 async function buildSyntaxPage(colors) {
   const target = path.join(__dirname, "../public/syntax.html");
   const data = await transformSyntaxPage(colors);
-  writeFileLog(target, data);
-}
-
-async function buildDaintyCss(colors) {
-  const target = path.join(__dirname, "../public/dainty.css");
-  const data = await transformDaintyCss(colors);
   writeFileLog(target, data);
 }
 
@@ -106,7 +90,5 @@ module.exports = {
   buildIndexPage,
   buildColorsPage,
   buildCoveragePage,
-  buildDaintyCssPage,
-  buildSyntaxPage,
-  buildDaintyCss
+  buildSyntaxPage
 };

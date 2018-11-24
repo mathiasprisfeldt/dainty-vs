@@ -3,11 +3,9 @@ const util = require("util");
 const convert = require("xml-js");
 const fs = require("fs");
 const uuidv1 = require("uuid/v1");
-const { cloneDeep, applyReplacements } = require("../utils");
-const {
-  toVsColorHex,
-  generateColorConstantReplacements
-} = require("../colors");
+const { cloneDeep, applyReplacements } = require("dainty-shared").utils;
+const { generateColorConstantReplacements } = require("dainty-shared").colors;
+const { toVsColorHex } = require("../colors-vs");
 const {
   getSearchReplaceReplacements,
   getCategoryReplacements
