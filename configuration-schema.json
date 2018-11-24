@@ -28,14 +28,13 @@
         "backgroundLightness": {
           "$id": "#/properties/editor/properties/backgroundLightness",
           "type": "integer",
-          "title": "Editor background lightness",
-          "default": 0,
-          "maximum": 0
+          "title": "Editor background lightness adjustment",
+          "default": 0
         },
         "foregroundLightness": {
           "$id": "#/properties/editor/properties/foregroundLightness",
           "type": "integer",
-          "title": "Editor foreground lightness",
+          "title": "Editor foreground lightness adjustment",
           "default": 0
         }
       }
@@ -50,14 +49,13 @@
         "backgroundLightness": {
           "$id": "#/properties/environment/properties/backgroundLightness",
           "type": "integer",
-          "title": "Environment background lightness",
-          "default": 0,
-          "maximum": 1
+          "title": "Environment background lightness adjustment",
+          "default": 0
         },
         "foregroundLightness": {
           "$id": "#/properties/environment/properties/foregroundLightness",
           "type": "integer",
-          "title": "Environment foreground lightness",
+          "title": "Environment foreground lightness adjustment",
           "default": 0
         },
         "additionalCommentsContrast": {
@@ -133,24 +131,24 @@
             "lightness": {
               "$id": "#/properties/colors/properties/adjustments/properties/lightness",
               "type": "integer",
-              "title": "Adjust lightness to make blue-grays either darker og lighter",
+              "title": "Blue-gray scale lightness adjustment",
               "default": 0
             },
             "chroma": {
               "$id": "#/properties/colors/properties/adjustments/properties/chroma",
               "type": "integer",
-              "title": "Adjust chroma to make colors either more or less saturated",
+              "title": "Colors chroma adjustment",
               "default": 0
             },
             "chromaStart": {
               "$id": "#/properties/colors/properties/adjustments/properties/chromaStart",
               "type": "integer",
-              "title": "Adjust start of blue grays scale chroma"
+              "title": "Start of blue grays scale chroma adjustment"
             },
             "chromaEnd": {
               "$id": "#/properties/colors/properties/adjustments/properties/chromaEnd",
               "type": "integer",
-              "title": "Adjust end of blue grays scale chroma"
+              "title": "End of blue grays scale chroma adjustment"
             }
           }
         },
