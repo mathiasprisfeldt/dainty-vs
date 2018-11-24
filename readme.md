@@ -28,15 +28,19 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 
 ## Setup
 
+    git clone https://github.com/alexanderte/dainty-shared.git
+    cd dainty-shared
+    npm install
+    cd ..
     git clone https://github.com/alexanderte/dainty-vs.git
     cd dainty-vs
     npm install
 
-## CLI usage
+## Build
 
-Run `npm run build` to generate the color theme files. This produces `dist/dainty.vstheme` and `dist/dainty.vssettings`.
+    npm run build
 
-`configuration.json` is used for configuration, and the file is created with default values if it doesn’t exist. The format of `configuration.json` is defined by [`configuration-schema.json`](https://github.com/alexanderte/dainty-vs/blob/master/configuration-schema.json).
+The build script generates `dist/dainty.vstheme` and `dist/dainty.vssettings`.
 
 ## Configuration
 
@@ -63,7 +67,7 @@ Usages of environment colors and editor tokens can be overridden by adding the f
 
 Each replacement is a tuple, where the first value represents the dark variation of the theme. The second value represents the light variation. For categories there is an inner tuple representing the background and text color, respectively.
 
-## Server usage
+## Server
 
 Run `npm run start` to start Express server. These are the available routes:
 
