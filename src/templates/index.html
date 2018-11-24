@@ -155,26 +155,42 @@
     .color-palette {
       display: flex;
       flex-wrap: wrap;
-      margin-left: -32px;
-      margin-right: -32px;
       margin-top: 24px;
       margin-bottom: -32px;
     }
 
+    @media (max-width: 1023.98px) {
+      .color-palette {
+        margin-left: -8px;
+        margin-right: -8px;
+        flex: 0 0 50%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .color-palette {
+        margin-left: -32px;
+        margin-right: -32px;
+        flex: 0 0 25%;
+      }
+    }
+
     .scale {
-      padding-left: 32px;
-      padding-right: 32px;
       margin-bottom: 32px;
     }
 
     @media (max-width: 1023.98px) {
       .scale {
+        padding-left: 8px;
+        padding-right: 8px;
         flex: 0 0 50%;
       }
     }
 
     @media (min-width: 1024px) {
       .scale {
+        padding-left: 32px;
+        padding-right: 32px;
         flex: 0 0 25%;
       }
     }
