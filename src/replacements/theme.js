@@ -11,7 +11,7 @@ function getCategoryReplacements(configuration, colors) {
   const dark = configuration.variant === "dark";
   const { blue, blueLessChroma, blueMoreChroma, blueGray, orange } = colors;
 
-  function edfc(index) {
+  function edfl(index) {
     return checkScaleRange(index + editor.foregroundLightness);
   }
 
@@ -33,7 +33,7 @@ function getCategoryReplacements(configuration, colors) {
     },
     "ColorizedSignatureHelp colors": {
       "HTML Attribute Value": [null, dark ? orange[33] : orange[18]],
-      punctuation: [null, blueGray[edfc(26)]],
+      punctuation: [null, blueGray[edfl(26)]],
       urlformat: [null, dark ? blueMoreChroma[28] : blueMoreChroma[16]]
     },
     "Text Editor Text Marker Items": {
@@ -61,19 +61,19 @@ function getSearchReplaceReplacements(configuration, colors) {
   } = colors;
   const dark = configuration.variant === "dark";
 
-  function envbc(index) {
-    return checkScaleRange(index - environment.backgroundLightness);
+  function envbl(index) {
+    return checkScaleRange(index + environment.backgroundLightness);
   }
 
-  function envfc(index) {
+  function envfl(index) {
     return checkScaleRange(index + environment.foregroundLightness);
   }
 
-  function edbc(index) {
-    return checkScaleRange(index - editor.backgroundLightness);
+  function edbl(index) {
+    return checkScaleRange(index + editor.backgroundLightness);
   }
 
-  function edfc(index) {
+  function edfl(index) {
     return checkScaleRange(index + editor.foregroundLightness);
   }
 
@@ -83,127 +83,127 @@ function getSearchReplaceReplacements(configuration, colors) {
     //
 
     // Active tab, statusbar
-    ["#007acc", blueGray[envbc(6)]],
+    ["#007acc", blueGray[envbl(6)]],
 
     // Menu bar item hover
-    ["#3e3e40", blueGray[envbc(6)]],
+    ["#3e3e40", blueGray[envbl(6)]],
 
     // Menu
-    ["#1b1b1c", blueGray[envbc(2)]],
+    ["#1b1b1c", blueGray[envbl(2)]],
 
     // Menu item hover
-    ["#333334", blueGray[envbc(6)]],
+    ["#333334", blueGray[envbl(6)]],
 
     // Hover tab
-    ["#1c97ea", blueGray[envbc(4)]],
+    ["#1c97ea", blueGray[envbl(4)]],
 
     // Inactive tab hover close
-    ["#52b0ef", blueGray[envbc(8)]],
+    ["#52b0ef", blueGray[envbl(8)]],
 
     // Inactive tab active close
-    ["#0e6198", blueGray[envbc(10)]],
+    ["#0e6198", blueGray[envbl(10)]],
 
     // Editor
-    ["#1e1e1e", blueGray[edbc(0)]],
+    ["#1e1e1e", blueGray[edbl(0)]],
 
     // Toolbar separator
-    ["#222222", blueGray[edbc(0)]],
+    ["#222222", blueGray[edbl(0)]],
 
     // Solution Explorer, Properties
-    ["#252526", blueGray[edbc(0)]],
+    ["#252526", blueGray[edbl(0)]],
 
     // Title bar, menu bar
-    ["#2d2d30", blueGray[envbc(2)]],
+    ["#2d2d30", blueGray[envbl(2)]],
 
     // Breakpoints bar
-    ["#333333", blueGray[envbc(1)]],
+    ["#333333", blueGray[envbl(1)]],
 
     // Search Solution Explorer, Quick Launch, Package Manager, menu separator line and borders around menu/menu item
-    ["#333337", blueGray[edbc(0)]],
+    ["#333337", blueGray[edbl(0)]],
 
     // Scrollbar containers
     [
       "#3e3e42",
       environment.transparentScrollbarContainers
-        ? blueGray[edbc(0)]
-        : blueGray[edbc(1)]
+        ? blueGray[edbl(0)]
+        : blueGray[edbl(1)]
     ],
 
     // Scrollbar
     [
       "#686868",
       environment.additionalScrollbarsContrast
-        ? blueGray[edbc(6)]
-        : blueGray[edbc(4)]
+        ? blueGray[edbl(6)]
+        : blueGray[edbl(4)]
     ],
 
     // Scrollbar hover
     [
       "#9e9e9e",
       environment.additionalScrollbarsContrast
-        ? blueGray[edbc(8)]
-        : blueGray[edbc(6)]
+        ? blueGray[edbl(8)]
+        : blueGray[edbl(6)]
     ],
 
     // Scrollbar active
     [
       "#efebef",
       environment.additionalScrollbarsContrast
-        ? blueGray[edbc(10)]
-        : blueGray[edbc(8)]
+        ? blueGray[edbl(10)]
+        : blueGray[edbl(8)]
     ],
 
     // Scrollbar glyph disabled
-    ["#555558", blueGray[envbc(4)]],
+    ["#555558", blueGray[envbl(4)]],
 
     // Selected item in Solution Explorer, thin borders across app
     [
       "#3f3f46",
-      environment.transparentBorders ? blueGray[envbc(2)] : blueGray[envbc(4)]
+      environment.transparentBorders ? blueGray[envbl(2)] : blueGray[envbl(4)]
     ],
 
     // Package Manger border
-    ["#434346", blueGray[envbc(8)]],
+    ["#434346", blueGray[envbl(8)]],
 
     // Current line border
-    ["#464646", blueGray[edbc(2)]],
+    ["#464646", blueGray[edbl(2)]],
 
     // Grip – inactive tool window
     [
       "#46464a",
       environment.transparentToolWindowGrips
-        ? blueGray[envbc(2)]
-        : blueGray[envbc(8)]
+        ? blueGray[envbl(2)]
+        : blueGray[envbl(8)]
     ],
 
     // Grip – active tool window
     [
       "#59a8de",
       environment.transparentToolWindowGrips
-        ? blueGray[envbc(4)]
-        : blueGray[envbc(16)]
+        ? blueGray[envbl(4)]
+        : blueGray[envbl(16)]
     ],
 
     // File changes indicator, current debugging statement
-    ["#eff284", blueGray[edbc(2)]],
+    ["#eff284", blueGray[edbl(2)]],
 
     // File changes after save indicator
-    ["#577430", blueGray[edbc(2)]],
+    ["#577430", blueGray[edbl(2)]],
 
     // Outline area
-    ["#232323", blueGray[edbc(2)]],
+    ["#232323", blueGray[edbl(2)]],
 
     // File preview
     ["#68217a", blue[0]],
 
     // Tooltip
-    ["#424245", blueGray[edbc(2)]],
+    ["#424245", blueGray[edbl(2)]],
 
     // Tooltip border
-    ["#4d4d50", blueGray[edbc(2)]],
+    ["#4d4d50", blueGray[edbl(2)]],
 
     // Extensions item hover
-    ["#3f3f40", blueGray[envbc(2)]],
+    ["#3f3f40", blueGray[envbl(2)]],
 
     // Yellowy tooltip line
     ["#fefcc8", orange[39]],
@@ -218,19 +218,19 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#8631c7", blueMoreChroma[8]],
 
     // `100%` box arrow hover
-    ["#1f1f20", blueGray[envbc(16)]],
+    ["#1f1f20", blueGray[envbl(16)]],
 
     // Inactive tool window glyph hover
-    ["#393939", blueGray[envbc(4)]],
+    ["#393939", blueGray[envbl(4)]],
 
     // Team Explorer `Changes` label
-    ["#2d2d2d", blueGray[envbc(4)]],
+    ["#2d2d2d", blueGray[envbl(4)]],
 
     // Team Explorer `Changes` label icon
-    ["#3d3d3d", blueGray[envbc(8)]],
+    ["#3d3d3d", blueGray[envbl(8)]],
 
     // Team Explorer `Changes` label icon hover
-    ["#525252", blueGray[envbc(12)]],
+    ["#525252", blueGray[envbl(12)]],
 
     // Team Explorer `Changes` icon
     ["#c8c8c8", blue[36]],
@@ -242,14 +242,14 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#f05033", dark ? blue[34] : blue[16]],
 
     // Diagnostic Tools tab hover
-    ["#555555", blueGray[envbc(4)]],
+    ["#555555", blueGray[envbl(4)]],
 
     //
     // Foregrounds
     //
 
     // Editor tooltip
-    ["#dadada", blueGray[edfc(32)]],
+    ["#dadada", blueGray[edfl(32)]],
 
     // Start page `NEW`
     ["#ff8c00", dark ? green[32] : green[16]],
@@ -273,55 +273,55 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#9cdcfe", dark ? blueLessChroma[30] : blue[20]],
 
     // Active tool window tab, `Import theme`
-    ["#0097fb", blueGray[envfc(32)]],
+    ["#0097fb", blueGray[envfl(32)]],
 
     // launchSettings.json property
-    ["#d7ba7d", blueGray[edfc(34)]],
+    ["#d7ba7d", blueGray[edfl(34)]],
 
     // Punctuation, method names
-    ["#dcdcdc", blueGray[edfc(34)]],
+    ["#dcdcdc", blueGray[edfl(34)]],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
     ["#ffffff", dark ? blue[30] : blue[8]],
 
     // Close and pin icons on active tab
-    ["#d0e6f5", blueGray[envfc(32)]],
+    ["#d0e6f5", blueGray[envfl(32)]],
 
     // `<` and `>`
-    ["#808080", blueGray[edfc(26)]],
+    ["#808080", blueGray[edfl(26)]],
 
     // Operator and HTML operator
-    ["#b4b4b4", blueGray[edfc(30)]],
+    ["#b4b4b4", blueGray[edfl(30)]],
 
     // Most UI text (menu bar items, tabs, non-selected tabs, console output, Solution Explorer item …)
-    ["#f1f1f1", blueGray[envfc(32)]],
+    ["#f1f1f1", blueGray[envfl(32)]],
 
     // Inactive tabs in tool windows, tool window titles
-    ["#d0d0d0", blueGray[envfc(26)]],
+    ["#d0d0d0", blueGray[envfl(26)]],
 
     // `Microsoft Visual Studio`
-    ["#999999", blueGray[envfc(22)]],
+    ["#999999", blueGray[envfl(22)]],
 
     // Disabled menu item
-    ["#656565", blueGray[envfc(18)]],
+    ["#656565", blueGray[envfl(18)]],
 
     // Inactive tabs hover in tool windows
-    ["#55aaff", blueGray[envfc(32)]],
+    ["#55aaff", blueGray[envfl(32)]],
 
     // Comments
     [
       "#57a64a",
       environment.additionalCommentsContrast
-        ? blueGray[edfc(20)]
-        : blueGray[edfc(16)]
+        ? blueGray[edfl(20)]
+        : blueGray[edfl(16)]
     ],
 
     // XML doc comment
     [
       "#608b4e",
       environment.additionalCommentsContrast
-        ? blueGray[edfc(20)]
-        : blueGray[edfc(16)]
+        ? blueGray[edfl(20)]
+        : blueGray[edfl(16)]
     ],
 
     // Numbers
@@ -340,7 +340,7 @@ function getSearchReplaceReplacements(configuration, colors) {
     ["#84ceff", blueLessChroma[34]],
 
     // `Import Theme` hover
-    ["#88ccfe", blueGray[envfc(36)]]
+    ["#88ccfe", blueGray[envfl(36)]]
   ];
 
   return mergeConfigurationSearchReplaceReplacements(
