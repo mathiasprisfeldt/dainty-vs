@@ -290,15 +290,9 @@ function applyColorConstantReplacement(
 }
 
 function checkScaleRange(index) {
-  if (!Number.isInteger(index)) {
+  if (!(Number.isInteger(index) && index >= 0 && index <= 39)) {
     throw new Error(
-      `Index \`${index}\` is not a valid index for a Dainty color scale.`
-    );
-  }
-
-  if (index < 0 || index > 39) {
-    throw new Error(
-      `Index \`${index}\` is not a valid index for a Dainty color scale.`
+      `\`${index}\` is not a valid index for a Dainty color scale. Index must be an integer ≥ 0 and ≤ 39.`
     );
   }
 
