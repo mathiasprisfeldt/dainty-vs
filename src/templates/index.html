@@ -21,6 +21,10 @@
   <style>
     /* INSERT_DAINTY_CSS */
 
+    * {
+      box-sizing: border-box;
+    }
+
     body.no-scroll {
       overflow-y: hidden;
     }
@@ -161,43 +165,63 @@
 
     @media (max-width: 1023.98px) {
       .color-palette {
-        margin-left: -8px;
-        margin-right: -8px;
-        flex: 0 0 50%;
+        margin-left: -12px;
+        margin-right: -12px;
       }
     }
 
     @media (min-width: 1024px) {
       .color-palette {
-        margin-left: -32px;
-        margin-right: -32px;
-        flex: 0 0 25%;
+        margin-left: -16px;
+        margin-right: -16px;
       }
     }
 
     .scale {
       margin-bottom: 32px;
+      border: 0.5px solid "BLUE_GRAY_10";
+    }
+
+    @media (max-width: 1023.98px) {
+      .scale h4 {
+        font-size: 13px;
+        position: relative;
+        left: -4px;
+        top: -2px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .scale h4 {
+        font-size: 15px;
+        position: relative;
+        left: -6px;
+        top: -4px;
+      }
     }
 
     @media (max-width: 1023.98px) {
       .scale {
-        padding-left: 8px;
-        padding-right: 8px;
-        flex: 0 0 50%;
+        padding: 16px;
+        padding-top: 8px;
+        margin-left: 12px;
+        margin-right: 12px;
       }
     }
 
     @media (min-width: 1024px) {
       .scale {
-        padding-left: 32px;
-        padding-right: 32px;
-        flex: 0 0 25%;
+        padding: 24px;
+        padding-top: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
       }
     }
 
     .swatch-group {
       display: flex;
       flex-wrap: wrap;
+      margin: -8px;
     }
 
     .swatch {
@@ -209,17 +233,15 @@
       .swatch {
         width: 20px;
         height: 20px;
-        margin-right: 12px;
-        margin-bottom: 12px;
+        margin: 6px;
       }
     }
 
     @media (min-width: 1024px) {
       .swatch {
         width: 24px;
-      height: 24px;
-        margin-right: 16px;
-        margin-bottom: 16px;
+        height: 24px;
+        margin: 8px;
       }
     }
 
