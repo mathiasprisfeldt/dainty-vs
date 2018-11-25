@@ -30,11 +30,11 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 
     git clone https://github.com/alexanderte/dainty-vs.git
     cd dainty-vs
-    npm install
+    yarn install
 
 ## Build
 
-    npm run build
+    yarn build
 
 The build script generates `dist/dainty.vstheme` and `dist/dainty.vssettings`.
 
@@ -65,7 +65,7 @@ Each replacement is a tuple, where the first value represents the dark variation
 
 ## Server
 
-Run `npm run start` to start Express server. These are the available routes:
+Run `yarn start` to start Express server. These are the available routes:
 
 | Method | Route                           | Description                                                         |
 | ------ | ------------------------------- | ------------------------------------------------------------------- |
