@@ -28,10 +28,6 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 
 ## Setup
 
-    git clone https://github.com/alexanderte/dainty-shared.git
-    cd dainty-shared
-    npm install
-    cd ..
     git clone https://github.com/alexanderte/dainty-vs.git
     cd dainty-vs
     npm install
