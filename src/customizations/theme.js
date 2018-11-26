@@ -1,7 +1,7 @@
 const { cloneDeep } = require("dainty-shared").utils;
 const {
   generateColorConstantReplacements,
-  applyColorConstantReplacement,
+  applyColorConstantReplacements,
   isHexColor,
   checkColorScaleRange
 } = require("dainty-shared").colors;
@@ -507,7 +507,7 @@ function mergeConfigurationSearchReplaceReplacements(
 
       resultReplacements[index] = [
         replacement,
-        applyColorConstantReplacement(
+        applyColorConstantReplacements(
           replacements[replacement][variantIndex],
           colorReplacements,
           colorReplacementsKeys
@@ -516,7 +516,7 @@ function mergeConfigurationSearchReplaceReplacements(
     } else {
       resultReplacements.push([
         replacement,
-        applyColorConstantReplacement(
+        applyColorConstantReplacements(
           replacements[replacement][variantIndex],
           colorReplacements,
           colorReplacementsKeys
