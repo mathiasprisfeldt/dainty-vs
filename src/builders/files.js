@@ -26,6 +26,5 @@ async function buildThemeFiles(dirname, configuration, colors) {
 }
 
 module.exports = {
-  buildThemeZip,
   buildThemeFiles
 };
