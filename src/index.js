@@ -5,13 +5,13 @@ const {
   getColorsCountByScale,
   trackColorsCount
 } = require("dainty-shared").colors;
+const { buildThemeFiles } = require("./builders/files");
 const {
-  buildThemeFiles,
   buildIndexPage,
   buildColorsPage,
   buildCoveragePage,
   buildSyntaxPage
-} = require("./build");
+} = require("./builders");
 
 (async () => {
   const argv = parseArgs(process.argv.slice(2));
@@ -32,14 +32,14 @@ const {
   const colors = generateColorPalette(configuration);
 
   trackColorsCount(true);
-  await buildThemeFiles(configuration, colors);
+  await buildThemeFiles(__dirname, configuration, colors);
   trackColorsCount(false);
 
   await Promise.all([
-    buildIndexPage(colors, getColorsCountByScale(c => c.count > 4)),
-    buildSyntaxPage(colors),
-    buildColorsPage(colors)
+    buildIndexPage(__dirname, colors, getColorsCountByScale(c => c.count > 4)),
+    buildSyntaxPage(__dirname, colors),
+    buildColorsPage(__dirname, colors)
   ]);
 
-  await buildCoveragePage(colors);
+  await buildCoveragePage(__dirname, colors);
 })();

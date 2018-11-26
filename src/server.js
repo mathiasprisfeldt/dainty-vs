@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const { getConfiguration } = require("dainty-shared").configuration;
 const { generateColorPalette } = require("dainty-shared").colors;
-const { buildThemeZip } = require("./build");
+const { buildThemeZip } = require("./builders/zip");
 const app = express();
 
 app.use(bodyParser.json());

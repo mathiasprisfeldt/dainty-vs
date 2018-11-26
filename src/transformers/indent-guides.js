@@ -5,7 +5,7 @@ const replaceOnce = require("replace-once");
 const convert = require("xml-js");
 const {
   getIndentGuidesReplacements
-} = require("../replacements/indent-guides");
+} = require("../customizations/indent-guides");
 
 const readFile = util.promisify(fs.readFile);
 

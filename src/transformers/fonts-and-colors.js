@@ -5,7 +5,7 @@ const replaceOnce = require("replace-once");
 const convert = require("xml-js");
 const {
   getFontsAndColorsReplacements
-} = require("../replacements/fonts-and-colors");
+} = require("../customizations/fonts-and-colors");
 
 const readFile = util.promisify(fs.readFile);
 

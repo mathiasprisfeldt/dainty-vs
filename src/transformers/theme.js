@@ -9,7 +9,7 @@ const { toVsColorHex } = require("../colors-vs");
 const {
   getSearchReplaceReplacements,
   getCategoryReplacements
-} = require("../replacements/theme");
+} = require("../customizations/theme");
 
 const readFile = util.promisify(fs.readFile);
 
