@@ -6,6 +6,7 @@ const { applyReplacements } = require("dainty-shared").utils;
 const { generateColorConstantReplacements } = require("dainty-shared").colors;
 const { toColorHex } = require("../../colors-vs");
 const { getDaintyCss } = require("dainty-shared").daintyCss;
+const { logTransform } = require("dainty-shared").utils;
 
 const readFile = util.promisify(fs.readFile);
 
@@ -17,7 +18,7 @@ async function transformCoveragePage(colors) {
     "../../../dist/dainty.vstheme"
   );
 
-  console.log(`Transforming \`${source}\`…`);
+  logTransform(source);
 
   const sourceContent = (await readFile(source, "utf8")).replace(
     "/* INSERT_DAINTY_CSS */",

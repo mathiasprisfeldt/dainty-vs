@@ -6,6 +6,7 @@ const convert = require("xml-js");
 const {
   getFontsAndColorsReplacements
 } = require("../customizations/fonts-and-colors");
+const { logTransform } = require("dainty-shared").utils;
 
 const readFile = util.promisify(fs.readFile);
 
@@ -15,7 +16,7 @@ async function transformFontsAndColors(configuration, colors) {
     "../templates/fonts-and-colors.vssettings"
   );
 
-  console.log(`Transforming \`${source}\`…`);
+  logTransform(source);
 
   const replacements = getFontsAndColorsReplacements(configuration, colors);
 

@@ -6,13 +6,14 @@ const convert = require("xml-js");
 const {
   getIndentGuidesReplacements
 } = require("../customizations/indent-guides");
+const { logTransform } = require("dainty-shared").utils;
 
 const readFile = util.promisify(fs.readFile);
 
 async function transformIndentGuides(configuration, colors) {
   const source = path.join(__dirname, "../templates/indent-guides.vssettings");
 
-  console.log(`Transforming \`${source}\`…`);
+  logTransform(source);
 
   const replacements = getIndentGuidesReplacements(configuration, colors);
 

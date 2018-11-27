@@ -3,7 +3,11 @@ const util = require("util");
 const convert = require("xml-js");
 const fs = require("fs");
 const uuidv1 = require("uuid/v1");
-const { cloneDeep, applyReplacements } = require("dainty-shared").utils;
+const {
+  cloneDeep,
+  applyReplacements,
+  logTransform
+} = require("dainty-shared").utils;
 const { generateColorConstantReplacements } = require("dainty-shared").colors;
 const { toVsColorHex } = require("../colors-vs");
 const {
@@ -16,7 +20,7 @@ const readFile = util.promisify(fs.readFile);
 async function transformTheme(configuration, colors) {
   const source = path.join(__dirname, "../templates/dark.vstheme");
 
-  console.log(`Transforming \`${source}\`…`);
+  logTransform(source);
 
   const content = await readFile(source, "utf8");
 

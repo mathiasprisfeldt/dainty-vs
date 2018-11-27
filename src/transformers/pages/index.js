@@ -1,7 +1,7 @@
 const path = require("path");
 const util = require("util");
 const fs = require("fs");
-const { applyReplacements } = require("dainty-shared").utils;
+const { applyReplacements, logTransform } = require("dainty-shared").utils;
 const {
   generateColorConstantReplacements,
   getColorScaleName
@@ -13,7 +13,7 @@ const readFile = util.promisify(fs.readFile);
 async function transformIndexPage(colors, colorsCountByScale) {
   const source = path.join(__dirname, "../../templates/index.html");
 
-  console.log(`Transforming \`${source}\`…`);
+  logTransform(source);
 
   let content = (await readFile(source, "utf8")).replace(
     "/* INSERT_DAINTY_CSS */",

@@ -5,13 +5,14 @@ const changeCase = require("change-case");
 const { applyReplacements } = require("dainty-shared").utils;
 const { generateColorConstantReplacements } = require("dainty-shared").colors;
 const { getDaintyCss } = require("dainty-shared").daintyCss;
+const { logTransform } = require("dainty-shared").utils;
 
 const readFile = util.promisify(fs.readFile);
 
 async function transformColorsPage(colors) {
   const source = path.join(__dirname, "../../templates/colors.html");
 
-  console.log(`Transforming \`${source}\`…`);
+  logTransform(source);
 
   let html = [];
 
