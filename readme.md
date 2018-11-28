@@ -30,7 +30,7 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 
     git clone https://github.com/alexanderte/dainty-vs.git
     cd dainty-vs
-    yarn install
+    yarn
 
 ## Build
 
