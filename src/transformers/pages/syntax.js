@@ -8,7 +8,7 @@ const { getDaintyCss } = require("dainty-shared").daintyCss;
 const readFile = util.promisify(fs.readFile);
 
 async function transformSyntaxPage(colors) {
-  const source = path.join(__dirname, "../../templates/syntax.html");
+  const source = path.join(__dirname, "../../sources/syntax.html");
 
   logTransform(source);
 

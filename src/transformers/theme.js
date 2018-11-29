@@ -18,7 +18,7 @@ const {
 const readFile = util.promisify(fs.readFile);
 
 async function transformTheme(configuration, colors) {
-  const source = path.join(__dirname, "../templates/dark.vstheme");
+  const source = path.join(__dirname, "../sources/dark.vstheme");
 
   logTransform(source);
 

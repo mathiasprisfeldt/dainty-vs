@@ -11,7 +11,7 @@ const { getDaintyCss } = require("dainty-shared").daintyCss;
 const readFile = util.promisify(fs.readFile);
 
 async function transformIndexPage(colors, colorsCountByScale) {
-  const source = path.join(__dirname, "../../templates/index.html");
+  const source = path.join(__dirname, "../../sources/index.html");
 
   logTransform(source);
 

@@ -11,7 +11,7 @@ const { logTransform } = require("dainty-shared").utils;
 const readFile = util.promisify(fs.readFile);
 
 async function transformIndentGuides(configuration, colors) {
-  const source = path.join(__dirname, "../templates/indent-guides.vssettings");
+  const source = path.join(__dirname, "../sources/indent-guides.vssettings");
 
   logTransform(source);
 

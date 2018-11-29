@@ -10,7 +10,7 @@ const { logTransform } = require("dainty-shared").utils;
 const readFile = util.promisify(fs.readFile);
 
 async function transformColorsPage(colors) {
-  const source = path.join(__dirname, "../../templates/colors.html");
+  const source = path.join(__dirname, "../../sources/colors.html");
 
   logTransform(source);
 

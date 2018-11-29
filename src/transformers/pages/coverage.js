@@ -11,8 +11,8 @@ const { logTransform } = require("dainty-shared").utils;
 const readFile = util.promisify(fs.readFile);
 
 async function transformCoveragePage(colors) {
-  const source = path.join(__dirname, "../../templates/coverage.html");
-  const darkThemeSource = path.join(__dirname, "../../templates/dark.vstheme");
+  const source = path.join(__dirname, "../../sources/coverage.html");
+  const darkThemeSource = path.join(__dirname, "../../sources/dark.vstheme");
   const daintyThemeSource = path.join(
     __dirname,
     "../../../dist/dainty.vstheme"

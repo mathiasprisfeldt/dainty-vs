@@ -13,7 +13,7 @@ const readFile = util.promisify(fs.readFile);
 async function transformFontsAndColors(configuration, colors) {
   const source = path.join(
     __dirname,
-    "../templates/fonts-and-colors.vssettings"
+    "../sources/fonts-and-colors.vssettings"
   );
 
   logTransform(source);
