@@ -38,6 +38,9 @@ function getCategoryReplacements(configuration, colors) {
     },
     "Text Editor Text Marker Items": {
       "Current Statement": ["#eff284", null] // Revert
+    },
+    VisualStudioInstaller: {
+      Background: [blueGray[39], null]
     }
   };
 
