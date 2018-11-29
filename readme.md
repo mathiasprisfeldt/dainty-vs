@@ -48,11 +48,11 @@ Usages of environment colors and editor tokens can be overridden by adding the f
 ```json
 "customizations": {
   "__searchReplace": {
-    "#b5cea8": ["PURPLE_20", "PURPLE_20"]
+    "#b5cea8": ["purple20", "purple20"]
   },
   "__categories": {
     "ColorizedSignatureHelp colors": {
-      "HTML Attribute Value": [[null, "BLUE_0"], [null, "BLUE_32"]]
+      "HTML Attribute Value": [[null, "blue0"], [null, "blue32"]]
     }
   }
 }

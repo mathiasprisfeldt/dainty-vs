@@ -19,7 +19,7 @@ async function transformColorsPage(colors) {
   for (color of Object.keys(colors)) {
     html.push(`
       <section>
-        <h2>${color}</h2>
+        <h2><code>${color}</code></h2>
         <table>
           <thead>
             <tr>
@@ -59,7 +59,7 @@ async function transformColorsPage(colors) {
           </td>
           <td width="20%"><code>${shade}</code></td>
           <td width="20%">
-            <code>${changeCase.constantCase(color)}_${index}</code>
+            <code>${color}${index}</code>
           </td>
         </tr>`
       );
