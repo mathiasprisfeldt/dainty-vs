@@ -205,33 +205,24 @@
         }
       }
     },
-    "replacements": {
-      "$id": "#/properties/replacements",
+    "customizations": {
+      "$id": "#/properties/customizations",
       "type": "object",
-      "title": "Replacements of environment and editor tokens",
+      "title": "Dainty customizations",
       "default": {},
       "additionalProperties": false,
       "properties": {
-        "overrides": {
-          "$id": "#/properties/replacements/properties/overrides",
+        "__searchReplace": {
+          "$id": "#/properties/customizations/properties/__searchReplace",
           "type": "object",
-          "title": "Overrides",
-          "default": {},
-          "additionalProperties": false,
-          "properties": {
-            "searchReplace": {
-              "$id": "#/properties/replacements/properties/overrides/properties/searchReplace",
-              "type": "object",
-              "title": "Search–replace overrides",
-              "default": {}
-            },
-            "categories": {
-              "$id": "#/properties/replacements/properties/overrides/properties/categories",
-              "type": "object",
-              "title": "Category overrides",
-              "default": {}
-            }
-          }
+          "title": "Search–replace customizations",
+          "default": {}
+        },
+        "__categories": {
+          "type": "object",
+          "$id": "#/properties/customizations/properties/__categories",
+          "title": "Category customizations",
+          "default": {}
         }
       }
     }

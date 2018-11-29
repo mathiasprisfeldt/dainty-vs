@@ -47,15 +47,13 @@ Dainty can be configured by editing `configuration.json`. The file is generated 
 Usages of environment colors and editor tokens can be overridden by adding the following object to the root of `configuration.json`:
 
 ```json
-"replacements": {
-  "overrides": {
-    "searchReplace": {
-      "#b5cea8": ["PURPLE_20", "PURPLE_20"]
-    },
-    "categories": {
-      "ColorizedSignatureHelp colors": {
-        "HTML Attribute Value": [[null, "BLUE_0"], [null, "BLUE_32"]]
-      }
+"customizations": {
+  "__searchReplace": {
+    "#b5cea8": ["PURPLE_20", "PURPLE_20"]
+  },
+  "__categories": {
+    "ColorizedSignatureHelp colors": {
+      "HTML Attribute Value": [[null, "BLUE_0"], [null, "BLUE_32"]]
     }
   }
 }

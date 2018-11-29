@@ -11,7 +11,7 @@ const {
 const { generateColorConstantReplacements } = require("dainty-shared").colors;
 const { toVsColorHex } = require("../colors-vs");
 const {
-  getSearchReplaceReplacements,
+  getSearchReplaceCustomizations,
   getCategoryCustomizations
 } = require("../customizations/theme");
 
@@ -26,7 +26,7 @@ async function transformTheme(configuration, colors) {
 
   let replacedContent = applyReplacements(
     content,
-    getSearchReplaceReplacements(configuration, colors),
+    getSearchReplaceCustomizations(configuration, colors),
     toVsColorHex,
     toVsColorHex
   );

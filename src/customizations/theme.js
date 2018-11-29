@@ -51,7 +51,7 @@ function getCategoryCustomizations(configuration, colors) {
   );
 }
 
-function getSearchReplaceReplacements(configuration, colors) {
+function getSearchReplaceCustomizations(configuration, colors) {
   const { environment, editor } = configuration;
   const {
     blue,
@@ -359,7 +359,7 @@ function mergeConfigurationCategoryReplacements(
   colors
 ) {
   let resultReplacements = cloneDeep(existingReplacements);
-  const { categories } = configuration.replacements.overrides;
+  const { __categories: categories } = configuration.customizations;
   const colorReplacements = generateColorConstantReplacements(colors, false);
   const colorReplacementsKeys = colorReplacements.map(r => r[0]);
 
@@ -456,7 +456,7 @@ function mergeConfigurationSearchReplaceReplacements(
   colors
 ) {
   let resultReplacements = cloneDeep(existingReplacements);
-  const { searchReplace: replacements } = configuration.replacements.overrides;
+  const { __searchReplace: replacements } = configuration.customizations;
   const colorReplacements = generateColorConstantReplacements(colors, false);
   const colorReplacementsKeys = colorReplacements.map(c => c[0]);
   const existingReplacementsKeys = existingReplacements.map(c => c[0]);
@@ -533,5 +533,5 @@ function mergeConfigurationSearchReplaceReplacements(
 
 module.exports = {
   getCategoryCustomizations,
-  getSearchReplaceReplacements
+  getSearchReplaceCustomizations
 };

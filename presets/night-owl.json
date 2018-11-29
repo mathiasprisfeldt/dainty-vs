@@ -10,19 +10,5 @@
       "orange": "#ecc48d",
       "blueLessChroma": "#addb67" // Green
     }
-  },
-  "replacements": {
-    "overrides": {
-      "searchReplace": {
-        "#b5cea8": ["#f78c6c", null], // Numbers
-        "#d69d85": ["#ecc48d", null] // Strings
-      },
-      "categories": {
-        "ColorizedSignatureHelp colors": {
-          "punctuation": [[null, "#c792ea"], [null, "#c792ea"]],
-          "HTML Attribute Value": [[null, "#ecc48d"], [null, "#ecc48d"]]
-        }
-      }
-    }
   }
 }
