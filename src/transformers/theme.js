@@ -12,7 +12,7 @@ const {
   generateColorConstantReplacements,
   getTokenColorFunction
 } = require("dainty-shared").colors;
-const { toVsColorHex } = require("../colors-vs");
+const { toVsColorHex } = require("../conversions");
 const {
   getSearchReplaceCustomizations,
   getCategoriesCustomizations

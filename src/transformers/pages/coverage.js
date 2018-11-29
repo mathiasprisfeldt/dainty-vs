@@ -4,7 +4,7 @@ const fs = require("fs");
 const convert = require("xml-js");
 const { applyReplacements } = require("dainty-shared").utils;
 const { generateColorConstantReplacements } = require("dainty-shared").colors;
-const { toColorHex } = require("../../colors-vs");
+const { toColorHex } = require("../../conversions");
 const { getDaintyCss } = require("dainty-shared").daintyCss;
 const { logTransform } = require("dainty-shared").utils;
 

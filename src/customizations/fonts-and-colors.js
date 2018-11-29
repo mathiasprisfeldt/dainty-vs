@@ -1,5 +1,5 @@
 const { checkColorScaleRange } = require("dainty-shared").colors;
-const { RGBToBGR } = require("../colors-vs");
+const { RGBToBGR } = require("../conversions");
 
 function getFontsAndColorsCustomizations(configuration, colors) {
   const { editor } = configuration;
