@@ -1,7 +1,7 @@
 const parseArgs = require("minimist");
 const { getConfiguration } = require("dainty-shared").configuration;
 const {
-  generateColorPalette,
+  generateColorScales,
   generateColorConstants,
   getColorsCountByScale,
   trackColorsCount
@@ -30,7 +30,7 @@ const {
     return;
   }
 
-  const colors = generateColorPalette(configuration);
+  const colors = generateColorScales(configuration);
   const colorConstants = generateColorConstants(colors);
 
   trackColorsCount(true);
