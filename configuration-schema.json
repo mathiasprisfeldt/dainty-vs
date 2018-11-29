@@ -119,7 +119,7 @@
             "lightness": {
               "$id": "#/properties/colors/properties/adjustments/properties/lightness",
               "type": "number",
-              "title": "Blue-gray scale lightness adjustment",
+              "title": "Neutral scale lightness adjustment",
               "default": 0
             },
             "chroma": {
@@ -147,10 +147,10 @@
           "default": {},
           "additionalProperties": false,
           "properties": {
-            "blueGray": {
-              "$id": "#/properties/colors/properties/overrides/properties/blueGray",
+            "neutral": {
+              "$id": "#/properties/colors/properties/overrides/properties/neutral",
               "type": "string",
-              "title": "Base color for blue-gray scale",
+              "title": "Base color for neutral scale",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
             },
             "blue": {

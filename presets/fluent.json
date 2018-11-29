@@ -7,7 +7,7 @@
       "chromaEnd": -10
     },
     "overrides": {
-      "blueGray": "#515C6B",
+      "neutral": "#515C6B",
       "blue": "#0078d7",
       "purple": "#b146c2",
       "green": "#00cc6a",
