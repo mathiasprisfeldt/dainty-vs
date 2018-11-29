@@ -12,7 +12,7 @@ const { generateColorConstantReplacements } = require("dainty-shared").colors;
 const { toVsColorHex } = require("../colors-vs");
 const {
   getSearchReplaceReplacements,
-  getCategoryReplacements
+  getCategoryCustomizations
 } = require("../customizations/theme");
 
 const readFile = util.promisify(fs.readFile);
@@ -39,7 +39,7 @@ async function transformTheme(configuration, colors) {
   try {
     replacedContent = applyCategoryReplacements(
       replacedContent,
-      getCategoryReplacements(configuration, colors),
+      getCategoryCustomizations(configuration, colors),
       generateColorConstantReplacements(colors, false),
       generateColorConstantReplacements(colors, false).map(r => r[0])
     );

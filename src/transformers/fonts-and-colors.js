@@ -4,21 +4,18 @@ const fs = require("fs");
 const replaceOnce = require("replace-once");
 const convert = require("xml-js");
 const {
-  getFontsAndColorsReplacements
+  getFontsAndColorsCustomizations
 } = require("../customizations/fonts-and-colors");
 const { logTransform } = require("dainty-shared").utils;
 
 const readFile = util.promisify(fs.readFile);
 
 async function transformFontsAndColors(configuration, colors) {
-  const source = path.join(
-    __dirname,
-    "../sources/fonts-and-colors.vssettings"
-  );
+  const source = path.join(__dirname, "../sources/fonts-and-colors.vssettings");
 
   logTransform(source);
 
-  const replacements = getFontsAndColorsReplacements(configuration, colors);
+  const replacements = getFontsAndColorsCustomizations(configuration, colors);
 
   const find = replacements.map(r => r[0]);
   const replace = replacements.map(r => r[1]);

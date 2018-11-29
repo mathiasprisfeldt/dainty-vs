@@ -4,7 +4,7 @@ const fs = require("fs");
 const replaceOnce = require("replace-once");
 const convert = require("xml-js");
 const {
-  getIndentGuidesReplacements
+  getIndentGuidesCustomizations
 } = require("../customizations/indent-guides");
 const { logTransform } = require("dainty-shared").utils;
 
@@ -15,7 +15,7 @@ async function transformIndentGuides(configuration, colors) {
 
   logTransform(source);
 
-  const replacements = getIndentGuidesReplacements(configuration, colors);
+  const replacements = getIndentGuidesCustomizations(configuration, colors);
 
   const find = replacements.map(r => r[0]);
   const replace = replacements.map(r => r[1]);

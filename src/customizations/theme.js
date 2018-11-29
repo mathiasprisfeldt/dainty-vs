@@ -6,7 +6,7 @@ const {
   checkColorScaleRange
 } = require("dainty-shared").colors;
 
-function getCategoryReplacements(configuration, colors) {
+function getCategoryCustomizations(configuration, colors) {
   const { editor } = configuration;
   const dark = configuration.variant === "dark";
   const { blue, blueLessChroma, blueMoreChroma, blueGray, orange } = colors;
@@ -532,6 +532,6 @@ function mergeConfigurationSearchReplaceReplacements(
 }
 
 module.exports = {
-  getCategoryReplacements,
+  getCategoryCustomizations,
   getSearchReplaceReplacements
 };

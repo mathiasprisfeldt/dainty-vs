@@ -1,7 +1,7 @@
 const { checkColorScaleRange } = require("dainty-shared").colors;
 const { toRGBString } = require("../colors-vs");
 
-function getIndentGuidesReplacements(configuration, colors) {
+function getIndentGuidesCustomizations(configuration, colors) {
   const { editor } = configuration;
   const { blueGray, purple } = colors;
 
@@ -18,5 +18,5 @@ function getIndentGuidesReplacements(configuration, colors) {
 }
 
 module.exports = {
-  getIndentGuidesReplacements
+  getIndentGuidesCustomizations
 };

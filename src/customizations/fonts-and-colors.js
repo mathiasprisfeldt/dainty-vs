@@ -1,7 +1,7 @@
 const { checkColorScaleRange } = require("dainty-shared").colors;
 const { RGBToBGR } = require("../colors-vs");
 
-function getFontsAndColorsReplacements(configuration, colors) {
+function getFontsAndColorsCustomizations(configuration, colors) {
   const { editor } = configuration;
   const { blueGray, blue, blueLessChroma } = colors;
   const dark = configuration.variant === "dark";
@@ -46,5 +46,5 @@ function getFontsAndColorsReplacements(configuration, colors) {
 }
 
 module.exports = {
-  getFontsAndColorsReplacements
+  getFontsAndColorsCustomizations
 };
