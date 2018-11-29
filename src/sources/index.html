@@ -437,13 +437,6 @@
                 </div>
               </div>
               <div class="form-group">
-                <label>Additional contrast for comments</label>
-                <div class="ckbx-style-8">
-                  <input type="checkbox" id="environment_additionalCommentsContrast">
-                  <label for="environment_additionalCommentsContrast"></label>
-                </div>
-              </div>
-              <div class="form-group">
                 <label>Transparent tool window grip handles</label>
                 <div class="ckbx-style-8">
                   <input type="checkbox" id="environment_transparentToolWindowGrips" checked>
@@ -518,8 +511,7 @@
         <li>Punctuation marks are slightly dimmed</li>
         <li>Left side of the editor is less busy than in the default themes</li>
         <li>Lightness of environment background and foreground can be adjusted</li>
-        <li>Lightness of editor background and foreground can be adjusted<sup>[1]</sup></li>
-        <li>Contrast for comments can be added</li>
+        <li>Lightness of editor background can be adjusted<sup>[1]</sup></li>
         <li>Contrast for scrollbars can be added</li>
         <li>Transparent environment borders can be set<sup>[1]</sup></li>
         <li>Transparent scrollbar containers can be set<sup>[1]</sup></li>
@@ -679,9 +671,7 @@
         },
         environment: {
           backgroundLightness: $("#environment_additionalBackgroundLightness").checked ? 2 : 0,
-          foregroundLightness: $("#environment_additionalForegroundLightness").checked ? 2 : 0,
           additionalScrollbarsContrast: $("#environment_additionalScrollbarsContrast").checked,
-          additionalCommentsContrast: $("#environment_additionalCommentsContrast").checked,
           transparentBorders: false,
           transparentScrollbarContainers: false,
           transparentToolWindowGrips: $("#environment_transparentToolWindowGrips").checked,

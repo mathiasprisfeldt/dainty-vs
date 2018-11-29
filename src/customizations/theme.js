@@ -6,14 +6,8 @@ const {
   checkColorScaleRange
 } = require("dainty-shared").colors;
 
-function getCategoryCustomizations(configuration, colors) {
-  const { editor } = configuration;
-  const dark = configuration.variant === "dark";
-  const { blue, blueLessChroma, blueMoreChroma, blueGray, orange } = colors;
-
-  function edfl(index) {
-    return checkColorScaleRange(index + editor.foregroundLightness);
-  }
+function getCategoriesCustomizations(configuration, colors, getTokenColor) {
+  const { blue, blueLessChroma, blueGray } = colors;
 
   const replacements = {
     Environment: {
@@ -32,9 +26,9 @@ function getCategoryCustomizations(configuration, colors) {
       StartPageTextControlLinkSelectedHover: [blueLessChroma[36], null]
     },
     "ColorizedSignatureHelp colors": {
-      "HTML Attribute Value": [null, dark ? orange[33] : orange[18]],
-      punctuation: [null, blueGray[edfl(26)]],
-      urlformat: [null, dark ? blueMoreChroma[28] : blueMoreChroma[16]]
+      "HTML Attribute Value": [null, getTokenColor("string")],
+      punctuation: [null, getTokenColor("punctuation")],
+      urlformat: [null, getTokenColor("url")]
     },
     "Text Editor Text Marker Items": {
       "Current Statement": ["#eff284", null] // Revert
@@ -44,24 +38,16 @@ function getCategoryCustomizations(configuration, colors) {
     }
   };
 
-  return mergeConfigurationCategoryReplacements(
+  return mergeConfigurationCategoriesCustomizations(
     replacements,
     configuration,
     colors
   );
 }
 
-function getSearchReplaceCustomizations(configuration, colors) {
+function getSearchReplaceCustomizations(configuration, colors, getTokenColor) {
   const { environment, editor } = configuration;
-  const {
-    blue,
-    blueGray,
-    blueLessChroma,
-    blueMoreChroma,
-    green,
-    orange,
-    purple
-  } = colors;
+  const { blue, blueGray, blueMoreChroma, green, orange } = colors;
   const dark = configuration.variant === "dark";
 
   function envbl(index) {
@@ -74,10 +60,6 @@ function getSearchReplaceCustomizations(configuration, colors) {
 
   function edbl(index) {
     return checkColorScaleRange(index + editor.backgroundLightness);
-  }
-
-  function edfl(index) {
-    return checkColorScaleRange(index + editor.foregroundLightness);
   }
 
   const replacements = [
@@ -252,7 +234,7 @@ function getSearchReplaceCustomizations(configuration, colors) {
     //
 
     // Editor tooltip
-    ["#dadada", blueGray[edfl(32)]],
+    ["#dadada", blueGray[32]],
 
     // Start page `NEW`
     ["#ff8c00", dark ? green[32] : green[16]],
@@ -261,28 +243,28 @@ function getSearchReplaceCustomizations(configuration, colors) {
     ["#3399ff", blue[28]],
 
     // `using`, `public class`
-    ["#569cd6", blue[26]],
+    ["#569cd6", getTokenColor("keyword")],
 
     // `form`, `option` (bold)
-    ["#008080", blue[26]],
+    ["#008080", getTokenColor("keyword")],
 
     // `&nbsp;`
-    ["#00a0a0", dark ? blueLessChroma[30] : blue[20]],
+    ["#00a0a0", getTokenColor("type")],
 
     // `Program`, `WebHost`, `Startup`
-    ["#4ec9b0", dark ? blueLessChroma[30] : blue[20]],
+    ["#4ec9b0", getTokenColor("type")],
 
     // HTML attribute
-    ["#9cdcfe", dark ? blueLessChroma[30] : blue[20]],
+    ["#9cdcfe", getTokenColor("type")],
 
     // Active tool window tab, `Import theme`
     ["#0097fb", blueGray[envfl(32)]],
 
-    // launchSettings.json property
-    ["#d7ba7d", blueGray[edfl(34)]],
+    // JSON property
+    ["#d7ba7d", getTokenColor("identifier")],
 
     // Punctuation, method names
-    ["#dcdcdc", blueGray[edfl(34)]],
+    ["#dcdcdc", getTokenColor("identifier")],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
     ["#ffffff", dark ? blue[30] : blue[8]],
@@ -291,10 +273,10 @@ function getSearchReplaceCustomizations(configuration, colors) {
     ["#d0e6f5", blueGray[envfl(32)]],
 
     // `<` and `>`
-    ["#808080", blueGray[edfl(26)]],
+    ["#808080", blueGray[26]],
 
     // Operator and HTML operator
-    ["#b4b4b4", blueGray[edfl(30)]],
+    ["#b4b4b4", getTokenColor("operator")],
 
     // Most UI text (menu bar items, tabs, non-selected tabs, console output, Solution Explorer item …)
     ["#f1f1f1", blueGray[envfl(32)]],
@@ -312,48 +294,38 @@ function getSearchReplaceCustomizations(configuration, colors) {
     ["#55aaff", blueGray[envfl(32)]],
 
     // Comments
-    [
-      "#57a64a",
-      environment.additionalCommentsContrast
-        ? blueGray[edfl(20)]
-        : blueGray[edfl(16)]
-    ],
+    ["#57a64a", getTokenColor("comment")],
 
     // XML doc comment
-    [
-      "#608b4e",
-      environment.additionalCommentsContrast
-        ? blueGray[edfl(20)]
-        : blueGray[edfl(16)]
-    ],
+    ["#608b4e", getTokenColor("comment")],
 
     // Numbers
-    ["#b5cea8", dark ? green[36] : green[16]],
+    ["#b5cea8", getTokenColor("number")],
 
     // `IWebHostBuilder`
-    ["#b8d7a3", dark ? purple[30] : purple[20]],
+    ["#b8d7a3", getTokenColor("otherType")],
 
     // Less variable
-    ["#c563bd", dark ? purple[30] : purple[20]],
+    ["#c563bd", getTokenColor("otherType")],
 
     // Strings
-    ["#d69d85", dark ? orange[33] : orange[18]],
+    ["#d69d85", getTokenColor("string")],
 
     // Start page heading
-    ["#84ceff", blueLessChroma[34]],
+    ["#84ceff", getTokenColor("type")],
 
     // `Import Theme` hover
     ["#88ccfe", blueGray[envfl(36)]]
   ];
 
-  return mergeConfigurationSearchReplaceReplacements(
+  return mergeConfigurationSearchReplaceCustomizations(
     replacements,
     configuration,
     colors
   );
 }
 
-function mergeConfigurationCategoryReplacements(
+function mergeConfigurationCategoriesCustomizations(
   existingReplacements,
   configuration,
   colors
@@ -450,7 +422,7 @@ function mergeConfigurationCategoryReplacements(
   return resultReplacements;
 }
 
-function mergeConfigurationSearchReplaceReplacements(
+function mergeConfigurationSearchReplaceCustomizations(
   existingReplacements,
   configuration,
   colors
@@ -532,6 +504,6 @@ function mergeConfigurationSearchReplaceReplacements(
 }
 
 module.exports = {
-  getCategoryCustomizations,
+  getCategoriesCustomizations,
   getSearchReplaceCustomizations
 };

@@ -8,16 +8,19 @@ const {
   applyReplacements,
   logTransform
 } = require("dainty-shared").utils;
-const { generateColorConstantReplacements } = require("dainty-shared").colors;
+const {
+  generateColorConstantReplacements,
+  getTokenColorFunction
+} = require("dainty-shared").colors;
 const { toVsColorHex } = require("../colors-vs");
 const {
   getSearchReplaceCustomizations,
-  getCategoryCustomizations
+  getCategoriesCustomizations
 } = require("../customizations/theme");
 
 const readFile = util.promisify(fs.readFile);
 
-async function transformTheme(configuration, colors) {
+async function transformTheme(configuration, colors, colorConstants) {
   const source = path.join(__dirname, "../sources/dark.vstheme");
 
   logTransform(source);
@@ -26,7 +29,11 @@ async function transformTheme(configuration, colors) {
 
   let replacedContent = applyReplacements(
     content,
-    getSearchReplaceCustomizations(configuration, colors),
+    getSearchReplaceCustomizations(
+      configuration,
+      colors,
+      getTokenColorFunction(configuration, colorConstants)
+    ),
     toVsColorHex,
     toVsColorHex
   );
@@ -39,7 +46,11 @@ async function transformTheme(configuration, colors) {
   try {
     replacedContent = applyCategoryReplacements(
       replacedContent,
-      getCategoryCustomizations(configuration, colors),
+      getCategoriesCustomizations(
+        configuration,
+        colors,
+        getTokenColorFunction(configuration, colorConstants)
+      ),
       generateColorConstantReplacements(colors, false),
       generateColorConstantReplacements(colors, false).map(r => r[0])
     );

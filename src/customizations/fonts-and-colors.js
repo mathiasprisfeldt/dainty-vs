@@ -10,10 +10,6 @@ function getFontsAndColorsCustomizations(configuration, colors) {
     return checkColorScaleRange(index + editor.backgroundLightness);
   }
 
-  function edfl(index) {
-    return checkColorScaleRange(index + editor.foregroundLightness);
-  }
-
   function r(str) {
     return RGBToBGR(str)
       .replace("#", "")
@@ -23,7 +19,7 @@ function getFontsAndColorsCustomizations(configuration, colors) {
   return [
     ["OUTLINING_SQUARE_FOREGROUND", r(blueGray[edbl(4)])],
     ["OUTLINING_VERTICAL_RULE_FOREGROUND", r(blueGray[edbl(4)])],
-    ["LINE_NUMBER_FOREGROUND", r(blueGray[edfl(12)])],
+    ["LINE_NUMBER_FOREGROUND", r(blueGray[12])],
     ["BLOCK_STRUCTURE_ADORNMENTS_BACKGROUND", r(blueGray[edbl(4)])],
     ["HTML_SERVER_SIDE_SCRIPT_FOREGROUND", r(blue[24])],
     ["HTML_SERVER_SIDE_SCRIPT_BACKGROUND", r(blueGray[edbl(4)])],

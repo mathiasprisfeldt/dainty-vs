@@ -2,6 +2,7 @@ const parseArgs = require("minimist");
 const { getConfiguration } = require("dainty-shared").configuration;
 const {
   generateColorPalette,
+  generateColorConstants,
   getColorsCountByScale,
   trackColorsCount
 } = require("dainty-shared").colors;
@@ -30,9 +31,10 @@ const {
   }
 
   const colors = generateColorPalette(configuration);
+  const colorConstants = generateColorConstants(colors);
 
   trackColorsCount(true);
-  await buildThemeFiles(__dirname, configuration, colors);
+  await buildThemeFiles(__dirname, configuration, colors, colorConstants);
   trackColorsCount(false);
 
   await Promise.all([

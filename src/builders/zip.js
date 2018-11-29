@@ -2,9 +2,9 @@ const { transformTheme } = require("../transformers/theme");
 const { transformSettings } = require("../transformers/settings");
 const { zip } = require("dainty-shared").utils;
 
-async function buildThemeZip(configuration, colors) {
+async function buildThemeZip(configuration, colors, colorConstants) {
   const [[_, vstheme], vssettings] = await Promise.all([
-    transformTheme(configuration, colors),
+    transformTheme(configuration, colors, colorConstants),
     transformSettings(configuration, colors)
   ]);
 

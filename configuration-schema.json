@@ -30,12 +30,6 @@
           "type": "number",
           "title": "Editor background lightness adjustment",
           "default": 0
-        },
-        "foregroundLightness": {
-          "$id": "#/properties/editor/properties/foregroundLightness",
-          "type": "number",
-          "title": "Editor foreground lightness adjustment",
-          "default": 0
         }
       }
     },
@@ -57,12 +51,6 @@
           "type": "number",
           "title": "Environment foreground lightness adjustment",
           "default": 0
-        },
-        "additionalCommentsContrast": {
-          "$id": "#/properties/environment/properties/additionalCommentsContrast",
-          "type": "boolean",
-          "title": "Additional contrast for comments",
-          "default": false
         },
         "additionalScrollbarsContrast": {
           "$id": "#/properties/environment/properties/additionalScrollbarsContrast",
@@ -212,6 +200,12 @@
       "default": {},
       "additionalProperties": false,
       "properties": {
+        "tokens": {
+          "$id": "#/properties/customizations/properties/tokens",
+          "type": "object",
+          "title": "Token customizations",
+          "default": {}
+        },
         "__searchReplace": {
           "$id": "#/properties/customizations/properties/__searchReplace",
           "type": "object",

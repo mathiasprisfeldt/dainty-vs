@@ -14,8 +14,7 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 - Punctuation marks are slightly dimmed
 - Left side of the editor is less busy than in the default themes
 - Lightness of environment background and foreground can be adjusted
-- Lightness of editor background and foreground can be adjusted
-- Contrast for comments can be added
+- Lightness of editor background can be adjusted
 - Contrast for scrollbars can be added
 - Transparent environment borders can be set
 - Transparent scrollbar containers can be set
