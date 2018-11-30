@@ -1,5 +1,5 @@
 .vs
-configuration.json
+configuration.jsonc
 dist
 node_modules
 public/colors.html
