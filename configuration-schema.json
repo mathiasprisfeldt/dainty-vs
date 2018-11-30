@@ -1,34 +1,29 @@
 {
   "$id": "https://dainty-vs.now.sh/configuration-schema.json",
   "type": "object",
-  "title": "Dainty customization",
   "additionalProperties": false,
   "properties": {
     "variant": {
       "$id": "#/properties/variant",
       "type": "string",
       "enum": ["dark", "light"],
-      "title": "Color theme variant",
       "default": "dark",
       "additionalProperties": false
     },
     "editor": {
       "$id": "#/properties/editor",
       "type": "object",
-      "title": "Visual Studio editor",
       "default": {},
       "additionalProperties": false,
       "properties": {
         "fontFamily": {
           "$id": "#/properties/editor/properties/fontFamily",
           "type": "string",
-          "title": "Editor, console, and output windows font",
           "default": "Consolas"
         },
         "backgroundLightness": {
           "$id": "#/properties/editor/properties/backgroundLightness",
           "type": "number",
-          "title": "Editor background lightness adjustment",
           "default": 0
         }
       }
@@ -36,44 +31,37 @@
     "environment": {
       "$id": "#/properties/environment",
       "type": "object",
-      "title": "Visual Studio environment",
       "default": {},
       "additionalProperties": false,
       "properties": {
         "backgroundLightness": {
           "$id": "#/properties/environment/properties/backgroundLightness",
           "type": "number",
-          "title": "Environment background lightness adjustment",
           "default": 0
         },
         "foregroundLightness": {
           "$id": "#/properties/environment/properties/foregroundLightness",
           "type": "number",
-          "title": "Environment foreground lightness adjustment",
           "default": 0
         },
         "additionalScrollbarsContrast": {
           "$id": "#/properties/environment/properties/additionalScrollbarsContrast",
           "type": "boolean",
-          "title": "Additional contrast for scrollbars",
           "default": true
         },
         "transparentBorders": {
           "$id": "#/properties/environment/properties/transparentBorders",
           "type": "boolean",
-          "title": "Transparent environment borders",
           "default": false
         },
         "transparentScrollbarContainers": {
           "$id": "#/properties/environment/properties/transparentScrollbarContainers",
           "type": "boolean",
-          "title": "Transparent scrollbar containers",
           "default": false
         },
         "transparentToolWindowGrips": {
           "$id": "#/properties/environment/properties/transparentToolWindowGrips",
           "type": "boolean",
-          "title": "Transparent tool window grip handles",
           "default": true
         }
       }
@@ -81,21 +69,18 @@
     "extensions": {
       "$id": "#/properties/extensions",
       "type": "object",
-      "title": "Visual Studio extensions",
       "default": {},
       "additionalProperties": false,
       "properties": {
         "indentGuides": {
           "$id": "#/properties/extensions/properties/indentGuides",
           "type": "object",
-          "title": "Indent Guides extension",
           "default": {},
           "additionalProperties": false,
           "properties": {
             "includeSettings": {
               "$id": "#/properties/extensions/properties/indentGuides/properties/includeSettings",
               "type": "boolean",
-              "title": "Include settings for Indent Guides extension",
               "default": false
             }
           }
@@ -105,34 +90,23 @@
     "colors": {
       "$id": "#/properties/colors",
       "type": "object",
-      "title": "Dainty colors",
-      "default": {},
-      "additionalProperties": false
+      "default": {}
     },
     "customizations": {
       "$id": "#/properties/customizations",
       "type": "object",
-      "title": "Dainty customizations",
-      "default": {},
-      "additionalProperties": false,
       "properties": {
         "tokens": {
           "$id": "#/properties/customizations/properties/tokens",
-          "type": "object",
-          "title": "Token customizations",
-          "default": {}
+          "type": "object"
         },
         "__searchReplace": {
           "$id": "#/properties/customizations/properties/__searchReplace",
-          "type": "object",
-          "title": "Search–replace customizations",
-          "default": {}
+          "type": "object"
         },
         "__categories": {
           "type": "object",
-          "$id": "#/properties/customizations/properties/__categories",
-          "title": "Category customizations",
-          "default": {}
+          "$id": "#/properties/customizations/properties/__categories"
         }
       }
     }
