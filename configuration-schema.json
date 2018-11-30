@@ -89,8 +89,7 @@
     },
     "colors": {
       "$id": "#/properties/colors",
-      "type": "object",
-      "default": {}
+      "type": "object"
     },
     "customizations": {
       "$id": "#/properties/customizations",
