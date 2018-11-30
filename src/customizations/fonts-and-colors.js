@@ -7,7 +7,7 @@ function getFontsAndColorsCustomizations(configuration, colors) {
   const dark = configuration.variant === "dark";
 
   function edbl(index) {
-    return checkColorScaleRange(index + editor.backgroundLightness);
+    return checkColorScaleRange(index + editor.backgroundShade);
   }
 
   function r(str) {

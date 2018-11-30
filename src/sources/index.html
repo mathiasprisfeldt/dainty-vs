@@ -418,15 +418,15 @@
               <div class="form-group">
                 <label>Additional environment background lightness </label>
                 <div class="ckbx-style-8">
-                  <input type="checkbox" id="environment_additionalBackgroundLightness">
-                  <label for="environment_additionalBackgroundLightness"></label>
+                  <input type="checkbox" id="environment_additionalbackgroundShade">
+                  <label for="environment_additionalbackgroundShade"></label>
                 </div>
               </div>
               <div class="form-group">
                 <label>Additional environment foreground lightness</label>
                 <div class="ckbx-style-8">
-                  <input type="checkbox" id="environment_additionalForegroundLightness">
-                  <label for="environment_additionalForegroundLightness"></label>
+                  <input type="checkbox" id="environment_additionalforegroundShade">
+                  <label for="environment_additionalforegroundShade"></label>
                 </div>
               </div>
               <div class="form-group">
@@ -670,7 +670,7 @@
           fontFamily: $("#editor_fontFamily").value
         },
         environment: {
-          backgroundLightness: $("#environment_additionalBackgroundLightness").checked ? 2 : 0,
+          backgroundShade: $("#environment_additionalbackgroundShade").checked ? 2 : 0,
           additionalScrollbarsContrast: $("#environment_additionalScrollbarsContrast").checked,
           transparentBorders: false,
           transparentScrollbarContainers: false,

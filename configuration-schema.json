@@ -12,8 +12,8 @@
           "type": "string",
           "default": "Consolas"
         },
-        "backgroundLightness": {
-          "$id": "#/properties/editor/properties/backgroundLightness",
+        "backgroundShade": {
+          "$id": "#/properties/editor/properties/backgroundShade",
           "type": "number",
           "default": 0
         }
@@ -25,13 +25,13 @@
       "default": {},
       "additionalProperties": false,
       "properties": {
-        "backgroundLightness": {
-          "$id": "#/properties/environment/properties/backgroundLightness",
+        "backgroundShade": {
+          "$id": "#/properties/environment/properties/backgroundShade",
           "type": "number",
           "default": 0
         },
-        "foregroundLightness": {
-          "$id": "#/properties/environment/properties/foregroundLightness",
+        "foregroundShade": {
+          "$id": "#/properties/environment/properties/foregroundShade",
           "type": "number",
           "default": 0
         },

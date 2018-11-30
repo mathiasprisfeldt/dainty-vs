@@ -6,7 +6,7 @@ function getIndentGuidesCustomizations(configuration, colors) {
   const { neutral, purple } = colors;
 
   function edbl(index) {
-    return checkColorScaleRange(index + editor.backgroundLightness);
+    return checkColorScaleRange(index + editor.backgroundShade);
   }
 
   return [

@@ -51,15 +51,15 @@ function getSearchReplaceCustomizations(configuration, colors, getTokenColor) {
   const dark = configuration.variant === "dark";
 
   function envbl(index) {
-    return checkColorScaleRange(index + environment.backgroundLightness);
+    return checkColorScaleRange(index + environment.backgroundShade);
   }
 
   function envfl(index) {
-    return checkColorScaleRange(index + environment.foregroundLightness);
+    return checkColorScaleRange(index + environment.foregroundShade);
   }
 
   function edbl(index) {
-    return checkColorScaleRange(index + editor.backgroundLightness);
+    return checkColorScaleRange(index + editor.backgroundShade);
   }
 
   const replacements = [
