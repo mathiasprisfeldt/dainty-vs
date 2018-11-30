@@ -1,15 +1,6 @@
 {
-  "$id": "https://dainty-vs.now.sh/configuration-schema.json",
-  "type": "object",
-  "additionalProperties": false,
+  "$id": "https://dainty.site/vs/configuration-schema.json",
   "properties": {
-    "variant": {
-      "$id": "#/properties/variant",
-      "type": "string",
-      "enum": ["dark", "light"],
-      "default": "dark",
-      "additionalProperties": false
-    },
     "editor": {
       "$id": "#/properties/editor",
       "type": "object",
@@ -87,19 +78,9 @@
         }
       }
     },
-    "colors": {
-      "$id": "#/properties/colors",
-      "type": "object"
-    },
     "customizations": {
-      "$id": "#/properties/customizations",
-      "type": "object",
       "default": {},
       "properties": {
-        "tokens": {
-          "$id": "#/properties/customizations/properties/tokens",
-          "type": "object"
-        },
         "__searchReplace": {
           "$id": "#/properties/customizations/properties/__searchReplace",
           "type": "object",
