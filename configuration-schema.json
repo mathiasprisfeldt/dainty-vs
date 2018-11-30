@@ -95,6 +95,7 @@
     "customizations": {
       "$id": "#/properties/customizations",
       "type": "object",
+      "default": {},
       "properties": {
         "tokens": {
           "$id": "#/properties/customizations/properties/tokens",
@@ -102,11 +103,13 @@
         },
         "__searchReplace": {
           "$id": "#/properties/customizations/properties/__searchReplace",
-          "type": "object"
+          "type": "object",
+          "default": {}
         },
         "__categories": {
           "type": "object",
-          "$id": "#/properties/customizations/properties/__categories"
+          "$id": "#/properties/customizations/properties/__categories",
+          "default": {}
         }
       }
     }
