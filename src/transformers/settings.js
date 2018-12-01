@@ -2,8 +2,10 @@ const convert = require("xml-js");
 const { transformFontsAndColors } = require("./fonts-and-colors");
 const { transformIndentGuides } = require("./indent-guides");
 
-async function transformSettings(configuration, colors) {
-  let transformers = [transformFontsAndColors(configuration, colors)];
+async function transformSettings(configuration, colors, colorConstants) {
+  let transformers = [
+    transformFontsAndColors(configuration, colors, colorConstants)
+  ];
 
   if (configuration.extensions.indentGuides.includeSettings) {
     transformers.push(transformIndentGuides(configuration, colors));

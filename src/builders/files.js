@@ -11,7 +11,7 @@ async function buildThemeFiles(dirname, configuration, colors, colorConstants) {
 
   const [[error, vstheme], vssettings] = await Promise.all([
     transformTheme(configuration, colors, colorConstants),
-    transformSettings(configuration, colors)
+    transformSettings(configuration, colors, colorConstants)
   ]);
 
   if (error) {

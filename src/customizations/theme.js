@@ -2,28 +2,35 @@ const { cloneDeep } = require("dainty-shared").utils;
 const {
   generateColorConstantReplacements,
   applyColorConstantReplacements,
-  isHexColor,
-  checkColorScaleRange
+  isHexColor
 } = require("dainty-shared").colors;
 
-function getCategoriesCustomizations(configuration, colors, getTokenColor) {
+function getCategoriesCustomizations(
+  configuration,
+  colors,
+  getTypeShade,
+  getTokenColor
+) {
   const { blue, blueLessChroma, neutral } = colors;
 
   const replacements = {
     Environment: {
-      MainWindowActiveIconDefault: [blue[24], null],
-      MainWindowActiveIconBuilding: [blue[24], null],
-      MainWindowActiveIconDebugging: [blue[24], null],
-      MainWindowActiveIconNoSolution: [blue[24], null],
-      RaftedWindowActiveIconDefault: [blue[24], null],
-      RaftedWindowActiveIconBuilding: [blue[24], null],
-      RaftedWindowActiveIconDebugging: [blue[24], null],
-      RaftedWindowActiveIconNoSolution: [blue[24], null],
-      RaftedWindowInactiveIconDefault: [blue[24], null],
-      RaftedWindowInactiveIconBuilding: [blue[24], null],
-      RaftedWindowInactiveIconDebugging: [blue[24], null],
-      StartPageTextControlLinkSelected: [blue[34], null],
-      StartPageTextControlLinkSelectedHover: [blueLessChroma[36], null]
+      MainWindowActiveIconDefault: [blue[getTypeShade(24)], null],
+      MainWindowActiveIconBuilding: [blue[getTypeShade(24)], null],
+      MainWindowActiveIconDebugging: [blue[getTypeShade(24)], null],
+      MainWindowActiveIconNoSolution: [blue[getTypeShade(24)], null],
+      RaftedWindowActiveIconDefault: [blue[getTypeShade(24)], null],
+      RaftedWindowActiveIconBuilding: [blue[getTypeShade(24)], null],
+      RaftedWindowActiveIconDebugging: [blue[getTypeShade(24)], null],
+      RaftedWindowActiveIconNoSolution: [blue[getTypeShade(24)], null],
+      RaftedWindowInactiveIconDefault: [blue[getTypeShade(24)], null],
+      RaftedWindowInactiveIconBuilding: [blue[getTypeShade(24)], null],
+      RaftedWindowInactiveIconDebugging: [blue[getTypeShade(24)], null],
+      StartPageTextControlLinkSelected: [blue[getTypeShade(34)], null],
+      StartPageTextControlLinkSelectedHover: [
+        blueLessChroma[getTypeShade(36)],
+        null
+      ]
     },
     "ColorizedSignatureHelp colors": {
       "HTML Attribute Value": [null, getTokenColor("string")],
@@ -34,7 +41,7 @@ function getCategoriesCustomizations(configuration, colors, getTokenColor) {
       "Current Statement": ["#eff284", null] // Revert
     },
     VisualStudioInstaller: {
-      Background: [neutral[39], null]
+      Background: [neutral[getTypeShade(39)], null]
     }
   };
 
@@ -45,22 +52,14 @@ function getCategoriesCustomizations(configuration, colors, getTokenColor) {
   );
 }
 
-function getSearchReplaceCustomizations(configuration, colors, getTokenColor) {
-  const { environment, editor } = configuration;
+function getSearchReplaceCustomizations(
+  configuration,
+  colors,
+  getTypeShade,
+  getTokenColor
+) {
+  const { environment } = configuration;
   const { blue, neutral, blueMoreChroma, green, orange } = colors;
-  const dark = configuration.variant === "dark";
-
-  function envbl(index) {
-    return checkColorScaleRange(index + environment.backgroundShade);
-  }
-
-  function envfl(index) {
-    return checkColorScaleRange(index + environment.foregroundShade);
-  }
-
-  function edbl(index) {
-    return checkColorScaleRange(index + editor.backgroundShade);
-  }
 
   const replacements = [
     //
@@ -68,179 +67,181 @@ function getSearchReplaceCustomizations(configuration, colors, getTokenColor) {
     //
 
     // Active tab, statusbar
-    ["#007acc", neutral[envbl(6)]],
+    ["#007acc", neutral[getTypeShade(6)]],
 
     // Menu bar item hover
-    ["#3e3e40", neutral[envbl(6)]],
+    ["#3e3e40", neutral[getTypeShade(6)]],
 
     // Menu
-    ["#1b1b1c", neutral[envbl(2)]],
+    ["#1b1b1c", neutral[getTypeShade(2)]],
 
     // Menu item hover
-    ["#333334", neutral[envbl(6)]],
+    ["#333334", neutral[getTypeShade(6)]],
 
     // Hover tab
-    ["#1c97ea", neutral[envbl(4)]],
+    ["#1c97ea", neutral[getTypeShade(4)]],
 
     // Inactive tab hover close
-    ["#52b0ef", neutral[envbl(8)]],
+    ["#52b0ef", neutral[getTypeShade(8)]],
 
     // Inactive tab active close
-    ["#0e6198", neutral[envbl(10)]],
+    ["#0e6198", neutral[getTypeShade(10)]],
 
     // Editor
-    ["#1e1e1e", neutral[edbl(0)]],
+    ["#1e1e1e", neutral[getTypeShade(0)]],
 
     // Toolbar separator
-    ["#222222", neutral[edbl(0)]],
+    ["#222222", neutral[getTypeShade(0)]],
 
     // Solution Explorer, Properties
-    ["#252526", neutral[edbl(0)]],
+    ["#252526", neutral[getTypeShade(0)]],
 
     // Title bar, menu bar
-    ["#2d2d30", neutral[envbl(2)]],
+    ["#2d2d30", neutral[getTypeShade(2)]],
 
     // Breakpoints bar
-    ["#333333", neutral[envbl(1)]],
+    ["#333333", neutral[getTypeShade(1)]],
 
     // Search Solution Explorer, Quick Launch, Package Manager, menu separator line and borders around menu/menu item
-    ["#333337", neutral[edbl(0)]],
+    ["#333337", neutral[getTypeShade(0)]],
 
     // Scrollbar containers
     [
       "#3e3e42",
       environment.transparentScrollbarContainers
-        ? neutral[edbl(0)]
-        : neutral[edbl(1)]
+        ? neutral[getTypeShade(0)]
+        : neutral[getTypeShade(1)]
     ],
 
     // Scrollbar
     [
       "#686868",
       environment.additionalScrollbarsContrast
-        ? neutral[edbl(6)]
-        : neutral[edbl(4)]
+        ? neutral[getTypeShade(6)]
+        : neutral[getTypeShade(4)]
     ],
 
     // Scrollbar hover
     [
       "#9e9e9e",
       environment.additionalScrollbarsContrast
-        ? neutral[edbl(8)]
-        : neutral[edbl(6)]
+        ? neutral[getTypeShade(8)]
+        : neutral[getTypeShade(6)]
     ],
 
     // Scrollbar active
     [
       "#efebef",
       environment.additionalScrollbarsContrast
-        ? neutral[edbl(10)]
-        : neutral[edbl(8)]
+        ? neutral[getTypeShade(10)]
+        : neutral[getTypeShade(8)]
     ],
 
     // Scrollbar glyph disabled
-    ["#555558", neutral[envbl(4)]],
+    ["#555558", neutral[getTypeShade(4)]],
 
     // Selected item in Solution Explorer, thin borders across app
     [
       "#3f3f46",
-      environment.transparentBorders ? neutral[envbl(2)] : neutral[envbl(4)]
+      environment.transparentBorders
+        ? neutral[getTypeShade(2)]
+        : neutral[getTypeShade(4)]
     ],
 
     // Package Manger border
-    ["#434346", neutral[envbl(8)]],
+    ["#434346", neutral[getTypeShade(8)]],
 
     // Current line border
-    ["#464646", neutral[edbl(2)]],
+    ["#464646", neutral[getTypeShade(2)]],
 
     // Grip – inactive tool window
     [
       "#46464a",
       environment.transparentToolWindowGrips
-        ? neutral[envbl(2)]
-        : neutral[envbl(8)]
+        ? neutral[getTypeShade(2)]
+        : neutral[getTypeShade(8)]
     ],
 
     // Grip – active tool window
     [
       "#59a8de",
       environment.transparentToolWindowGrips
-        ? neutral[envbl(4)]
-        : neutral[envbl(16)]
+        ? neutral[getTypeShade(4)]
+        : neutral[getTypeShade(16)]
     ],
 
     // File changes indicator, current debugging statement
-    ["#eff284", neutral[edbl(2)]],
+    ["#eff284", neutral[getTypeShade(2)]],
 
     // File changes after save indicator
-    ["#577430", neutral[edbl(2)]],
+    ["#577430", neutral[getTypeShade(2)]],
 
     // Outline area
-    ["#232323", neutral[edbl(2)]],
+    ["#232323", neutral[getTypeShade(2)]],
 
     // File preview
-    ["#68217a", blue[0]],
+    ["#68217a", blue[getTypeShade(0)]],
 
     // Tooltip
-    ["#424245", neutral[edbl(2)]],
+    ["#424245", neutral[getTypeShade(2)]],
 
     // Tooltip border
-    ["#4d4d50", neutral[edbl(2)]],
+    ["#4d4d50", neutral[getTypeShade(2)]],
 
     // Extensions item hover
-    ["#3f3f40", neutral[envbl(2)]],
+    ["#3f3f40", neutral[getTypeShade(2)]],
 
     // Yellowy tooltip line
-    ["#fefcc8", orange[39]],
+    ["#fefcc8", orange[getTypeShade(39)]],
 
     // Start page arrow
-    ["#4f4f53", blue[16]],
+    ["#4f4f53", blue[getTypeShade(16)]],
 
     // Start page arrow hover
-    ["#606060", blue[20]],
+    ["#606060", blue[getTypeShade(20)]],
 
     // Notification badge
-    ["#8631c7", blueMoreChroma[8]],
+    ["#8631c7", blueMoreChroma[getTypeShade(8)]],
 
     // `100%` box arrow hover
-    ["#1f1f20", neutral[envbl(16)]],
+    ["#1f1f20", neutral[getTypeShade(16)]],
 
     // Inactive tool window glyph hover
-    ["#393939", neutral[envbl(4)]],
+    ["#393939", neutral[getTypeShade(4)]],
 
     // Team Explorer `Changes` label
-    ["#2d2d2d", neutral[envbl(4)]],
+    ["#2d2d2d", neutral[getTypeShade(4)]],
 
     // Team Explorer `Changes` label icon
-    ["#3d3d3d", neutral[envbl(8)]],
+    ["#3d3d3d", neutral[getTypeShade(8)]],
 
     // Team Explorer `Changes` label icon hover
-    ["#525252", neutral[envbl(12)]],
+    ["#525252", neutral[getTypeShade(12)]],
 
     // Team Explorer `Changes` icon
-    ["#c8c8c8", blue[36]],
+    ["#c8c8c8", blue[getTypeShade(36)]],
 
     // Team Explorer `Settings` blue indicator
-    ["#0079ce", blue[20]],
+    ["#0079ce", blue[getTypeShade(20)]],
 
     // Team Explorer `Changes` red indicator
-    ["#f05033", dark ? blue[34] : blue[16]],
+    ["#f05033", blue[getTypeShade(34, 16)]],
 
     // Diagnostic Tools tab hover
-    ["#555555", neutral[envbl(4)]],
+    ["#555555", neutral[getTypeShade(4)]],
 
     //
     // Foregrounds
     //
 
     // Editor tooltip
-    ["#dadada", neutral[32]],
+    ["#dadada", neutral[getTypeShade(32)]],
 
     // Start page `NEW`
-    ["#ff8c00", dark ? green[32] : green[16]],
+    ["#ff8c00", green[getTypeShade(32)]],
 
     // Preview Selected Items border
-    ["#3399ff", blue[28]],
+    ["#3399ff", blue[getTypeShade(28)]],
 
     // `using`, `public class`
     ["#569cd6", getTokenColor("keyword")],
@@ -258,7 +259,7 @@ function getSearchReplaceCustomizations(configuration, colors, getTokenColor) {
     ["#9cdcfe", getTokenColor("type")],
 
     // Active tool window tab, `Import theme`
-    ["#0097fb", neutral[envfl(32)]],
+    ["#0097fb", neutral[getTypeShade(32)]],
 
     // JSON property
     ["#d7ba7d", getTokenColor("identifier")],
@@ -267,31 +268,31 @@ function getSearchReplaceCustomizations(configuration, colors, getTokenColor) {
     ["#dcdcdc", getTokenColor("identifier")],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
-    ["#ffffff", dark ? blue[30] : blue[8]],
+    ["#ffffff", blue[getTypeShade(30)]],
 
     // Close and pin icons on active tab
-    ["#d0e6f5", neutral[envfl(32)]],
+    ["#d0e6f5", neutral[getTypeShade(32)]],
 
     // `<` and `>`
-    ["#808080", neutral[26]],
+    ["#808080", getTokenColor("punctuation")],
 
     // Operator and HTML operator
     ["#b4b4b4", getTokenColor("operator")],
 
     // Most UI text (menu bar items, tabs, non-selected tabs, console output, Solution Explorer item …)
-    ["#f1f1f1", neutral[envfl(32)]],
+    ["#f1f1f1", neutral[getTypeShade(32)]],
 
     // Inactive tabs in tool windows, tool window titles
-    ["#d0d0d0", neutral[envfl(26)]],
+    ["#d0d0d0", neutral[getTypeShade(26)]],
 
     // `Microsoft Visual Studio`
-    ["#999999", neutral[envfl(22)]],
+    ["#999999", neutral[getTypeShade(22)]],
 
     // Disabled menu item
-    ["#656565", neutral[envfl(18)]],
+    ["#656565", neutral[getTypeShade(18)]],
 
     // Inactive tabs hover in tool windows
-    ["#55aaff", neutral[envfl(32)]],
+    ["#55aaff", neutral[getTypeShade(32)]],
 
     // Comments
     ["#57a64a", getTokenColor("comment")],
@@ -315,7 +316,7 @@ function getSearchReplaceCustomizations(configuration, colors, getTokenColor) {
     ["#84ceff", getTokenColor("type")],
 
     // `Import Theme` hover
-    ["#88ccfe", neutral[envfl(36)]]
+    ["#88ccfe", neutral[getTypeShade(36)]]
   ];
 
   return mergeConfigurationSearchReplaceCustomizations(
@@ -347,7 +348,7 @@ function mergeConfigurationCategoriesCustomizations(
 
       if (!(Array.isArray(colorGroup) && colorGroup.length === 2)) {
         throw new Error(
-          `Value of category replacement \`${colorGroupKey}\` in \`configuration.json\` must be an array with length of 2. The first value is a tuple with background and text color for the dark variant. The second value is a tuple with background and text color for the light variant. Each colors must either be a color hex value or a Dainty color constant.`
+          `Value of category replacement \`${colorGroupKey}\` in \`configuration.json\` must be an array with length of 2. The first value is a tuple with background and text color for the dark type. The second value is a tuple with background and text color for the light type. Each colors must either be a color hex value or a Dainty color constant.`
         );
       }
 
@@ -356,13 +357,13 @@ function mergeConfigurationCategoriesCustomizations(
 
       if (!(Array.isArray(darkColors) && darkColors.length === 2)) {
         throw new Error(
-          `Array index 0 of category replacement color group \`${colorGroupKey}\` in \`configuration.json\` must be an array with length of 2. The first value is the background color for the dark variant. The second value is the text color for the dark variant. Each colors must either be a color hex value or a Dainty color constant.`
+          `Array index 0 of category replacement color group \`${colorGroupKey}\` in \`configuration.json\` must be an array with length of 2. The first value is the background color for the dark type. The second value is the text color for the dark type. Each colors must either be a color hex value or a Dainty color constant.`
         );
       }
 
       if (!(Array.isArray(lightColors) && lightColors.length === 2)) {
         throw new Error(
-          `Array index 1 of category replacement color group \`${colorGroupKey}\` in \`configuration.json\` must be an array with length of 2. The first value is the background color for the light variant. The second value is the text color for the light variant. Each colors must either be a color hex value or a Dainty color constant.`
+          `Array index 1 of category replacement color group \`${colorGroupKey}\` in \`configuration.json\` must be an array with length of 2. The first value is the background color for the light type. The second value is the text color for the light type. Each colors must either be a color hex value or a Dainty color constant.`
         );
       }
 
@@ -374,7 +375,7 @@ function mergeConfigurationCategoriesCustomizations(
         )
       ) {
         throw new Error(
-          `Array index 0 of category replacement color group  \`${colorGroupKey}\` for dark variant in \`configuration.json\` is not valid. The value must either be a color hex value or a Dainty color constant.`
+          `Array index 0 of category replacement color group  \`${colorGroupKey}\` for dark type in \`configuration.json\` is not valid. The value must either be a color hex value or a Dainty color constant.`
         );
       }
 
@@ -386,7 +387,7 @@ function mergeConfigurationCategoriesCustomizations(
         )
       ) {
         throw new Error(
-          `Array index 1 of category replacement color group  \`${colorGroupKey}\` for dark variant in \`configuration.json\` is not valid. The value must either be a color hex value or a Dainty color constant.`
+          `Array index 1 of category replacement color group  \`${colorGroupKey}\` for dark type in \`configuration.json\` is not valid. The value must either be a color hex value or a Dainty color constant.`
         );
       }
 
@@ -398,7 +399,7 @@ function mergeConfigurationCategoriesCustomizations(
         )
       ) {
         throw new Error(
-          `Array index 0 of category replacement color group  \`${colorGroupKey}\` for light variant in \`configuration.json\` is not valid. The value must either be a color hex value or a Dainty color constant.`
+          `Array index 0 of category replacement color group  \`${colorGroupKey}\` for light type in \`configuration.json\` is not valid. The value must either be a color hex value or a Dainty color constant.`
         );
       }
 
@@ -410,12 +411,12 @@ function mergeConfigurationCategoriesCustomizations(
         )
       ) {
         throw new Error(
-          `Array index 1 of category replacement color group  \`${colorGroupKey}\` for light variant in \`configuration.json\` is not valid. The value must either be a color hex value or a Dainty color constant.`
+          `Array index 1 of category replacement color group  \`${colorGroupKey}\` for light type in \`configuration.json\` is not valid. The value must either be a color hex value or a Dainty color constant.`
         );
       }
 
-      const variantIndex = configuration.variant === "dark" ? 0 : 1;
-      resultReplacements[categoryKey][colorGroupKey] = colorGroup[variantIndex];
+      const typeIndex = configuration.type === "dark" ? 0 : 1;
+      resultReplacements[categoryKey][colorGroupKey] = colorGroup[typeIndex];
     }
   }
 
@@ -447,7 +448,7 @@ function mergeConfigurationSearchReplaceCustomizations(
       )
     ) {
       throw new Error(
-        `Value of search–replace replacement \`${replacement}\` in \`configuration.json\` must be an array with length of 2. The first value is a color hex value or Dainty color constant for the dark variant. The second value is a color hex value or Dainty color constant for the light variant.`
+        `Value of search–replace replacement \`${replacement}\` in \`configuration.json\` must be an array with length of 2. The first value is a color hex value or Dainty color constant for the dark type. The second value is a color hex value or Dainty color constant for the light type.`
       );
     }
 
@@ -475,7 +476,7 @@ function mergeConfigurationSearchReplaceCustomizations(
       );
     }
 
-    const variantIndex = configuration.variant === "dark" ? 0 : 1;
+    const typeIndex = configuration.type === "dark" ? 0 : 1;
 
     if (existingReplacementsKeys.includes(replacement)) {
       const index = resultReplacements.findIndex(r => r[0] === replacement);
@@ -483,7 +484,7 @@ function mergeConfigurationSearchReplaceCustomizations(
       resultReplacements[index] = [
         replacement,
         applyColorConstantReplacements(
-          replacements[replacement][variantIndex],
+          replacements[replacement][typeIndex],
           colorReplacements,
           colorReplacementsKeys
         )
@@ -492,7 +493,7 @@ function mergeConfigurationSearchReplaceCustomizations(
       resultReplacements.push([
         replacement,
         applyColorConstantReplacements(
-          replacements[replacement][variantIndex],
+          replacements[replacement][typeIndex],
           colorReplacements,
           colorReplacementsKeys
         )

@@ -10,6 +10,7 @@ const {
 } = require("dainty-shared").utils;
 const {
   generateColorConstantReplacements,
+  getTypeShadeFunction,
   getTokenColorFunction
 } = require("dainty-shared").colors;
 const { toVsColorHex } = require("../conversions");
@@ -32,6 +33,7 @@ async function transformTheme(configuration, colors, colorConstants) {
     getSearchReplaceCustomizations(
       configuration,
       colors,
+      getTypeShadeFunction(configuration),
       getTokenColorFunction(configuration, colorConstants)
     ),
     toVsColorHex,
@@ -49,6 +51,7 @@ async function transformTheme(configuration, colors, colorConstants) {
       getCategoriesCustomizations(
         configuration,
         colors,
+        getTypeShadeFunction(configuration),
         getTokenColorFunction(configuration, colorConstants)
       ),
       generateColorConstantReplacements(colors, false),

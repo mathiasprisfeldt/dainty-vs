@@ -11,11 +11,6 @@
           "$id": "#/properties/editor/properties/fontFamily",
           "type": "string",
           "default": "Consolas"
-        },
-        "backgroundShade": {
-          "$id": "#/properties/editor/properties/backgroundShade",
-          "type": "number",
-          "default": 0
         }
       }
     },
@@ -25,16 +20,6 @@
       "default": {},
       "additionalProperties": false,
       "properties": {
-        "backgroundShade": {
-          "$id": "#/properties/environment/properties/backgroundShade",
-          "type": "number",
-          "default": 0
-        },
-        "foregroundShade": {
-          "$id": "#/properties/environment/properties/foregroundShade",
-          "type": "number",
-          "default": 0
-        },
         "additionalScrollbarsContrast": {
           "$id": "#/properties/environment/properties/additionalScrollbarsContrast",
           "type": "boolean",
