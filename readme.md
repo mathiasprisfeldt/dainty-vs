@@ -13,16 +13,13 @@ For more information and web-based configuration, see https://dainty-vs.now.sh.
 - Precise and pleasant colors are generated and selected within the CIELAB color space
 - Punctuation marks are slightly dimmed
 - Left side of the editor is less busy than in the default themes
-- Lightness of environment background and foreground can be adjusted
-- Lightness of editor background can be adjusted
 - Contrast for scrollbars can be added
 - Transparent environment borders can be set
 - Transparent scrollbar containers can be set
 - Transparent tool window grip handles can be set
 - Settings for Indent Guides extension can be included
 - Colors can be lightened, darkened, or desaturated
-- Colors can be overridden
-- Usages of colors can be overridden
+- Colors, and usages of colors, can be overridden
 - Supports configuration presets
 
 ## Setup
