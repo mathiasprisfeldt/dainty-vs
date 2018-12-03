@@ -1,26 +1,6 @@
 # Dainty for Visual Studio
 
-Dainty is a configurable, refined, and balanced color theme using carefully selected colors within the CIELAB color space. It is designed to maximize readability and reduce eye strain.
-
-For more information and web-based configuration, see https://dainty-vs.now.sh.
-
-## Screenshot
-
-![image](public/screenshot-dainty-github.png)
-
-## Features
-
-- Precise and pleasant colors are generated and selected within the CIELAB color space
-- Punctuation marks are slightly dimmed
-- Left side of the editor is less busy than in the default themes
-- Contrast for scrollbars can be added
-- Transparent environment borders can be set
-- Transparent scrollbar containers can be set
-- Transparent tool window grip handles can be set
-- Settings for Indent Guides extension can be included
-- Colors can be lightened, darkened, or desaturated
-- Colors, and usages of colors, can be overridden
-- Supports configuration presets
+Dainty is a color theme generator with support for Visual Studio Code. Dainty Light and Dainty Dark are the default presets. They’re balanced and refined color themes, using carefully selected colors within the CIELAB color space.
 
 ## Setup
 
@@ -36,11 +16,11 @@ The build script generates `dist/dainty.vstheme` and `dist/dainty.vssettings`.
 
 ## Configuration
 
-Dainty can be configured by editing `configuration.jsonc`. The file is generated if it doesn’t exist while running `yarn build`. Its schema is defined by [`configuration-schema.json`](https://github.com/alexanderte/dainty-vs/blob/master/configuration-schema.json). See [Shared configuration](https://github.com/alexanderte/dainty-shared/blob/master/shared-configuration.md) for configuration shared by Dainty for different applications.
+Dainty can be configured by editing `configuration.json`. The file is generated if it doesn’t exist while running `yarn build`. See [Configuration](https://github.com/alexanderte/dainty-shared/blob/master/configuration.md) for more information.
 
 ### Visual Studio-specific customizations
 
-While customization genrally should be done using `"customization"."tokens"`, there is possible to tap into how Dainty customizes Visual Studio by adding to the `"__searchReplace"` and `__categories` objects:
+While customization genrally should be done using `customization.tokens`, there is possible to tap into how Dainty customizes Visual Studio by adding to the `"__searchReplace"` and `__categories` objects:
 
 ```json
 "customizations": {
@@ -74,4 +54,4 @@ Run `yarn start` to start Express server. These are the available routes:
 
 ## License
 
-Dainty for Visual Studio is licensed under the [MIT License](https://github.com/alexanderte/dainty-vs/blob/master/license.md).
+Dainty is licensed under the [MIT License](https://github.com/alexanderte/dainty-vs/blob/master/license.md).
