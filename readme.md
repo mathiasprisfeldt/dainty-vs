@@ -18,7 +18,7 @@ The build script generates `dist/dainty.vstheme` and `dist/dainty.vssettings`.
 
 ## Configuration
 
-Dainty can be configured by editing `configuration.json`. The file is generated if it doesn’t exist while running `yarn build`. See [Configuration](https://github.com/alexanderte/dainty-shared/blob/master/configuration.md) for more information.
+See https://dainty.site/configuration for more information.
 
 ### Visual Studio-specific customizations
 
