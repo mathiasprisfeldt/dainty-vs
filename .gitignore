@@ -4,5 +4,3 @@ dist
 node_modules
 public/colors.html
 public/coverage.html
-public/index.html
-public/syntax.html
