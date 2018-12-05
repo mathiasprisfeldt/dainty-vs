@@ -20,25 +20,6 @@ The build script generates `dist/dainty.vstheme` and `dist/dainty.vssettings`.
 
 See https://dainty.site/configuration for more information.
 
-### Visual Studio-specific customizations
-
-While customization genrally should be done using `customization.tokens`, there is possible to tap into how Dainty customizes Visual Studio by adding to the `"__searchReplace"` and `__categories` objects:
-
-```json
-"customizations": {
-  "__searchReplace": {
-    "#b5cea8": ["purple20", "purple20"]
-  },
-  "__categories": {
-    "ColorizedSignatureHelp colors": {
-      "HTML Attribute Value": [[null, "blue0"], [null, "blue32"]]
-    }
-  }
-}
-```
-
-Each replacement is a tuple, where the first value represents the dark variation of the theme. The second value represents the light variation. For categories there is an inner tuple representing the background and text color, respectively.
-
 ## License
 
 Dainty is licensed under the [MIT License](https://github.com/alexanderte/dainty-vs/blob/master/license.md).
