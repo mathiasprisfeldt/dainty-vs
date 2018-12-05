@@ -39,21 +39,6 @@ While customization genrally should be done using `customization.tokens`, there 
 
 Each replacement is a tuple, where the first value represents the dark variation of the theme. The second value represents the light variation. For categories there is an inner tuple representing the background and text color, respectively.
 
-## Server
-
-Run `yarn start` to start Express server. These are the available routes:
-
-| Method | Route                           | Description                                                         |
-| ------ | ------------------------------- | ------------------------------------------------------------------- |
-| `GET`  | `/`                             | Landing page                                                        |
-| `GET`  | `/colors.html`                  | Color scales page                                                   |
-| `GET`  | `/coverage.html`                | Coverage page                                                       |
-| `GET`  | `/syntax.html`                  | Syntax page                                                         |
-| `GET`  | `/dainty-latest.zip`            | Generates the latest version of Dainty with default configuration   |
-| `POST` | `/dainty-latest-configured.zip` | Generates the latest version of Dainty with custom configuration[1] |
-
-1. Custom configuration is sent as JSON using the request body, and the format is defined by [`configuration-schema.json`](https://github.com/alexanderte/dainty-vs/blob/master/configuration-schema.json).
-
 ## License
 
 Dainty is licensed under the [MIT License](https://github.com/alexanderte/dainty-vs/blob/master/license.md).

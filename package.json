@@ -10,7 +10,6 @@
     "culori": "0.7.3",
     "dainty-shared": "2.1.0-60e2cca",
     "express": "4.16.4",
-    "html-minifier": "3.5.21",
     "minimist": "1.2.0",
     "replace-once": "1.0.0",
     "uuid": "3.3.2",

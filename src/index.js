@@ -2,17 +2,10 @@ const parseArgs = require("minimist");
 const { getConfiguration } = require("dainty-shared").configuration;
 const {
   generateColorScales,
-  generateColorConstants,
-  getColorsCountByScale,
-  trackColorsCount
+  generateColorConstants
 } = require("dainty-shared").colors;
 const { buildThemeFiles } = require("./builders/files");
-const {
-  buildIndexPage,
-  buildColorsPage,
-  buildCoveragePage,
-  buildSyntaxPage
-} = require("./builders");
+const { buildColorsPage, buildCoveragePage } = require("./builders");
 
 (async () => {
   const argv = parseArgs(process.argv.slice(2));
@@ -33,15 +26,9 @@ const {
   const colors = generateColorScales(configuration);
   const colorConstants = generateColorConstants(colors);
 
-  trackColorsCount(true);
-  await buildThemeFiles(__dirname, configuration, colors, colorConstants);
-  trackColorsCount(false);
-
   await Promise.all([
-    buildIndexPage(__dirname, colors, getColorsCountByScale(c => c.count > 4)),
-    buildSyntaxPage(__dirname, colors),
-    buildColorsPage(__dirname, colors)
+    buildThemeFiles(__dirname, configuration, colors, colorConstants),
+    buildColorsPage(__dirname, colors),
+    buildCoveragePage(__dirname, colors)
   ]);
-
-  await buildCoveragePage(__dirname, colors);
 })();
