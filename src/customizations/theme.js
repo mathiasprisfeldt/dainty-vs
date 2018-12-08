@@ -262,7 +262,7 @@ function getSearchReplaceCustomizations(
     ["#0097fb", neutral[getTypeShade(32)]],
 
     // JSON property
-    ["#d7ba7d", getTokenColor("propertyName")],
+    ["#d7ba7d", getTokenColor("property")],
 
     // Punctuation, method names
     ["#dcdcdc", getTokenColor("other")],
