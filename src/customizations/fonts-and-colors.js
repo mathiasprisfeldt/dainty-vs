@@ -19,7 +19,7 @@ function getFontsAndColorsCustomizations(
     ["OUTLINING_VERTICAL_RULE_FOREGROUND", r(neutral[getTypeShade(4)])],
     ["LINE_NUMBER_FOREGROUND", r(neutral[getTypeShade(12)])],
     ["BLOCK_STRUCTURE_ADORNMENTS_BACKGROUND", r(neutral[getTypeShade(4)])],
-    ["HTML_SERVER_SIDE_SCRIPT_FOREGROUND", r(blue[getTypeShade(24)])],
+    ["HTML_SERVER_SIDE_SCRIPT_FOREGROUND", r(getTokenColor("operator"))],
     ["HTML_SERVER_SIDE_SCRIPT_BACKGROUND", r(neutral[getTypeShade(4)])],
     ["RAZOR_CODE_BACKGROUND", r(neutral[getTypeShade(1)])],
     ["SELECTED_TEXT_BACKGROUND", r(blueLessChroma[getTypeShade(16)])],

@@ -9,33 +9,32 @@ function getCategoriesCustomizations(
   configuration,
   colors,
   getTypeShade,
+  getAccentColor,
   getTokenColor
 ) {
   const { blue, blueLessChroma, neutral } = colors;
 
   const replacements = {
     Environment: {
-      MainWindowActiveIconDefault: [blue[getTypeShade(24)], null],
-      MainWindowActiveIconBuilding: [blue[getTypeShade(24)], null],
-      MainWindowActiveIconDebugging: [blue[getTypeShade(24)], null],
-      MainWindowActiveIconNoSolution: [blue[getTypeShade(24)], null],
-      RaftedWindowActiveIconDefault: [blue[getTypeShade(24)], null],
-      RaftedWindowActiveIconBuilding: [blue[getTypeShade(24)], null],
-      RaftedWindowActiveIconDebugging: [blue[getTypeShade(24)], null],
-      RaftedWindowActiveIconNoSolution: [blue[getTypeShade(24)], null],
-      RaftedWindowInactiveIconDefault: [blue[getTypeShade(24)], null],
-      RaftedWindowInactiveIconBuilding: [blue[getTypeShade(24)], null],
-      RaftedWindowInactiveIconDebugging: [blue[getTypeShade(24)], null],
-      StartPageTextControlLinkSelected: [blue[getTypeShade(34)], null],
-      StartPageTextControlLinkSelectedHover: [
-        blueLessChroma[getTypeShade(36)],
-        null
-      ]
+      MainWindowActiveIconDefault: [getAccentColor(1), null],
+      MainWindowActiveIconBuilding: [getAccentColor(1), null],
+      MainWindowActiveIconDebugging: [getAccentColor(1), null],
+      MainWindowActiveIconNoSolution: [getAccentColor(1), null],
+      RaftedWindowActiveIconDefault: [getAccentColor(1), null],
+      RaftedWindowActiveIconBuilding: [getAccentColor(1), null],
+      RaftedWindowActiveIconDebugging: [getAccentColor(1), null],
+      RaftedWindowActiveIconNoSolution: [getAccentColor(1), null],
+      RaftedWindowInactiveIconDefault: [getAccentColor(1), null],
+      RaftedWindowInactiveIconBuilding: [getAccentColor(1), null],
+      RaftedWindowInactiveIconDebugging: [getAccentColor(1), null],
+      StartPageTextControlLinkSelected: [getTokenColor("url"), null],
+      StartPageTextControlLinkSelectedHover: [getTokenColor("url"), null]
     },
     "ColorizedSignatureHelp colors": {
       "HTML Attribute Value": [null, getTokenColor("string")],
       punctuation: [null, getTokenColor("punctuation")],
-      urlformat: [null, getTokenColor("url")]
+      urlformat: [null, getTokenColor("url")],
+      "Preprocessor Keyword": [null, getTokenColor("operator")]
     },
     "Text Editor Text Marker Items": {
       "Current Statement": ["#eff284", null] // Revert
@@ -56,6 +55,7 @@ function getSearchReplaceCustomizations(
   configuration,
   colors,
   getTypeShade,
+  getAccentColor,
   getTokenColor
 ) {
   const { environment } = configuration;
@@ -201,7 +201,7 @@ function getSearchReplaceCustomizations(
     ["#606060", blue[getTypeShade(20)]],
 
     // Notification badge
-    ["#8631c7", blueMoreChroma[getTypeShade(8)]],
+    ["#8631c7", getAccentColor(0)],
 
     // `100%` box arrow hover
     ["#1f1f20", neutral[getTypeShade(16)]],
@@ -262,13 +262,13 @@ function getSearchReplaceCustomizations(
     ["#0097fb", neutral[getTypeShade(32)]],
 
     // JSON property
-    ["#d7ba7d", getTokenColor("identifier")],
+    ["#d7ba7d", getTokenColor("propertyName")],
 
     // Punctuation, method names
-    ["#dcdcdc", getTokenColor("identifier")],
+    ["#dcdcdc", getTokenColor("other")],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
-    ["#ffffff", blue[getTypeShade(30)]],
+    ["#ffffff", getAccentColor(2)],
 
     // Close and pin icons on active tab
     ["#d0e6f5", neutral[getTypeShade(32)]],
