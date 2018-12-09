@@ -245,7 +245,7 @@ function getSearchReplaceCustomizations(
     ["#569cd6", getProperty("token.keyword")],
 
     // `form`, `option` (bold)
-    ["#008080", getProperty("token.keyword")],
+    ["#008080", getProperty("token.tag")],
 
     // `&nbsp;`
     ["#00a0a0", getProperty("token.type")],
@@ -254,7 +254,7 @@ function getSearchReplaceCustomizations(
     ["#4ec9b0", getProperty("token.type")],
 
     // HTML attribute
-    ["#9cdcfe", getProperty("token.type")],
+    ["#9cdcfe", getProperty("token.attributeName")],
 
     // Active tool window tab, `Import theme`
     ["#0097fb", neutral[getTypeShade(32)]],
