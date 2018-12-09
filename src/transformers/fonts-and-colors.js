@@ -8,8 +8,8 @@ const {
 } = require("../customizations/fonts-and-colors");
 const { logTransform } = require("dainty-shared").utils;
 const {
-  getTypeShadeFunction,
-  getTokenColorFunction
+  getPropertyFunction,
+  getTypeShadeFunction
 } = require("dainty-shared").colors;
 
 const readFile = util.promisify(fs.readFile);
@@ -22,8 +22,8 @@ async function transformFontsAndColors(configuration, colors, colorConstants) {
   const replacements = getFontsAndColorsCustomizations(
     configuration,
     colors,
-    getTypeShadeFunction(configuration),
-    getTokenColorFunction(configuration, colorConstants)
+    getPropertyFunction(configuration, colorConstants),
+    getTypeShadeFunction(configuration)
   );
 
   const find = replacements.map(r => r[0]);

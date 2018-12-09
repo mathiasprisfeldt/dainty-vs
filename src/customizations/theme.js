@@ -8,33 +8,32 @@ const {
 function getCategoriesCustomizations(
   configuration,
   colors,
-  getTypeShade,
-  getAccentColor,
-  getTokenColor
+  getProperty,
+  getTypeShade
 ) {
-  const { blue, blueLessChroma, neutral } = colors;
+  const { neutral } = colors;
 
   const replacements = {
     Environment: {
-      MainWindowActiveIconDefault: [getAccentColor(1), null],
-      MainWindowActiveIconBuilding: [getAccentColor(1), null],
-      MainWindowActiveIconDebugging: [getAccentColor(1), null],
-      MainWindowActiveIconNoSolution: [getAccentColor(1), null],
-      RaftedWindowActiveIconDefault: [getAccentColor(1), null],
-      RaftedWindowActiveIconBuilding: [getAccentColor(1), null],
-      RaftedWindowActiveIconDebugging: [getAccentColor(1), null],
-      RaftedWindowActiveIconNoSolution: [getAccentColor(1), null],
-      RaftedWindowInactiveIconDefault: [getAccentColor(1), null],
-      RaftedWindowInactiveIconBuilding: [getAccentColor(1), null],
-      RaftedWindowInactiveIconDebugging: [getAccentColor(1), null],
-      StartPageTextControlLinkSelected: [getTokenColor("url"), null],
-      StartPageTextControlLinkSelectedHover: [getTokenColor("url"), null]
+      MainWindowActiveIconDefault: [getProperty("accent1"), null],
+      MainWindowActiveIconBuilding: [getProperty("accent1"), null],
+      MainWindowActiveIconDebugging: [getProperty("accent1"), null],
+      MainWindowActiveIconNoSolution: [getProperty("accent1"), null],
+      RaftedWindowActiveIconDefault: [getProperty("accent1"), null],
+      RaftedWindowActiveIconBuilding: [getProperty("accent1"), null],
+      RaftedWindowActiveIconDebugging: [getProperty("accent1"), null],
+      RaftedWindowActiveIconNoSolution: [getProperty("accent1"), null],
+      RaftedWindowInactiveIconDefault: [getProperty("accent1"), null],
+      RaftedWindowInactiveIconBuilding: [getProperty("accent1"), null],
+      RaftedWindowInactiveIconDebugging: [getProperty("accent1"), null],
+      StartPageTextControlLinkSelected: [getProperty("token.url"), null],
+      StartPageTextControlLinkSelectedHover: [getProperty("token.url"), null]
     },
     "ColorizedSignatureHelp colors": {
-      "HTML Attribute Value": [null, getTokenColor("string")],
-      punctuation: [null, getTokenColor("punctuation")],
-      urlformat: [null, getTokenColor("url")],
-      "Preprocessor Keyword": [null, getTokenColor("operator")]
+      "HTML Attribute Value": [null, getProperty("token.string")],
+      punctuation: [null, getProperty("token.punctuation")],
+      urlformat: [null, getProperty("token.url")],
+      "Preprocessor Keyword": [null, getProperty("token.operator")]
     },
     "Text Editor Text Marker Items": {
       "Current Statement": ["#eff284", null] // Revert
@@ -54,12 +53,11 @@ function getCategoriesCustomizations(
 function getSearchReplaceCustomizations(
   configuration,
   colors,
-  getTypeShade,
-  getAccentColor,
-  getTokenColor
+  getProperty,
+  getTypeShade
 ) {
   const { environment } = configuration;
-  const { blue, neutral, blueMoreChroma, green, orange } = colors;
+  const { blue, neutral, green, orange } = colors;
 
   const replacements = [
     //
@@ -201,7 +199,7 @@ function getSearchReplaceCustomizations(
     ["#606060", blue[getTypeShade(20)]],
 
     // Notification badge
-    ["#8631c7", getAccentColor(0)],
+    ["#8631c7", getProperty("accent0")],
 
     // `100%` box arrow hover
     ["#1f1f20", neutral[getTypeShade(16)]],
@@ -244,40 +242,40 @@ function getSearchReplaceCustomizations(
     ["#3399ff", blue[getTypeShade(28)]],
 
     // `using`, `public class`
-    ["#569cd6", getTokenColor("keyword")],
+    ["#569cd6", getProperty("token.keyword")],
 
     // `form`, `option` (bold)
-    ["#008080", getTokenColor("keyword")],
+    ["#008080", getProperty("token.keyword")],
 
     // `&nbsp;`
-    ["#00a0a0", getTokenColor("type")],
+    ["#00a0a0", getProperty("token.type")],
 
     // `Program`, `WebHost`, `Startup`
-    ["#4ec9b0", getTokenColor("type")],
+    ["#4ec9b0", getProperty("token.type")],
 
     // HTML attribute
-    ["#9cdcfe", getTokenColor("type")],
+    ["#9cdcfe", getProperty("token.type")],
 
     // Active tool window tab, `Import theme`
     ["#0097fb", neutral[getTypeShade(32)]],
 
     // JSON property
-    ["#d7ba7d", getTokenColor("property")],
+    ["#d7ba7d", getProperty("token.property")],
 
     // Punctuation, method names
-    ["#dcdcdc", getTokenColor("other")],
+    ["#dcdcdc", getProperty("token.other")],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
-    ["#ffffff", getAccentColor(2)],
+    ["#ffffff", getProperty("accent2")],
 
     // Close and pin icons on active tab
     ["#d0e6f5", neutral[getTypeShade(32)]],
 
     // `<` and `>`
-    ["#808080", getTokenColor("punctuation")],
+    ["#808080", getProperty("token.punctuation")],
 
     // Operator and HTML operator
-    ["#b4b4b4", getTokenColor("operator")],
+    ["#b4b4b4", getProperty("token.operator")],
 
     // Most UI text (menu bar items, tabs, non-selected tabs, console output, Solution Explorer item …)
     ["#f1f1f1", neutral[getTypeShade(32)]],
@@ -295,25 +293,25 @@ function getSearchReplaceCustomizations(
     ["#55aaff", neutral[getTypeShade(32)]],
 
     // Comments
-    ["#57a64a", getTokenColor("comment")],
+    ["#57a64a", getProperty("token.comment")],
 
     // XML doc comment
-    ["#608b4e", getTokenColor("comment")],
+    ["#608b4e", getProperty("token.comment")],
 
     // Numbers
-    ["#b5cea8", getTokenColor("number")],
+    ["#b5cea8", getProperty("token.number")],
 
     // `IWebHostBuilder`
-    ["#b8d7a3", getTokenColor("otherType")],
+    ["#b8d7a3", getProperty("token.otherType")],
 
     // Less variable
-    ["#c563bd", getTokenColor("otherType")],
+    ["#c563bd", getProperty("token.otherType")],
 
     // Strings
-    ["#d69d85", getTokenColor("string")],
+    ["#d69d85", getProperty("token.string")],
 
     // Start page heading
-    ["#84ceff", getTokenColor("type")],
+    ["#84ceff", getProperty("token.type")],
 
     // `Import Theme` hover
     ["#88ccfe", neutral[getTypeShade(36)]]

@@ -3,10 +3,10 @@ const { RGBToBGR } = require("../conversions");
 function getFontsAndColorsCustomizations(
   configuration,
   colors,
-  getTypeShade,
-  getTokenColor
+  getProperty,
+  getTypeShade
 ) {
-  const { neutral, blue, blueLessChroma } = colors;
+  const { neutral, blueLessChroma } = colors;
 
   function r(str) {
     return RGBToBGR(str)
@@ -19,7 +19,7 @@ function getFontsAndColorsCustomizations(
     ["OUTLINING_VERTICAL_RULE_FOREGROUND", r(neutral[getTypeShade(4)])],
     ["LINE_NUMBER_FOREGROUND", r(neutral[getTypeShade(12)])],
     ["BLOCK_STRUCTURE_ADORNMENTS_BACKGROUND", r(neutral[getTypeShade(4)])],
-    ["HTML_SERVER_SIDE_SCRIPT_FOREGROUND", r(getTokenColor("operator"))],
+    ["HTML_SERVER_SIDE_SCRIPT_FOREGROUND", r(getProperty("token.operator"))],
     ["HTML_SERVER_SIDE_SCRIPT_BACKGROUND", r(neutral[getTypeShade(4)])],
     ["RAZOR_CODE_BACKGROUND", r(neutral[getTypeShade(1)])],
     ["SELECTED_TEXT_BACKGROUND", r(blueLessChroma[getTypeShade(16)])],
@@ -28,8 +28,8 @@ function getFontsAndColorsCustomizations(
     ["BRACE_MATCHING_BACKGROUND", r(blueLessChroma[getTypeShade(4)])],
     ["CURRENT_LINE_FOREGROUND", r(neutral[getTypeShade(0)])],
     ["CURRENT_LINE_BACKGROUND", r(neutral[getTypeShade(6)])],
-    ["XML_ATTRIBUTE_VALUE_FOREGROUND", r(getTokenColor("string"))],
-    ["XML_ATTRIBUTE_QUOTES_FOREGROUND", r(getTokenColor("string"))]
+    ["XML_ATTRIBUTE_VALUE_FOREGROUND", r(getProperty("token.string"))],
+    ["XML_ATTRIBUTE_QUOTES_FOREGROUND", r(getProperty("token.string"))]
   ];
 }
 
