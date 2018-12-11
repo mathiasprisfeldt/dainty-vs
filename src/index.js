@@ -28,7 +28,8 @@ const { buildColorsPage, buildCoveragePage } = require("./builders");
 
   await Promise.all([
     buildThemeFiles(__dirname, configuration, colors, colorConstants),
-    buildColorsPage(__dirname, colors),
-    buildCoveragePage(__dirname, colors)
+    buildColorsPage(__dirname, colors)
   ]);
+
+  await buildCoveragePage(__dirname, colors);
 })();
