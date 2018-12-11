@@ -26,10 +26,5 @@ const { buildColorsPage, buildCoveragePage } = require("./builders");
   const colors = generateColorScales(configuration);
   const colorConstants = generateColorConstants(colors);
 
-  await Promise.all([
-    buildThemeFiles(__dirname, configuration, colors, colorConstants),
-    buildColorsPage(__dirname, colors)
-  ]);
-
-  await buildCoveragePage(__dirname, colors);
+  await buildThemeFiles(__dirname, configuration, colors, colorConstants);
 })();
