@@ -8,7 +8,7 @@
   "dependencies": {
     "change-case": "3.0.2",
     "culori": "0.7.3",
-    "dainty-shared": "2.2.1-67d3c66",
+    "dainty-shared": "2.2.1-f3a56bb",
     "express": "4.16.4",
     "minimist": "1.2.0",
     "replace-once": "1.0.0",
