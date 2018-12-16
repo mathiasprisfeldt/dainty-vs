@@ -10,7 +10,6 @@
 				<Categories>
 					<Category GUID="{75A05685-00A8-4DED-BAE5-E7A50BFA929A}" FontName="EDITOR_FONT_FAMILY" FontSize="10" CharSet="1" FontIsDefault="No">
 						<Items>
-							<Item Name="MarkerFormatDefinition/HighlightedReference" Foreground="0x00D3C0AD" Background="0x0000FF00" BoldFont="No"/>
 							<Item Name="Selected Text" Foreground="0x01000000" Background="0x00FFB26A" BoldFont="No"/>
 							<Item Name="CurrentLineActiveFormat" Foreground="0x00FFFFFE" Background="0x00F1E8E5" BoldFont="No"/>
 							<Item Name="outlining.square" Foreground="0x00F1E8E5" Background="0x00000000" BoldFont="No"/>
@@ -18,12 +17,6 @@
 							<Item Name="Line Number" Foreground="0x00CFBEB7" Background="0x01000001" BoldFont="No"/>
 							<Item Name="Block Structure Adornments" Foreground="0x01000000" Background="0x00F1E8E5" BoldFont="No"/>
 							<Item Name="brace matching" Foreground="0x008C3900" Background="0x00FFECAA" BoldFont="No"/>
-							<Item Name="MarkerFormatDefinition/HighlightedWrittenReference" Foreground="0x00D3C0AD" Background="0x0000FF00" BoldFont="No"/>
-							<Item Name="MarkerFormatDefinition/HighlightedDefinition" Foreground="0x00ADD3C0" Background="0x0000FF00" BoldFont="No"/>
-							<Item Name="MarkerFormatDefinition/HighlightVariableFormatDefinition" Foreground="0x01000000" Background="0x0000FF00" BoldFont="No"/>
-							<Item Name="MarkerFormatDefinition/HighlightParameterFormatDefinition" Foreground="0x00D3C0AD" Background="0x0000FF00" BoldFont="No"/>
-
-
 							<Item Name="outlining.square" Foreground="0x00OUTLINING_SQUARE_FOREGROUND" Background="0x00000000" BoldFont="No"/>
 							<Item Name="outlining.verticalrule" Foreground="0x00OUTLINING_VERTICAL_RULE_FOREGROUND" Background="0x01000001" BoldFont="No"/>
 							<Item Name="Line Number" Foreground="0x00LINE_NUMBER_FOREGROUND" Background="0x01000001" BoldFont="No"/>
