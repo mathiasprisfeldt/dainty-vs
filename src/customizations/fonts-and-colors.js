@@ -51,7 +51,15 @@ function getFontsAndColorsCustomizations(
     ["CURRENT_LINE_FOREGROUND", convert(getColor("neutral", getTypeShade(0)))],
     ["CURRENT_LINE_BACKGROUND", convert(getColor("neutral", getTypeShade(2)))],
     ["XML_ATTRIBUTE_VALUE_FOREGROUND", convert(getProperty("token.string"))],
-    ["XML_ATTRIBUTE_QUOTES_FOREGROUND", convert(getProperty("token.string"))]
+    ["XML_ATTRIBUTE_QUOTES_FOREGROUND", convert(getProperty("token.string"))],
+    [
+      "TEXT_TOOL_WINDOW_FOREGROUND",
+      convert(getColor("neutral", getTypeShade(14)))
+    ],
+    [
+      "TEXT_TOOL_WINDOW_BACKGROUND",
+      convert(getColor("neutral", getTypeShade(0)))
+    ]
   ];
 }
 

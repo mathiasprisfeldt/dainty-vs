@@ -30,16 +30,24 @@
 						</Items>
 					</Category>
 					<Category GUID="{9973EFDF-317D-431C-8BC1-5E88CBFD4F7F}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
-						<Items/>
+						<Items>
+							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
+						</Items>
 					</Category>
 					<Category GUID="{6BB65C5A-2F31-4BDE-9F48-8A38DC0C63E7}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
-						<Items/>
+						<Items>
+							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
+						</Items>
 					</Category>
 					<Category GUID="{5C48B2CB-0366-4FBF-9786-0BB37E945687}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
-						<Items/>
+						<Items>
+							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
+						</Items>
 					</Category>
 					<Category GUID="{EE1BE240-4E81-4BEB-8EEA-54322B6B1BF5}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
-						<Items/>
+						<Items>
+							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
+						</Items>
 					</Category>
 					<Category GUID="{FF349800-EA43-46C1-8C98-878E78F46501}" FontName="EDITOR_FONT_FAMILY" FontSize="10" CharSet="1" FontIsDefault="No">
 						<Items/>
@@ -54,7 +62,9 @@
 						<Items/>
 					</Category>
 					<Category GUID="{F9D6BCE6-C669-41DB-8EE7-DD953828685B}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
-						<Items/>
+						<Items>
+							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
+						</Items>
 					</Category>
 				</Categories>
 			</FontsAndColors>
