@@ -35,11 +35,7 @@ function toColorHex(str) {
 // In: "#00CC4480"
 // Out: "80CC4400"
 function toVsColorHex(str) {
-  if (str.length === 9) {
-    return `${str.substr(7, 2)}${str.substr(1, 6)}`.toUpperCase();
-  } else {
-    return `FF${str.substr(1, 6)}`.toUpperCase();
-  }
+  return `${str.substr(7, 2)}${str.substr(1, 6)}`.toUpperCase();
 }
 
 module.exports = {

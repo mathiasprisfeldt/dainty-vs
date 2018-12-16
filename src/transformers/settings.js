@@ -2,13 +2,11 @@ const convert = require("xml-js");
 const { transformFontsAndColors } = require("./fonts-and-colors");
 const { transformIndentGuides } = require("./indent-guides");
 
-async function transformSettings(configuration, colors, colorConstants) {
-  let transformers = [
-    transformFontsAndColors(configuration, colors, colorConstants)
-  ];
+async function transformSettings(configuration) {
+  let transformers = [transformFontsAndColors(configuration)];
 
   if (configuration.extensions.indentGuides.includeSettings) {
-    transformers.push(transformIndentGuides(configuration, colors));
+    transformers.push(transformIndentGuides(configuration));
   }
 
   const settingsObjects = await Promise.all(transformers);

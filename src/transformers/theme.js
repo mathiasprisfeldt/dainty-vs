@@ -7,12 +7,12 @@ const {
   cloneDeep,
   applyReplacements,
   logTransform
-} = require("dainty-shared").utils;
+} = require("dainty-shared/src/utils");
 const {
-  generateColorConstantReplacements,
-  getTypeShadeFunction,
-  getPropertyFunction
-} = require("dainty-shared").colors;
+  getColorFunction,
+  getPropertyFunction,
+  getTypeShadeFunction
+} = require("dainty-shared/src/colors");
 const { toVsColorHex } = require("../conversions");
 const {
   getSearchReplaceCustomizations,
@@ -21,7 +21,7 @@ const {
 
 const readFile = util.promisify(fs.readFile);
 
-async function transformTheme(configuration, colors, colorConstants) {
+async function transformTheme(configuration) {
   const source = path.join(__dirname, "../sources/dark.vstheme");
 
   logTransform(source);
@@ -32,8 +32,8 @@ async function transformTheme(configuration, colors, colorConstants) {
     content,
     getSearchReplaceCustomizations(
       configuration,
-      colors,
-      getPropertyFunction(configuration, colorConstants),
+      getColorFunction(configuration),
+      getPropertyFunction(configuration, getColorFunction(configuration)),
       getTypeShadeFunction(configuration)
     ),
     toVsColorHex,
@@ -46,16 +46,14 @@ async function transformTheme(configuration, colors, colorConstants) {
   ]);
 
   try {
-    replacedContent = applyCategoryReplacements(
+    replacedContent = applyCategoriesCustomizations(
       replacedContent,
       getCategoriesCustomizations(
         configuration,
-        colors,
-        getPropertyFunction(configuration, colorConstants),
+        getColorFunction(configuration),
+        getPropertyFunction(configuration, getColorFunction(configuration)),
         getTypeShadeFunction(configuration)
-      ),
-      generateColorConstantReplacements(colors, false),
-      generateColorConstantReplacements(colors, false).map(r => r[0])
+      )
     );
   } catch (error) {
     return [error, null];
@@ -64,48 +62,31 @@ async function transformTheme(configuration, colors, colorConstants) {
   return [null, replacedContent];
 }
 
-function applyColorConstantReplacement(
-  color,
-  colorReplacements,
-  colorReplacementKeys
-) {
-  if (colorReplacementKeys.includes(color)) {
-    return colorReplacements[colorReplacementKeys.indexOf(color)][1];
-  } else {
-    return color;
-  }
-}
-
-function applyCategoryReplacements(
-  xmlContent,
-  categoryReplacements,
-  colorReplacements,
-  colorReplacementKeys
-) {
+function applyCategoriesCustomizations(xmlContent, categegoriesCustomizations) {
   let jsContent = convert.xml2js(xmlContent);
-  let replacements = cloneDeep(categoryReplacements);
+  let customizations = cloneDeep(categegoriesCustomizations);
 
   const categories = jsContent.elements[0].elements[0].elements;
 
   for (let category of categories) {
     const categoryName = category.attributes.Name;
 
-    if (replacements[categoryName] === undefined) {
+    if (customizations[categoryName] === undefined) {
       continue;
     }
 
     for (let colorsGroup of category.elements) {
       const colorsGroupName = colorsGroup.attributes.Name;
-      const colorsGroupReplacements =
-        replacements[categoryName][colorsGroupName];
+      const colorsGroupCustomizations =
+        customizations[categoryName][colorsGroupName];
 
-      if (colorsGroupReplacements === undefined) {
+      if (colorsGroupCustomizations === undefined) {
         continue;
       }
 
       if (
-        !Array.isArray(colorsGroupReplacements) ||
-        colorsGroupReplacements.length !== 2
+        !Array.isArray(colorsGroupCustomizations) ||
+        colorsGroupCustomizations.length !== 2
       ) {
         throw new Error(
           `Colors group for \`${categoryName}.${colorsGroupName}\` must be an array consisting of two elements; one with background color, and one with foreground color.`
@@ -118,21 +99,17 @@ function applyCategoryReplacements(
 
       if (
         backgroundElement === undefined &&
-        colorsGroupReplacements[0] !== null
+        colorsGroupCustomizations[0] !== null
       ) {
         throw new Error(
           `Replacement background set for colors group \`${categoryName}.${colorsGroupName}\`, but no such background is defined`
         );
       } else if (
         backgroundElement !== undefined &&
-        colorsGroupReplacements[0] !== null
+        colorsGroupCustomizations[0] !== null
       ) {
         backgroundElement.attributes.Source = toVsColorHex(
-          applyColorConstantReplacement(
-            colorsGroupReplacements[0],
-            colorReplacements,
-            colorReplacementKeys
-          )
+          colorsGroupCustomizations[0]
         );
       }
 
@@ -142,46 +119,42 @@ function applyCategoryReplacements(
 
       if (
         foregroundElement === undefined &&
-        colorsGroupReplacements[1] !== null
+        colorsGroupCustomizations[1] !== null
       ) {
         throw new Error(
           `Replacement foreground set for colors group \`${categoryName}.${colorsGroupName}\`, but foreground not defined in .vstheme.`
         );
       } else if (
         foregroundElement !== undefined &&
-        colorsGroupReplacements[1] !== null
+        colorsGroupCustomizations[1] !== null
       ) {
         foregroundElement.attributes.Source = toVsColorHex(
-          applyColorConstantReplacement(
-            colorsGroupReplacements[1],
-            colorReplacements,
-            colorReplacementKeys
-          )
+          colorsGroupCustomizations[1]
         );
       }
 
-      delete replacements[categoryName][colorsGroupName];
+      delete customizations[categoryName][colorsGroupName];
     }
 
-    if (Object.keys(replacements[categoryName]).length !== 0) {
+    if (Object.keys(customizations[categoryName]).length !== 0) {
       throw new Error(
         `Replacements set for category \`${categoryName}\` but color groups not defined in .vstheme: ${Object.keys(
-          replacements[categoryName]
+          customizations[categoryName]
         ).join(", ")}`
       );
     }
-    delete replacements[categoryName];
+    delete customizations[categoryName];
   }
 
-  if (Object.keys(replacements).length !== 0) {
+  if (Object.keys(customizations).length !== 0) {
     throw new Error(
       `Replacements set for categories not defined in .vstheme: ${Object.keys(
-        replacements
+        customizations
       ).join(", ")}`
     );
   }
 
-  return convert.js2xml(jsContent);
+  return convert.js2xml(jsContent, { spaces: 2 });
 }
 
 module.exports = {
