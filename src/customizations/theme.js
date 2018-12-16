@@ -115,7 +115,7 @@ function getSearchReplaceCustomizations(
     //
 
     // Active tab, statusbar
-    ["#007accff", getColor("neutral", getTypeShade(2))],
+    ["#007accff", getColor("neutral", getTypeShade(3))],
 
     // Menu bar item hover
     ["#3e3e40ff", getColor("neutral", getTypeShade(2))],
