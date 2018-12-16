@@ -325,7 +325,7 @@ function getSearchReplaceCustomizations(
     ["#dcdcdcff", getProperty("token.other")],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
-    ["#ffffffff", getColor("neutral", getTypeShade(16))],
+    ["#ffffffff", getColor("neutral", getTypeShade(15))],
 
     // Close and pin icons on active tab
     ["#d0e6f5ff", getColor("neutral", getTypeShade(13))],
@@ -337,10 +337,10 @@ function getSearchReplaceCustomizations(
     ["#b4b4b4ff", getProperty("token.operator")],
 
     // Most UI text (menu bar items, tabs, non-selected tabs, console output, Solution Explorer item …)
-    ["#f1f1f1ff", getColor("neutral", getTypeShade(12))],
+    ["#f1f1f1ff", getColor("neutral", getTypeShade(11))],
 
     // Inactive tabs in tool windows, tool window titles
-    ["#d0d0d0ff", getColor("neutral", getTypeShade(10))],
+    ["#d0d0d0ff", getColor("neutral", getTypeShade(11))],
 
     // `Microsoft Visual Studio`
     ["#999999ff", getColor("neutral", getTypeShade(9))],
