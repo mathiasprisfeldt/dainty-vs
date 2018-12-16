@@ -2,28 +2,22 @@ const path = require("path");
 const util = require("util");
 const fs = require("fs");
 const convert = require("xml-js");
-const { applyReplacements } = require("dainty-shared").utils;
-const { generateColorConstantReplacements } = require("dainty-shared").colors;
-const { toColorHex } = require("../../conversions");
-const { getDaintyCss } = require("dainty-shared").daintyCss;
-const { logTransform } = require("dainty-shared").utils;
+const { applyReplacements, logTransform } = require("dainty-shared/src/utils");
+const {
+  generateColorConstantReplacements
+} = require("dainty-shared/src/colors");
+const { toColorHex } = require("../conversions");
 
 const readFile = util.promisify(fs.readFile);
 
 async function transformCoveragePage(colors) {
-  const source = path.join(__dirname, "../../sources/coverage.html");
-  const darkThemeSource = path.join(__dirname, "../../sources/dark.vstheme");
-  const daintyThemeSource = path.join(
-    __dirname,
-    "../../../dist/dainty.vstheme"
-  );
+  const source = path.join(__dirname, "../sources/coverage.html");
+  const darkThemeSource = path.join(__dirname, "../sources/dark.vstheme");
+  const daintyThemeSource = path.join(__dirname, "../../dist/dainty.vstheme");
 
   logTransform(source);
 
-  const sourceContent = (await readFile(source, "utf8")).replace(
-    "/* INSERT_DAINTY_CSS */",
-    await getDaintyCss()
-  );
+  const sourceContent = await readFile(source, "utf8");
 
   function sortCategories(a, b) {
     return b.elements.length - a.elements.length;
@@ -267,10 +261,7 @@ async function transformCoveragePage(colors) {
     </section>
   `);
 
-  return applyReplacements(
-    sourceContent,
-    generateColorConstantReplacements(colors)
-  ).replace("<!-- INSERT_CONTENT -->", html.join("\n"));
+  return sourceContent.replace("<!-- INSERT_CONTENT -->", html.join("\n"));
 }
 
 module.exports = {

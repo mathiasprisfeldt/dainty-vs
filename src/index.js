@@ -1,6 +1,7 @@
 const parseArgs = require("minimist");
 const { getConfiguration } = require("dainty-shared/src/configuration");
-const { buildThemeFiles } = require("./builders/files");
+const { buildThemeFiles } = require("./builders/theme");
+const { buildCoveragePage } = require("./builders/coverage");
 
 (async () => {
   const argv = parseArgs(process.argv.slice(2));
@@ -19,4 +20,5 @@ const { buildThemeFiles } = require("./builders/files");
   }
 
   await buildThemeFiles(__dirname, configuration);
+  await buildCoveragePage(__dirname, configuration);
 })();
