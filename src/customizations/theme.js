@@ -50,7 +50,23 @@ function getCategoriesCustomizations(
         null
       ],
       StartPageTextControlLinkSelected: [getProperty("token.url"), null],
-      StartPageTextControlLinkSelectedHover: [getProperty("token.url"), null]
+      StartPageTextControlLinkSelectedHover: [getProperty("token.url"), null],
+      StatusBarDefault: [
+        getColor("neutral", getTypeShade(2)),
+        getColor("neutral", getTypeShade(11))
+      ],
+      StatusBarBuilding: [
+        getColor("blue", getTypeShade(2)),
+        getColor("neutral", getTypeShade(11))
+      ],
+      StatusBarDebugging: [
+        getColor("orangeMoreChroma", getTypeShade(6)),
+        getColor("neutral", getTypeShade(11))
+      ],
+      StatusBarNoSolution: [
+        getColor("purpleMoreChroma", getTypeShade(4)),
+        getColor("neutral", getTypeShade(11))
+      ]
     },
     "ColorizedSignatureHelp colors": {
       "HTML Attribute Value": [null, getProperty("token.string")],
@@ -263,13 +279,13 @@ function getSearchReplaceCustomizations(
     ["#555555ff", getColor("neutral", getTypeShade(2))],
 
     // Notification flag
-    ["#ffcc00ff", getColor("yellow", 13)],
+    ["#ffcc00ff", getColor("orangeMoreChroma", 13)],
 
     // Notification flag hover
-    ["#ffdf66ff", getColor("yellow", 14)],
+    ["#ffdf66ff", getColor("orangeMoreChroma", 14)],
 
     // Notification flag active
-    ["#c59e00ff", getColor("yellow", 12)],
+    ["#c59e00ff", getColor("orangeMoreChroma", 12)],
 
     //
     // Foregrounds
