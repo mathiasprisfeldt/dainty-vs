@@ -262,6 +262,15 @@ function getSearchReplaceCustomizations(
     // Diagnostic Tools tab hover
     ["#555555ff", getColor("neutral", getTypeShade(2))],
 
+    // Notification flag
+    ["#ffcc00ff", getColor("yellow", 13)],
+
+    // Notification flag hover
+    ["#ffdf66ff", getColor("yellow", 14)],
+
+    // Notification flag active
+    ["#c59e00ff", getColor("yellow", 12)],
+
     //
     // Foregrounds
     //
