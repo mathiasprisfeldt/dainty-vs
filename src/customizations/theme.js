@@ -8,17 +8,47 @@ function getCategoriesCustomizations(
 ) {
   const customizations = {
     Environment: {
-      MainWindowActiveIconDefault: [getProperty("accent1"), null],
-      MainWindowActiveIconBuilding: [getProperty("accent1"), null],
-      MainWindowActiveIconDebugging: [getProperty("accent1"), null],
-      MainWindowActiveIconNoSolution: [getProperty("accent1"), null],
-      RaftedWindowActiveIconDefault: [getProperty("accent1"), null],
-      RaftedWindowActiveIconBuilding: [getProperty("accent1"), null],
-      RaftedWindowActiveIconDebugging: [getProperty("accent1"), null],
-      RaftedWindowActiveIconNoSolution: [getProperty("accent1"), null],
-      RaftedWindowInactiveIconDefault: [getProperty("accent1"), null],
-      RaftedWindowInactiveIconBuilding: [getProperty("accent1"), null],
-      RaftedWindowInactiveIconDebugging: [getProperty("accent1"), null],
+      MainWindowActiveIconDefault: [getColor("accent", getTypeShade(11)), null],
+      MainWindowActiveIconBuilding: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
+      MainWindowActiveIconDebugging: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
+      MainWindowActiveIconNoSolution: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
+      RaftedWindowActiveIconDefault: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
+      RaftedWindowActiveIconBuilding: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
+      RaftedWindowActiveIconDebugging: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
+      RaftedWindowActiveIconNoSolution: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
+      RaftedWindowInactiveIconDefault: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
+      RaftedWindowInactiveIconBuilding: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
+      RaftedWindowInactiveIconDebugging: [
+        getColor("accent", getTypeShade(11)),
+        null
+      ],
       StartPageTextControlLinkSelected: [getProperty("token.url"), null],
       StartPageTextControlLinkSelectedHover: [getProperty("token.url"), null]
     },
@@ -170,7 +200,7 @@ function getSearchReplaceCustomizations(
     ["#232323ff", getColor("neutral", getTypeShade(1))],
 
     // File preview
-    ["#68217aff", getColor("blue", getTypeShade(0))],
+    ["#68217aff", getColor("accent", getTypeShade(0))],
 
     // Tooltip
     ["#424245ff", getColor("neutral", getTypeShade(1))],
@@ -185,13 +215,13 @@ function getSearchReplaceCustomizations(
     ["#fefcc8ff", getColor("orange", getTypeShade(15))],
 
     // Start page arrow
-    ["#4f4f53ff", getColor("blue", getTypeShade(6))],
+    ["#4f4f53ff", getColor("accent", getTypeShade(8))],
 
     // Start page arrow hover
-    ["#606060ff", getColor("blue", getTypeShade(8))],
+    ["#606060ff", getColor("accent", getTypeShade(9))],
 
     // Notification badge
-    ["#8631c7ff", getProperty("accent0")],
+    ["#8631c7ff", getColor("accent", getTypeShade(0))],
 
     // `100%` box arrow hover
     ["#1f1f20ff", getColor("neutral", getTypeShade(6))],
@@ -206,16 +236,16 @@ function getSearchReplaceCustomizations(
     ["#3d3d3dff", getColor("neutral", getTypeShade(3))],
 
     // Team Explorer `Changes` label icon hover
-    ["#525252ff", getColor("neutral", getTypeShade(5))],
+    ["#525252ff", getColor("neutral", getTypeShade(4))],
 
     // Team Explorer `Changes` icon
-    ["#c8c8c8ff", getColor("blue", getTypeShade(14))],
+    ["#c8c8c8ff", getColor("neutral", getTypeShade(12))],
 
     // Team Explorer `Settings` blue indicator
-    ["#0079ceff", getColor("blue", getTypeShade(8))],
+    ["#0079ceff", getColor("accent", getTypeShade(11))],
 
     // Team Explorer `Changes` red indicator
-    ["#f05033ff", getColor("blue", getTypeShade(14, 6))],
+    ["#f05033ff", getColor("accent", getTypeShade(11))],
 
     // Diagnostic Tools tab hover
     ["#555555ff", getColor("neutral", getTypeShade(2))],
@@ -231,7 +261,7 @@ function getSearchReplaceCustomizations(
     ["#ff8c00ff", getColor("green", getTypeShade(13))],
 
     // Preview Selected Items border
-    ["#3399ffff", getColor("blue", getTypeShade(11))],
+    ["#3399ffff", getColor("accent", getTypeShade(11))],
 
     // `using`, `public class`
     ["#569cd6ff", getProperty("token.keyword")],
@@ -258,7 +288,7 @@ function getSearchReplaceCustomizations(
     ["#dcdcdcff", getProperty("token.other")],
 
     // Status bar, Visual Studio logo, active tab, selected Solution Explorer item
-    ["#ffffffff", getProperty("accent2")],
+    ["#ffffffff", getColor("accent", getTypeShade(11))],
 
     // Close and pin icons on active tab
     ["#d0e6f5ff", getColor("neutral", getTypeShade(13))],
@@ -303,7 +333,7 @@ function getSearchReplaceCustomizations(
     ["#d69d85ff", getProperty("token.string")],
 
     // Start page heading
-    ["#84ceffff", getProperty("token.type")],
+    ["#84ceffff", getColor("blueLessChroma", getTypeShade(14))],
 
     // `Import Theme` hover
     ["#88ccfeff", getColor("neutral", getTypeShade(14))]
