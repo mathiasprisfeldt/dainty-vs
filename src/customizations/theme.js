@@ -56,7 +56,19 @@ function getCategoriesCustomizations(
       "HTML Attribute Value": [null, getProperty("token.string")],
       punctuation: [null, getProperty("token.punctuation")],
       urlformat: [null, getProperty("token.url")],
-      "Preprocessor Keyword": [null, getProperty("token.operator")]
+      "Preprocessor Keyword": [null, getProperty("token.operator")],
+      "MarkerFormatDefinition/HighlightedDefinition": [
+        getColor("blueLessChroma", getTypeShade(2)),
+        getColor("blueLessChroma", getTypeShade(2))
+      ],
+      "MarkerFormatDefinition/HighlightedReference": [
+        getColor("blueLessChroma", getTypeShade(2)),
+        getColor("blueLessChroma", getTypeShade(2))
+      ],
+      "MarkerFormatDefinition/HighlightedWrittenReference": [
+        getColor("blueLessChroma", getTypeShade(2)),
+        getColor("blueLessChroma", getTypeShade(2))
+      ]
     },
     "Text Editor Text Marker Items": {
       "Current Statement": ["#eff284ff", null] // Revert
