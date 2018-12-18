@@ -72,8 +72,8 @@
           "default": {}
         },
         "__categories": {
-          "type": "object",
           "$id": "#/properties/customizations/properties/__categories",
+          "type": "object",
           "default": {}
         }
       }
