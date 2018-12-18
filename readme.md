@@ -22,7 +22,7 @@ See https://dainty.site/configuration for more information.
 
 ### Visual Studio-specific customizations
 
-It is possible to tap into the customization done by Dainty through the objects `__searchReplace` and `__categories`. For `__categories`, the tuple specifies the background and foreground color, respectively:
+It is possible to tap into the customizations done by Dainty through the objects `__searchReplace` and `__categories`. For `__categories`, the tuple specifies the background and foreground color, respectively:
 
     {
       "colors": {
