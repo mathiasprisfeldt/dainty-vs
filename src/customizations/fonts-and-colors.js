@@ -59,7 +59,28 @@ function getFontsAndColorsCustomizations(
     [
       "TEXT_TOOL_WINDOW_BACKGROUND",
       convert(getColor("neutral", getTypeShade(0)))
-    ]
+    ],
+    [
+      "CPP_MEMBER_FUNCTION_SEMANTIC_TOKEN_FORMAT",
+      convert(getProperty("token.function"))
+    ],
+    [
+      "CPP_FUNCTION_SEMANTIC_TOKEN_FORMAT",
+      convert(getProperty("token.function"))
+    ],
+    [
+      "CPP_PARAMETER_SEMANTIC_TOKEN_FORMAT",
+      convert(getProperty("token.parameter"))
+    ],
+    [
+      "CPP_LOCAL_VARIABLE_SEMANTIC_TOKEN_FORMAT",
+      convert(getProperty("token.variable"))
+    ],
+    [
+      "CPP_GLOBAL_VARIABLE_SEMANTIC_TOKEN_FORMAT",
+      convert(getProperty("token.variable"))
+    ],
+    ["CPP_MACRO_SEMANTIC_TOKEN_FORMAT", convert(getProperty("token.constant"))]
   ];
 }
 
