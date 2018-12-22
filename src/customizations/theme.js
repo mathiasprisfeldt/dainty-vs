@@ -53,19 +53,19 @@ function getCategoriesCustomizations(
       StartPageTextControlLinkSelectedHover: [getProperty("token.url"), null],
       StatusBarDefault: [
         getColor("neutral", getTypeShade(2)),
-        getColor("neutral", getTypeShade(11))
+        getColor("neutral", getTypeShade(12))
       ],
       StatusBarBuilding: [
         getColor("blue", getTypeShade(2)),
-        getColor("neutral", getTypeShade(11))
+        getColor("neutral", getTypeShade(12))
       ],
       StatusBarDebugging: [
         getColor("orangeMoreChroma", getTypeShade(6)),
-        getColor("neutral", getTypeShade(11))
+        getColor("neutral", getTypeShade(12))
       ],
       StatusBarNoSolution: [
         getColor("purpleMoreChroma", getTypeShade(4)),
-        getColor("neutral", getTypeShade(11))
+        getColor("neutral", getTypeShade(12))
       ]
     },
     "ColorizedSignatureHelp colors": {
@@ -337,10 +337,10 @@ function getSearchReplaceCustomizations(
     ["#b4b4b4ff", getProperty("token.operator")],
 
     // Most UI text (menu bar items, tabs, non-selected tabs, console output, Solution Explorer item …)
-    ["#f1f1f1ff", getColor("neutral", getTypeShade(11))],
+    ["#f1f1f1ff", getColor("neutral", getTypeShade(12))],
 
     // Inactive tabs in tool windows, tool window titles
-    ["#d0d0d0ff", getColor("neutral", getTypeShade(11))],
+    ["#d0d0d0ff", getColor("neutral", getTypeShade(12))],
 
     // `Microsoft Visual Studio`
     ["#999999ff", getColor("neutral", getTypeShade(9))],
