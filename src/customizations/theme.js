@@ -165,24 +165,24 @@ function getSearchReplaceCustomizations(
     [
       "#686868ff",
       environment.additionalScrollbarsContrast
-        ? getColor("neutral", getTypeShade(2))
-        : getColor("neutral", getTypeShade(1))
+        ? getColor("neutral", getTypeShade(3))
+        : getColor("neutral", getTypeShade(2))
     ],
 
     // Scrollbar hover
     [
       "#9e9e9eff",
       environment.additionalScrollbarsContrast
-        ? getColor("neutral", getTypeShade(3))
-        : getColor("neutral", getTypeShade(2))
+        ? getColor("neutral", getTypeShade(4))
+        : getColor("neutral", getTypeShade(3))
     ],
 
     // Scrollbar active
     [
       "#efebefff",
       environment.additionalScrollbarsContrast
-        ? getColor("neutral", getTypeShade(4))
-        : getColor("neutral", getTypeShade(3))
+        ? getColor("neutral", getTypeShade(5))
+        : getColor("neutral", getTypeShade(4))
     ],
 
     // Scrollbar glyph disabled
