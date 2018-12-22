@@ -81,7 +81,15 @@ function getFontsAndColorsCustomizations(
       convert(getProperty("token.variable"))
     ],
     ["CPP_MACRO_SEMANTIC_TOKEN_FORMAT", convert(getProperty("token.constant"))],
-    ["PREPROCESSOR_KEYWORD", convert(getProperty("token.keyword"))]
+    ["PREPROCESSOR_KEYWORD", convert(getProperty("token.keyword"))],
+    [
+      "CPP_NAMESPACE_SEMANTIC_TOKEN_FORMAT",
+      convert(getProperty("token.namespace"))
+    ],
+    [
+      "CPP_MEMBER_FIELD_SEMANTIC_TOKEN_FORMAT",
+      convert(getProperty("token.variableProperty"))
+    ]
   ];
 }
 
