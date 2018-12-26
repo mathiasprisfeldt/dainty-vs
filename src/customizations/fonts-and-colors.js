@@ -89,6 +89,10 @@ function getFontsAndColorsCustomizations(
     [
       "CPP_MEMBER_FIELD_SEMANTIC_TOKEN_FORMAT",
       convert(getProperty("token.variableProperty"))
+    ],
+    [
+      "CPP_FUNCTION_TEMPLATE_SEMANTIC_TOKEN_FORMAT",
+      convert(getProperty("token.function"))
     ]
   ];
 }
