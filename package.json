@@ -6,7 +6,7 @@
   "dependencies": {
     "change-case": "3.0.2",
     "culori": "0.7.3",
-    "dainty-shared": "3.0.0-e3c4442",
+    "dainty-shared": "3.0.0-6eb4f5f",
     "minimist": "1.2.0",
     "replace-once": "1.0.0",
     "uuid": "3.3.2",
