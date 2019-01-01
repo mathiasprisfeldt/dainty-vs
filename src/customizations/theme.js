@@ -74,16 +74,16 @@ function getCategoriesCustomizations(
       urlformat: [null, getProperty("token.url")],
       "Preprocessor Keyword": [null, getProperty("token.operator")],
       "MarkerFormatDefinition/HighlightedDefinition": [
-        getColor("blueLessChroma", getTypeShade(2)),
-        getColor("blueLessChroma", getTypeShade(2))
+        getColor("blueLessChroma", getTypeShade(1)),
+        getColor("blueLessChroma", getTypeShade(1))
       ],
       "MarkerFormatDefinition/HighlightedReference": [
-        getColor("blueLessChroma", getTypeShade(2)),
-        getColor("blueLessChroma", getTypeShade(2))
+        getColor("blueLessChroma", getTypeShade(1)),
+        getColor("blueLessChroma", getTypeShade(1))
       ],
       "MarkerFormatDefinition/HighlightedWrittenReference": [
-        getColor("blueLessChroma", getTypeShade(2)),
-        getColor("blueLessChroma", getTypeShade(2))
+        getColor("blueLessChroma", getTypeShade(1)),
+        getColor("blueLessChroma", getTypeShade(1))
       ],
       "Peek Background": [
         getColor("neutral", getTypeShade(1)),
@@ -99,7 +99,11 @@ function getCategoriesCustomizations(
       ]
     },
     "Text Editor Text Marker Items": {
-      "Current Statement": ["#eff284ff", null] // Revert
+      "Current Statement": ["#eff284ff", null], // Revert
+      "Brace Matching (Rectangle)": [
+        getColor("blueLessChroma", getTypeShade(3)),
+        null
+      ]
     },
     VisualStudioInstaller: {
       Background: [getColor("neutral", getTypeShade(16)), null]
