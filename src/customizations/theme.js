@@ -226,7 +226,7 @@ function getSearchReplaceCustomizations(
     [
       "#59a8deff",
       environment.transparentToolWindowGrips
-        ? getColor("neutral", getTypeShade(2))
+        ? getColor("neutral", getTypeShade(3))
         : getColor("neutral", getTypeShade(6))
     ],
 
