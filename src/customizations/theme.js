@@ -84,6 +84,18 @@ function getCategoriesCustomizations(
       "MarkerFormatDefinition/HighlightedWrittenReference": [
         getColor("blueLessChroma", getTypeShade(2)),
         getColor("blueLessChroma", getTypeShade(2))
+      ],
+      "Peek Background": [
+        getColor("neutral", getTypeShade(1)),
+        getColor("neutral", getTypeShade(1))
+      ],
+      "Peek Background Unfocused": [
+        getColor("neutral", getTypeShade(2)),
+        getColor("neutral", getTypeShade(2))
+      ],
+      "Block Structure Adornments": [
+        getColor("neutral", getTypeShade(3)),
+        getColor("neutral", getTypeShade(3))
       ]
     },
     "Text Editor Text Marker Items": {
