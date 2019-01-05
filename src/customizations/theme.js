@@ -75,28 +75,23 @@ function getCategoriesCustomizations(
       "Preprocessor Keyword": [null, getProperty("token.operator")],
       "MarkerFormatDefinition/HighlightedDefinition": [
         getColor("blueLessChroma", getTypeShade(1)),
-        getColor("blueLessChroma", getTypeShade(1))
+        null
       ],
       "MarkerFormatDefinition/HighlightedReference": [
         getColor("blueLessChroma", getTypeShade(1)),
-        getColor("blueLessChroma", getTypeShade(1))
+        null
       ],
       "MarkerFormatDefinition/HighlightedWrittenReference": [
         getColor("blueLessChroma", getTypeShade(1)),
-        getColor("blueLessChroma", getTypeShade(1))
+        null
       ],
-      "Peek Background": [
-        getColor("neutral", getTypeShade(1)),
-        getColor("neutral", getTypeShade(1))
+      "MarkerFormatDefinition/FindHighlight": [
+        getColor("blueLessChroma", getTypeShade(1)),
+        null
       ],
-      "Peek Background Unfocused": [
-        getColor("neutral", getTypeShade(2)),
-        getColor("neutral", getTypeShade(2))
-      ],
-      "Block Structure Adornments": [
-        getColor("neutral", getTypeShade(3)),
-        getColor("neutral", getTypeShade(3))
-      ]
+      "Peek Background": [getColor("neutral", getTypeShade(1)), null],
+      "Peek Background Unfocused": [getColor("neutral", getTypeShade(2)), null],
+      "Block Structure Adornments": [getColor("neutral", getTypeShade(3)), null]
     },
     "Text Editor Text Marker Items": {
       "Current Statement": ["#eff284ff", null], // Revert
