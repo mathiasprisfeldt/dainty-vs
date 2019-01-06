@@ -310,6 +310,9 @@ function getSearchReplaceCustomizations(
     // Debugger data tip parent outer border
     ["#37373aff", getColor("neutral", getTypeShade(3))],
 
+    // Debugger data tip parent text
+    ["#7a7a7aff", getColor("neutral", getTypeShade(10))],
+
     //
     // Foregrounds
     //
