@@ -15,11 +15,11 @@ function getFontsAndColorsCustomizations(
   return [
     [
       "OUTLINING_SQUARE_FOREGROUND",
-      convert(getColor("neutral", getTypeShade(2)))
+      convert(getColor("neutral", getTypeShade(4)))
     ],
     [
       "OUTLINING_VERTICAL_RULE_FOREGROUND",
-      convert(getColor("neutral", getTypeShade(2)))
+      convert(getColor("neutral", getTypeShade(4)))
     ],
     ["LINE_NUMBER_FOREGROUND", convert(getColor("neutral", getTypeShade(5)))],
     [
