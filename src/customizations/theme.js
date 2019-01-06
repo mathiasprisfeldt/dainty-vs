@@ -298,6 +298,18 @@ function getSearchReplaceCustomizations(
     // Notification flag active
     ["#c59e00ff", getColor("orangeMoreChroma", 12)],
 
+    // Debugger data tip hover
+    ["#505051ff", getColor("neutral", getTypeShade(2))],
+
+    // Debugger data tip parent
+    ["#3d3d3fff", getColor("neutral", getTypeShade(3))],
+
+    // Debugger data tip parent border
+    ["#2c2c2fff", getColor("neutral", getTypeShade(3))],
+
+    // Debugger data tip parent outer border
+    ["#37373aff", getColor("neutral", getTypeShade(3))],
+
     //
     // Foregrounds
     //
