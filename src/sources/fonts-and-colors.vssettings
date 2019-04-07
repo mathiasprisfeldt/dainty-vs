@@ -8,9 +8,9 @@
 			<PropertyValue name="Version">2</PropertyValue>
 			<FontsAndColors Version="2.0">
 				<Categories>
-					<Category GUID="{75A05685-00A8-4DED-BAE5-E7A50BFA929A}" FontName="EDITOR_FONT_FAMILY" FontSize="10" CharSet="1" FontIsDefault="No">
+					<Category GUID="{75A05685-00A8-4DED-BAE5-E7A50BFA929A}" FontName="EDITOR_FONT_FAMILY" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items>
-							<Item Name="Selected Text" Foreground="0x01000000" Background="0x00FFB26A" BoldFont="No"/>
+							<Item Name="Selected Text" Foreground="0x01000000" Background="0x00676367" BoldFont="No"/>
 							<Item Name="CurrentLineActiveFormat" Foreground="0x00FFFFFE" Background="0x00F1E8E5" BoldFont="No"/>
 							<Item Name="outlining.square" Foreground="0x00F1E8E5" Background="0x00000000" BoldFont="No"/>
 							<Item Name="outlining.verticalrule" Foreground="0x00F1E8E5" Background="0x01000001" BoldFont="No"/>
@@ -22,10 +22,9 @@
 							<Item Name="Block Structure Adornments" Foreground="0x01000000" Background="0x00BLOCK_STRUCTURE_ADORNMENTS_BACKGROUND" BoldFont="No"/>
 							<Item Name="HTML Server-Side Script" Foreground="0x00HTML_SERVER_SIDE_SCRIPT_FOREGROUND" Background="0x00HTML_SERVER_SIDE_SCRIPT_BACKGROUND" BoldFont="No"/>
 							<Item Name="RazorCode" Foreground="0x01000000" Background="0x00RAZOR_CODE_BACKGROUND" BoldFont="No"/>
-							<Item Name="Selected Text" Foreground="0x01000000" Background="0x00SELECTED_TEXT_BACKGROUND" BoldFont="No"/>
 							<Item Name="RazorTagHelperElement" BoldFont="No"/>
 							<Item Name="RazorTagHelperAttribute" BoldFont="No"/>
-							<Item Name="brace matching" Foreground="0x00BRACE_MATCHING_FOREGROUND" Background="0x00BRACE_MATCHING_BACKGROUND" BoldFont="No"/>
+							<Item Name="brace matching" Foreground="0x00BRACE_MATCHING_FOREGROUND" Background="0x00312E32" BoldFont="No"/>
 							<Item Name="CurrentLineActiveFormat" Foreground="0x00CURRENT_LINE_FOREGROUND" Background="0x00CURRENT_LINE_BACKGROUND" BoldFont="No"/>
 							<Item Name="CppMemberFunctionSemanticTokenFormat" Foreground="0x00CPP_MEMBER_FUNCTION_SEMANTIC_TOKEN_FORMAT" Background="0x01000001" BoldFont="No"/>
 							<Item Name="CppFunctionSemanticTokenFormat" Foreground="0x00CPP_FUNCTION_SEMANTIC_TOKEN_FORMAT" Background="0x01000001" BoldFont="No"/>
@@ -39,39 +38,39 @@
 							<Item Name="CppFunctionTemplateSemanticTokenFormat" Foreground="0x00CPP_FUNCTION_TEMPLATE_SEMANTIC_TOKEN_FORMAT" Background="0x01000001" BoldFont="No"/>
 						</Items>
 					</Category>
-					<Category GUID="{9973EFDF-317D-431C-8BC1-5E88CBFD4F7F}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
+					<Category GUID="{9973EFDF-317D-431C-8BC1-5E88CBFD4F7F}" FontName="EDITOR_FONT_FAMILY" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items>
 							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
 						</Items>
 					</Category>
-					<Category GUID="{6BB65C5A-2F31-4BDE-9F48-8A38DC0C63E7}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
+					<Category GUID="{6BB65C5A-2F31-4BDE-9F48-8A38DC0C63E7}" FontName="EDITOR_FONT_FAMILY" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items>
 							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
 						</Items>
 					</Category>
-					<Category GUID="{5C48B2CB-0366-4FBF-9786-0BB37E945687}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
+					<Category GUID="{5C48B2CB-0366-4FBF-9786-0BB37E945687}" FontName="EDITOR_FONT_FAMILY" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items>
 							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
 						</Items>
 					</Category>
-					<Category GUID="{EE1BE240-4E81-4BEB-8EEA-54322B6B1BF5}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
+					<Category GUID="{EE1BE240-4E81-4BEB-8EEA-54322B6B1BF5}" FontName="EDITOR_FONT_FAMILY" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items>
 							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
 						</Items>
 					</Category>
-					<Category GUID="{FF349800-EA43-46C1-8C98-878E78F46501}" FontName="EDITOR_FONT_FAMILY" FontSize="10" CharSet="1" FontIsDefault="No">
+					<Category GUID="{FF349800-EA43-46C1-8C98-878E78F46501}" FontName="EDITOR_FONT_FAMILY" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items/>
 					</Category>
-					<Category GUID="{E0187991-B458-4F7E-8CA9-42C9A573B56C}" FontName="EDITOR_FONT_FAMILY" FontSize="10" CharSet="1" FontIsDefault="No">
+					<Category GUID="{E0187991-B458-4F7E-8CA9-42C9A573B56C}" FontName="EDITOR_FONT_FAMILY" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items>
 							<Item Name="XML Attribute Value" Foreground="0x00XML_ATTRIBUTE_VALUE_FOREGROUND" Background="0x02000000" BoldFont="No"/>
 							<Item Name="XML Attribute Quotes" Foreground="0x00XML_ATTRIBUTE_QUOTES_FOREGROUND" Background="0x02000000" BoldFont="No"/>
 						</Items>
 					</Category>
-					<Category GUID="{58E96763-1D3B-4E05-B6BA-FF7115FD0B7B}" FontName="EDITOR_FONT_FAMILY" FontSize="10" CharSet="1" FontIsDefault="No">
+					<Category GUID="{58E96763-1D3B-4E05-B6BA-FF7115FD0B7B}" FontName="EDITOR_FONT_FAMILY" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items/>
 					</Category>
-					<Category GUID="{F9D6BCE6-C669-41DB-8EE7-DD953828685B}" FontName="EDITOR_FONT_FAMILY" FontSize="9" CharSet="1" FontIsDefault="No">
+					<Category GUID="{F9D6BCE6-C669-41DB-8EE7-DD953828685B}" FontName="EDITOR_FONT_FAMILY" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items>
 							<Item Name="Plain Text" Foreground="0x00TEXT_TOOL_WINDOW_FOREGROUND" Background="0x00TEXT_TOOL_WINDOW_BACKGROUND" BoldFont="No"/>
 						</Items>
