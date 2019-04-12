@@ -1,0 +1,278 @@
+{
+	"name": "Monokai Pro",
+	"colors": {
+		"accent": {
+			"hex": "#FADB68"
+		},
+		"neutral": {
+			"hex": "#312E32"
+		},
+		"highlightColor": {
+			"hex": "#5A565A"
+		},
+
+		/*
+			Monokai Pro Colors
+		 */
+		"monokaiRed": {
+			"hex": "#F86288"
+		},
+		"monokaiGreen": {
+			"hex": "#A8DE76"
+		},
+		"monokaiYellow": {
+			"hex": "#FADB68"
+		},
+		"monokaiOrange": {
+			"hex": "#F59A69"
+		},
+		"monokaiPurple": {
+			"hex": "#AD96F1"
+		},
+		"monokaiBlue": {
+			"hex": "#83D9E7"
+		},
+
+		/*
+			Colors
+			*All colors are read to see the effect they have on the theme.
+		*/
+		"black": {
+			"hex": "#1F1E20"
+		},
+		"gray": {
+			"hex": "#716F71"
+		},
+		"white": {
+			"hex": "#FCFCFA"
+		},
+		"red": {
+			"hex": "#F86288"
+		},
+		"yellow": {
+			"hex": "#ff0000"
+		},
+		"green": {
+			"hex": "#A8DE76"
+		},
+		"cyan": {
+			"hex": "#83D9E7"
+		},
+		"blue": {
+			"hex": "#83D9E7"
+		},
+		"blueLessChroma": {
+			"hex": "#83D9E7"
+		},
+		"blueMoreChroma": {
+			"hex": "#83D9E7"
+		},
+		"orange": {
+			"hex": "#F59A69"
+		},
+		"orangeLessChroma": {
+			"hex": "#F59A69"
+		},
+		"orangeMoreChroma": {
+			"hex": "#F59A69"
+		},
+		"purple": {
+			"hex": "#AD96F1"
+		},
+		"purpleLessChroma": {
+			"hex": "#AD96F1"
+		},
+		"purpleMoreChroma": {
+			"hex": "#AD96F1"
+		},
+		"brightBlack": {
+			"hex": "#ff0000"
+		},
+		"brightWhite": {
+			"hex": "#ff0000"
+		},
+		"brightRed": {
+			"hex": "#ff0000"
+		},
+		"brightYellow": {
+			"hex": "#ff0000"
+		},
+		"brightGreen": {
+			"hex": "#ff0000"
+		},
+		"brightCyan": {
+			"hex": "#ff0000"
+		},
+		"brightBlue": {
+			"hex": "#ff0000"
+		},
+		"brightPurple": {
+			"hex": "#ff0000"
+		},
+
+		/*
+			Tokens:
+		*/
+		"tokenAttributeName": {
+			"hex": "#A8DE76"
+		},
+		"tokenComment": {
+			"hex": "#716F71"
+		},
+		"tokenFunction": {
+			"hex": "#A8DE76"
+		},
+		"tokenJsxTag": {
+			"hex": "#F86288"
+		},
+		"tokenKeyword": {
+			"hex": "#F86288"
+		},
+		"tokenLiteral": {
+			"hex": "#AD96F1"
+		},
+		"tokenNumber": {
+			"hex": "#AD96F1"
+		},
+		"tokenOperator": {
+			"hex": "#F86288"
+		},
+		"tokenOther": {
+			"hex": "#FCFCFA"
+		},
+		"tokenOtherType": {
+			"hex": "#83D9E7"
+		},
+		"tokenParameter": {
+			"hex": "#F59A69"
+		},
+		"tokenStorageType": {
+			"hex": "#83D9E7"
+		},
+		"tokenStorageTypeFunction": {
+			"hex": "#83D9E7"
+		},
+		"tokenString": {
+			"hex": "#FADB67"
+		},
+		"tokenStringTemplate": {
+			"hex": "#FADB67"
+		},
+		"tokenSupportFunction": {
+			"hex": "#83D9E7"
+		},
+		"tokenSupportType": {
+			"hex": "#83D9E7"
+		},
+		"tokenTag": {
+			"hex": "#F86288"
+		},
+		"tokenType": {
+			"hex": "#A8DE76"
+		},
+		"tokenVariable": {
+			"hex": "#A8DE76"
+		},
+		"tokenPunctuation": {
+			"hex": "#929192"
+		},
+		"cursor": {
+			"hex": "#f8f8f0"
+		}
+	},
+	"customizations": {
+		"__searchReplace": {
+			"#92CAF4FF": "monokaiBlue-exact", // Converts old monokai blue to new one
+			"#68217aff": "monokaiYellow-exact", // File Preview bg
+			"#E1D3E4FF": "black-exact", // File preview icons color
+			"#B064ABFF": "monokaiYellow-10", // File preview buttons
+			"#9B4F96FF": "monokaiYellow-10" // File preview buttons
+		},
+		"__categories": {
+			/*
+				Highlighting colors:
+			 */
+			"ColorizedSignatureHelp colors": {
+				"MarkerFormatDefinition/HighlightedDefinition": [
+					"highlightColor-exact",
+					"highlightColor-exact"
+				],
+				"MarkerFormatDefinition/HighlightedReference": [
+					"highlightColor-exact",
+					"highlightColor-exact"
+				],
+				"MarkerFormatDefinition/HighlightedWrittenReference": [
+					"highlightColor-exact",
+					"highlightColor-exact"
+				],
+				"MarkerFormatDefinition/FindHighlight": [
+					"highlightColor-exact",
+					"highlightColor-exact"
+				]
+			},
+			"Text Editor Text Marker Items": {
+				"Brace Matching (Rectangle)": [
+					"highlightColor-exact",
+					"highlightColor-exact"
+				]
+			},
+			////
+
+			"Environment": {
+				"MainWindowActiveIconDefault": ["accent-exact", null],
+				"MainWindowActiveIconBuilding": ["accent-exact", null],
+				"MainWindowActiveIconDebugging": ["accent-exact", null],
+				"MainWindowActiveIconNoSolution": ["accent-exact", null],
+				"RaftedWindowActiveIconDefault": ["accent-exact", null],
+				"RaftedWindowActiveIconBuilding": ["accent-exact", null],
+				"RaftedWindowActiveIconDebugging": ["accent-exact", null],
+				"RaftedWindowActiveIconNoSolution": ["accent-exact", null],
+				"RaftedWindowInactiveIconDefault": ["accent-exact", null],
+				"RaftedWindowInactiveIconBuilding": ["accent-exact", null],
+				"RaftedWindowInactiveIconDebugging": ["accent-exact", null],
+				"StatusBarBuilding": ["monokaiBlue-10", null],
+				"StatusBarDebugging": ["monokaiOrange-10", null],
+				"StatusBarNoSolution": ["monokaiPurple-10", null]
+			}
+		},
+		"tokens": {
+			"attributeName": "tokenAttributeName-exact",
+			"comment": "tokenComment-exact",
+			"function": "tokenFunction-exact",
+			"jsxTag": "tokenJsxTag-exact",
+			"keyword": "tokenKeyword-exact",
+			"literal": "tokenLiteral-exact",
+			"number": "tokenNumber-exact",
+			"operator": "tokenOperator-exact",
+			"other": "tokenOther-exact",
+			"otherType": "tokenOtherType-exact",
+			"parameter": "tokenParameter-exact",
+			"storageType": "tokenStorageType-exact",
+			"storageTypeFunction": "tokenStorageTypeFunction-exact",
+			"string": "tokenString-exact",
+			"stringTemplate": "tokenStringTemplate-exact",
+			"supportFunction": "tokenSupportFunction-exact",
+			"supportType": "tokenSupportType-exact",
+			"tag": "tokenTag-exact",
+			"type": "tokenType-exact",
+			"variable": "tokenVariable-exact",
+			"punctuation": "tokenPunctuation-exact",
+			"url": "monokaiBlue-exact"
+		},
+		"cursor": "cursor-exact"
+	},
+	"editor": {
+		"fontFamily": "Consolas"
+	},
+	"environment": {
+		"additionalScrollbarsContrast": true,
+		"transparentBorders": false,
+		"transparentScrollbarContainers": false,
+		"transparentToolWindowGrips": true
+	},
+	"extensions": {
+		"indentGuides": {
+			"includeSettings": false
+		}
+	}
+}

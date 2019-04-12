@@ -19,6 +19,8 @@ const { buildCoveragePage } = require("./builders/coverage");
     return;
   }
 
+  configuration.name = configuration.name || "dainty";
+
   await buildThemeFiles(__dirname, configuration);
   await buildCoveragePage(__dirname, configuration);
 })();
